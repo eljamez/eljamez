@@ -1,1 +1,7 @@
 export { default as CounterContainer } from './CounterContainer'
+export { default as HeaderContainer } from './HeaderContainer'
+export { default as HeroContainer } from './HeroContainer'
+export { default as FeaturedContainer } from './FeaturedContainer'
+export { default as AboutContainer } from './AboutContainer'
+export { default as WorkContainer } from './WorkContainer'
+export { default as ContactContainer } from './ContactContainer'
