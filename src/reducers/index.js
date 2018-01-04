@@ -3,6 +3,7 @@ import header from './header'
 import scrollPos from './scrollPos'
 import sectionRefs from './sectionRefs'
 import currentSection from './currentSection'
+import currentSectionTop from './currentSectionTop'
 
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
   scrollPos,
   header,
   currentSection,
+  currentSectionTop,
 })
 
 export default rootReducer

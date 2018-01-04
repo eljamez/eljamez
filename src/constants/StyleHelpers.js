@@ -19,5 +19,5 @@ export default {
       'mainCursive': "font-family: 'Short Stack', cursive;",
     },
     'headerHeight': '40',
-    'sectionHeaderX': (scrollPos) => scrollPos / 8,
+    //'sectionHeaderX': (window.scrollY) => window.scrollY / 8,
 }

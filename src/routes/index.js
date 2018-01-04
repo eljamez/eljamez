@@ -27,17 +27,25 @@ class Routes extends React.Component {
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
+  isResizingEvent = () => {
+    console.log('resize?');
+  }
+
   handleScroll = () => {
     this.props.scrollPosAction(window.scrollY);
+  }
+
+  handleResize = () => {
+    console.log('handle resize?');
   }
 
   render () {
     return (
       <Router>
-        <Container isScrollingEvent={this.isScrollingEvent()}>
+        <Container>
           <Route path="/" ref="header" component={HeaderContainer} />
           <Route path="/" ref="hero" component={HeroContainer} />
-          <Route path="/" ref="featured" component={FeaturedContainer} />
+          <Route path="/" ref="featured" component={FeaturedContainer} handleResize={this.handleResize}/>
           <Route path="/" ref="about" component={AboutContainer} />
           <Route path="/" ref="work" component={WorkContainer} />
           <Route path="/" ref="contact" component={ContactContainer} />
@@ -49,6 +57,8 @@ class Routes extends React.Component {
 
   // lets redo this, don't need all that stuff
   componentDidMount() {
+    this.isScrollingEvent();
+    this.isResizingEvent();
     this.props.setSectionRefsAction({
       'hero': ReactDOM.findDOMNode(this.refs['hero']).getBoundingClientRect(),
       'featured': ReactDOM.findDOMNode(this.refs['featured']).getBoundingClientRect(),

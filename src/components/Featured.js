@@ -16,7 +16,7 @@ const StyledFeatured = styled.section`
 export default ({scrollPos}) => {
   return (
     <StyledFeatured>
-      <h2>Featured {scrollPos}</h2>
+      <h2>Featured</h2>
       <div>
         <h3>just a few recent things...</h3>
         <div>

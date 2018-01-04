@@ -2,55 +2,38 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Featured } from 'components'
 import { createStructuredSelector, createSelector } from 'reselect'
-
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import ReactDOM from 'react-dom'
-import * as FeaturedActions from 'actions/featured'
+import * as SectionActions from 'actions/section'
+import { SectionContainer } from 'containers'
 
-class FeaturedContainer extends React.Component {
+class FeaturedContainer extends SectionContainer {
   constructor(props) {
     super(props)
-    //console.log(this.props)
-  }
-
-  static propTypes = {
-    scrollPos: PropTypes.number.isRequired,
-    currentSection: PropTypes.string.isRequired,
-  }
-
-  getYPos = (attr) => {
-    //console.log('getting y');
-    //console.log(ReactDOM.findDOMNode(this).getBoundingClientRect().top);
+    this.sectionName = 'Featured'
   }
 
   render() {
     return (
-      <Featured scrollPos={this.props.scrollPos} getYPos={this.getYPos()}/>
+      <Featured handleResize={this.props.handleResize}/>
     )
   }
 
-  componentDidUpdate() {
-    //console.log(ReactDOM.findDOMNode(this).getBoundingClientRect().top);
-  }
 }
 
-// scroll position should always be updated? helper function for checking?
-
-
 const mapStateToProps = createStructuredSelector({
-  scrollPos: createSelector(
-    (state) => state.scrollPos,
-    (scrollPosState) => scrollPosState,
-  ),
   currentSection: createSelector(
     (state) => state.currentSection,
     (currentSectionState) => currentSectionState,
   ),
+  currentSectionTop: createSelector(
+    (state) => state.currentSectionTop,
+    (currentSectionTopState) => currentSectionTopState,
+  ),
 })
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(FeaturedActions, dispatch)
+  return bindActionCreators(SectionActions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeaturedContainer)
