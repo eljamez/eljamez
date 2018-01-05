@@ -25,10 +25,6 @@ const mapStateToProps = createStructuredSelector({
     (state) => state.currentSection,
     (currentSectionState) => currentSectionState,
   ),
-  currentSectionTop: createSelector(
-    (state) => state.currentSectionTop,
-    (currentSectionTopState) => currentSectionTopState,
-  ),
 })
 
 function mapDispatchToProps(dispatch) {

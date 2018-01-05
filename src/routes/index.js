@@ -14,7 +14,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import * as ScrollActions from 'actions/scroll'
-import * as SectionActions from 'actions/section'
 
 import styled from 'styled-components'
 
@@ -59,13 +58,6 @@ class Routes extends React.Component {
   componentDidMount() {
     this.isScrollingEvent();
     this.isResizingEvent();
-    this.props.setSectionRefsAction({
-      'hero': ReactDOM.findDOMNode(this.refs['hero']).getBoundingClientRect(),
-      'featured': ReactDOM.findDOMNode(this.refs['featured']).getBoundingClientRect(),
-      'about': ReactDOM.findDOMNode(this.refs['about']).getBoundingClientRect(),
-      'work': ReactDOM.findDOMNode(this.refs['work']).getBoundingClientRect(),
-      'contact': ReactDOM.findDOMNode(this.refs['contact']).getBoundingClientRect(),
-    });
   }
 }
 
@@ -73,15 +65,11 @@ const mapStateToProps = createStructuredSelector({
   scrollPos: createSelector(
     (state) => state.scrollPos,
     (scrollPosState) => scrollPosState,
-  ),
-  sectionRefs: createSelector(
-    (state) => state.sectionRefs,
-    (sectionRefsState) => sectionRefsState, 
   )
 })
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ ...ScrollActions, ...SectionActions }, dispatch)
+  return bindActionCreators({ ...ScrollActions }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Routes)

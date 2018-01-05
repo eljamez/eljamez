@@ -11,7 +11,10 @@ import * as SectionActions from 'actions/section'
 class HeaderContainer extends React.Component {
 
   handleNavClick = (newSection, newY) => {
-    this.props.currentSectionAction(newSection);
+    console.log('the current click is '+newSection)
+    this.props.currentSectionAction(newSection)
+    this.props.sectionNavClickAction(true)
+    console.log('and the current section is '+this.props.currentSection.name)
   }
 
   render() {
@@ -19,7 +22,7 @@ class HeaderContainer extends React.Component {
       <Header
         scrollPos={this.props.scrollPos}
         handleNavClick={this.handleNavClick}
-        currentSection={this.props.currentSection}
+        currentSection={this.props.currentSection.name}
       />
     )
   }

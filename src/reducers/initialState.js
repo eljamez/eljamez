@@ -1,7 +1,14 @@
 export default {
     scrollPos: window.scrollY,
-    currentSection: 'Hero',
-    currentSectionTop: false,
+    currentSection: {
+        name: 'Hero',
+        isTop: false,
+        isScrolling: false,
+        yPos: 0,
+        navClicked: false,
+    },
+    //currentSection: 'Hero',
+    //currentSectionTop: false,
     counter: 0,
     sectionRefs: {},
 };
