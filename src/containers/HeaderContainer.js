@@ -11,10 +11,8 @@ import * as SectionActions from 'actions/section'
 class HeaderContainer extends React.Component {
 
   handleNavClick = (newSection, newY) => {
-    console.log('the current click is '+newSection)
     this.props.currentSectionAction(newSection)
     this.props.sectionNavClickAction(true)
-    console.log('and the current section is '+this.props.currentSection.name)
   }
 
   render() {

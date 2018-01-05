@@ -14,6 +14,7 @@ const NavButton = styled.button`
 
   &:hover {
     color: ${styleHelpers.colors.rangoon};
+    cursor: pointer;
     background-color: whitesmoke;
   }
 

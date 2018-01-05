@@ -14,6 +14,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import * as ScrollActions from 'actions/scroll'
+import * as SectionActions from 'actions/section'
 
 import styled from 'styled-components'
 
@@ -59,17 +60,28 @@ class Routes extends React.Component {
     this.isScrollingEvent();
     this.isResizingEvent();
   }
+
+  componentDidUpdate() {
+    // navclicked is no more when section top and scrollY are the same
+    if(this.props.scrollPos === this.props.currentSection.yPos && this.props.currentSection.navClicked){
+      this.props.sectionNavClickAction(false)
+    }
+  }
 }
 
 const mapStateToProps = createStructuredSelector({
   scrollPos: createSelector(
     (state) => state.scrollPos,
     (scrollPosState) => scrollPosState,
-  )
+  ),
+  currentSection: createSelector(
+    (state) => state.currentSection,
+    (currentSectionState) => currentSectionState,
+  ),
 })
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ ...ScrollActions }, dispatch)
+  return bindActionCreators({ ...ScrollActions, ...SectionActions }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Routes)

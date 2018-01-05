@@ -56,8 +56,17 @@ class SectionContainer extends React.Component {
       this.props.currentSection.navClicked &&
       !this.scrolling
     ) {
+      this.props.currentSectionYAction(this.yPos);
       this.scrolling = true
       this.scrollToSection(this.yPos)
+    }
+
+    // when scrolling through, change section
+    if (this.isCurrent &&
+      this.props.currentSection.name !== this.sectionName &&
+      !this.props.currentSection.navClicked
+    ) {
+      this.props.currentSectionAction(this.sectionName)
     }
 
     // reset the params to click can happen again.
