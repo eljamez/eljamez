@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components'
+import background from 'assets/halftone-yellow.png'
 import styleHelpers from 'constants/StyleHelpers'
 
 /* eslint no-unused-expressions: 0 */
@@ -6,6 +7,9 @@ injectGlobal`
   html,
   body {
     background-color: ${styleHelpers.colors.myWhite};
+    background-image: url(${background});
+    background-repeat: repeat;
+    background-position: fixed;
     font-family: 'Signika', sans-serif;
     box-sizing: border-box;
     color: ${styleHelpers.colors.rangoon};
@@ -24,8 +28,7 @@ injectGlobal`
     background-color: ${styleHelpers.colors.sectionBG};
     box-sizing: border-box;
     display: block;
-    min-height: ${window.innerHeight}px;
-    padding: 0px 0px 0px 96px;
+    padding: 0px 20px 0px 96px;
     position: relative;
     width: 100%;
 

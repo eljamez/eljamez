@@ -3,6 +3,7 @@ import avatar from 'assets/avatar.jpg'
 import styled, { keyframes } from 'styled-components'
 import styleHelpers from 'constants/StyleHelpers'
 import NavButton from './NavButton'
+import heroBackground from 'assets/background.jpg'
 
 const rotate360 = keyframes`
   from {
@@ -54,7 +55,11 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
   const avatarLeft = calculatedLeft < 0 ? 0 : calculatedLeft;
 
   const TopBar = styled.div`
-    background-color: ${styleHelpers.colors.rangoon};
+    background-color: ${styleHelpers.colors.headerBG};
+    background-image: url(${heroBackground});
+    background-repeat: no-repeat;
+    background-size: auto ${window.innerHeight}px;
+    background-position: bottom center;
     color: whitesmoke;
     height: ${headerHeight}px;
     margin: 0px;
@@ -131,7 +136,7 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
 
     .avatar {
       /*animation: ${rotate360} 1 1s ease;*/
-      border: 10px solid ${styleHelpers.colors.rangoon};
+      border: 10px solid ${styleHelpers.colors.headerBG};
       border-radius: 50%;
       height: 100%;
       width: 100%;

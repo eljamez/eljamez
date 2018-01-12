@@ -7,6 +7,7 @@ export default {
       'fields': "#b3c100",
       'copper': "#ddb071",
       'myWhite': 'whitesmoke',
+      'headerBG' : '#070A0E',
       'sectionBG': 'whitesmoke',
       'sectionHeaderBG': '#783543',
     },

@@ -15,12 +15,16 @@ class HeroContainer extends SectionContainer {
 
   render() {
     return (
-      <Hero/>
+      <Hero scrollPos={this.props.scrollPos}/>
     )
   }
 }
 
 const mapStateToProps = createStructuredSelector({
+  scrollPos: createSelector(
+    (state) => state.scrollPos,
+    (scrollPosState) => scrollPosState,
+  ),
   currentSection: createSelector(
     (state) => state.currentSection,
     (currentSectionState) => currentSectionState,
@@ -28,7 +32,7 @@ const mapStateToProps = createStructuredSelector({
 })
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(SectionActions, dispatch)
+  return bindActionCreators( { ...SectionActions }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeroContainer)

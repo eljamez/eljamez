@@ -68,62 +68,6 @@ class SectionContainer extends React.Component {
     ) {
       this.props.currentSectionAction(this.sectionName)
     }
-
-    // reset the params to click can happen again.
-
-
-    /*
-    // if clicked from nav, scroll to top
-    if (this.props.currentSection.name === this.sectionName &&
-      !this.props.currentSection.isTop &&
-      !this.scrolling &&
-      this.props.currentSection.navClicked
-    ) {
-      this.scrolling = true
-      
-      scrollToSection(this.yPos)
-      return
-    }
-
-    // if we have left the area, scrolling is false for sure.
-    if (!this.isCurrent) {
-      this.scrolling = false
-    }
-    
-    // if we are withing the params of the section, set to that section, as long as it wasn't a nav click
-    if (this.isCurrent &&
-      this.props.currentSection.name !== this.sectionName &&
-      !this.props.currentSection.navClicked
-    ) {
-      //this.props.sectionNavClickAction(false)
-      this.props.currentSectionAction(this.sectionName)
-    }
-
-    // scroll to that section if we are not at the top and are not currently scrolling
-    if (this.props.currentSection.name === this.sectionName && !this.props.currentSection.isTop && !this.scrolling) {
-      this.scrolling = true
-      scrollToSection(this.yPos)
-    }
-
-    // once at top, set state
-    if (this.yPos === window.scrollY && !this.props.currentSection.isTop) {
-      this.props.currentSectionTopAction(true)
-    }
-
-    // always must reset the navclicked to false
-    if (this.props.currentSection.navClicked &&
-        !this.scrolling
-    ) {
-      this.props.sectionNavClickAction(false)
-    } 
-
-
-    // once we leave the top, we are not scrolling
-    //if (this.yPos !== window.scrollY && this.props.currentSectionTop && this.scrolling) {
-      //this.scrolling = false;
-      //this.props.currentSectionTopAction(false)
-    //}
-    */
   }
 }
 
