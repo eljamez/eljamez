@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Work } from 'components'
 import { createStructuredSelector, createSelector } from 'reselect'
 import { bindActionCreators } from 'redux'
@@ -15,7 +14,7 @@ class WorkContainer extends SectionContainer {
 
   render() {
     return (
-      <Work className="work" toggleShowing={this.toggleShowing}/>
+      <Work h2Pos={this.h2Pos}/>
     )
   }
 }

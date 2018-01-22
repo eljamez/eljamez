@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Featured } from 'components'
 import { createStructuredSelector, createSelector } from 'reselect'
 import { bindActionCreators } from 'redux'
@@ -15,10 +14,9 @@ class FeaturedContainer extends SectionContainer {
 
   render() {
     return (
-      <Featured handleResize={this.props.handleResize}/>
+      <Featured handleResize={this.props.handleResize} h2Pos={this.h2Pos}/>
     )
   }
-
 }
 
 const mapStateToProps = createStructuredSelector({

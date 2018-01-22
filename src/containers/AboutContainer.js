@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { About } from 'components'
 import { createStructuredSelector, createSelector } from 'reselect'
 import { bindActionCreators } from 'redux'
@@ -15,7 +14,7 @@ class AboutContainer extends SectionContainer {
 
   render() {
     return (
-      <About className="about" toggleShowing={this.toggleShowing}/>
+      <About h2Pos={this.h2Pos}/>
     )
   }
 }

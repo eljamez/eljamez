@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
 import { Header } from 'components'
 import { createStructuredSelector, createSelector } from 'reselect'
 
@@ -9,6 +8,12 @@ import { connect } from 'react-redux'
 import * as SectionActions from 'actions/section'
 
 class HeaderContainer extends React.Component {
+  static propTypes = {
+    handleNavClick: PropTypes.func.isRequired,
+    isCurrentSection: PropTypes.func.isRequired,
+    scrollPos: PropTypes.object.isRequired,
+    currentSection: PropTypes.object.isRequired,
+  }
 
   handleNavClick = (newSection, newY) => {
     this.props.currentSectionAction(newSection)
@@ -34,10 +39,6 @@ const mapStateToProps = createStructuredSelector({
   currentSection: createSelector(
     (state) => state.currentSection,
     (currentSectionState) => currentSectionState,
-  ),
-  sectionRefs: createSelector(
-    (state) => state.sectionRefs,
-    (sectionRefsState) => sectionRefsState,
   )
 })
 

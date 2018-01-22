@@ -1,54 +1,33 @@
 import React from 'react'
 import avatar from 'assets/avatar.jpg'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import styleHelpers from 'constants/StyleHelpers'
 import NavButton from './NavButton'
 import heroBackground from 'assets/background.jpg'
 
-const rotate360 = keyframes`
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-`
-
-const slideLeft = keyframes`
-from {
-    transform: translate(50%, 0px);
-  }
-  to {
-    transform: translate(0px, 0px);
-  }
-`
-
 export default ({scrollPos, handleNavClick, currentSection}) => {
 
   // The header height depending on the sites scroll position
-  let headerHeight = window.innerHeight - scrollPos * 3;
-
-  // the border of the avatar, used for calculations n' such
-  const avatarBorderWidth = 20;
-
-  // the starting positions of the avatar, centered and above 
-  const avatarTopStart = window.innerHeight / 3 - scrollPos - 30;
-  const avatarLeftStart = (window.innerWidth / 2) - (styleHelpers.headerHeight / 2 * 2) - avatarBorderWidth;
-
-  // the calculated avatar position depending on the scrolled position
-  const calculatedTop = avatarTopStart - (scrollPos / 30);
-  const calculatedLeft = avatarLeftStart - (scrollPos * 2);
+  let headerHeight = window.innerHeight - scrollPos;// * 3;
 
   // the header height never gets too small
   if (headerHeight <= styleHelpers.headerHeight) {
     headerHeight = styleHelpers.headerHeight
   }
 
-  // how opaque is the header info
-  const percentHeaderShown = Math.round((headerHeight-styleHelpers.headerHeight)/(window.innerHeight - scrollPos) * 100);
+  // the border of the avatar, used for calculations n' such
+  const avatarBorderWidth = 20;
+
+  // the starting positions of the avatar, centered and above 
+  const avatarTopStart = headerHeight;
+  const avatarLeftStart = (window.innerWidth / 2) - (styleHelpers.headerHeight / 2 * 2) - avatarBorderWidth;
+
+  // the calculated avatar position depending on the scrolled position
+  const calculatedTop = (avatarTopStart - scrollPos) / 6;
+  const calculatedLeft = avatarLeftStart - (scrollPos * 2);
 
   // and what is it's y pos as we scroll
-  const topHeader = Math.round(window.innerHeight / 3 - scrollPos);
+  const topHeader = Math.round(window.innerHeight / 3);
 
   // Also, make sure the avatar never leaves
   const avatarTop = calculatedTop < 0 ? 0 : calculatedTop;
@@ -60,6 +39,7 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
     background-repeat: no-repeat;
     background-size: auto ${window.innerHeight}px;
     background-position: bottom center;
+    background-attachment: fixed;
     color: whitesmoke;
     height: ${headerHeight}px;
     margin: 0px;
@@ -72,50 +52,21 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
     z-index: 2;
 
     .titleHolder {
-      opacity: ${percentHeaderShown/100};
       text-align: center;
       transform: translateY(${topHeader}px);
-      
-      .welcome {
-        border-radius: 10px;
-        background-color: whitesmoke;
-        color: ${styleHelpers.colors.rangoon};
-        display: inline-block;
-        ${styleHelpers.fonts.comic}
-        font-family: 'Permanent Marker', cursive;
-        margin: 0px 0 10px;
-        padding: 10px 20px;
-        position: relative;
-        transform: translate(${avatarLeft - avatarLeftStart + 22}px, -${styleHelpers.headerHeight * 2 + (avatarBorderWidth / 2)}px);
-
-        &:after {
-          background: whitesmoke;
-          bottom: -8px;
-          content: '';
-          height: 15px;
-          position: absolute;
-          left: 22px;
-          width: 15px;
-          transform: rotate(45deg);
-        }
-      }
 
       > h1 {
-        ${styleHelpers.fonts.block}
+        ${styleHelpers.fonts.block};
         font-size: 4em;
         margin: 0px;
       }
 
       > h2 {
-        ${styleHelpers.fonts.handwriting}
+        ${styleHelpers.fonts.handwriting};
         font-size: 2.1em;
         margin: 0px;
         top: -10px;
       }
-    }
-
-    > p {
-
     }
 
     > nav {
@@ -126,7 +77,6 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
   `
 
   const AvatarHolder = styled.div`    
-    /*animation: ${slideLeft} 1 1s ease;*/
     margin: 0;
     position: fixed;
     top: 0px;
@@ -135,24 +85,47 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
     z-index: 3;
 
     .avatar {
-      /*animation: ${rotate360} 1 1s ease;*/
       border: 10px solid ${styleHelpers.colors.headerBG};
       border-radius: 50%;
       height: 100%;
       width: 100%;
       transform: translate(${avatarLeft}px, ${avatarTop}px);
     }
+
+    .welcome {
+      border-radius: 10px;
+      background-color: whitesmoke;
+      color: ${styleHelpers.colors.rangoon};
+      display: inline-block;
+      ${styleHelpers.fonts.comic};
+      font-family: 'Permanent Marker', cursive;
+      margin: 0px 0 10px;
+      padding: 10px 20px;
+      position: absolute;
+      white-space: nowrap;
+      transform: translate(${avatarLeft}px, ${avatarTop - (styleHelpers.headerHeight * 2 - avatarBorderWidth)}px);
+
+      &:after {
+        background: whitesmoke;
+        bottom: -8px;
+        content: '';
+        height: 15px;
+        position: absolute;
+        left: ${(styleHelpers.headerHeight * 2 - avatarBorderWidth) / 2}px;
+        width: 15px;
+        transform: rotate(45deg);
+      }
+    }
   `
 
   return (
     <div>
       <AvatarHolder>
+        <p className="welcome">Welcome to...</p>
         <img src={avatar} className="avatar" alt="logo" />
       </AvatarHolder>
       <TopBar>
-        
         <div className="titleHolder">
-          <p className="welcome">Welcome to...</p>
           <h1>eljamez.com</h1>
           <h2>My name is james and I am a <span>Front End Engineer</span></h2>
         </div>

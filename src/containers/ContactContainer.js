@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Contact } from 'components'
 import { createStructuredSelector, createSelector } from 'reselect'
 import { bindActionCreators } from 'redux'
@@ -15,7 +14,7 @@ class ContactContainer extends SectionContainer {
 
   render() {
     return (
-      <Contact className="contact" toggleShowing={this.toggleShowing}/>
+      <Contact h2Pos={this.h2Pos}/>
     )
   }
 }

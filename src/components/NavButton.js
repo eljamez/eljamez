@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import background from 'assets/dust_scratches.png'
 import styleHelpers from 'constants/StyleHelpers'
 
 const NavButton = styled.button`
-  font-family: 'Bree Serif', serif;
+  ${styleHelpers.fonts.block};
   background-color: transparent;
   border: 0px;
-  color: whitesmoke;
+  color: ${styleHelpers.colors.myWhite};
   font-size: 1.4em;
   padding: 5px 20px;
   text-transform: uppercase;
@@ -15,12 +16,16 @@ const NavButton = styled.button`
   &:hover {
     color: ${styleHelpers.colors.rangoon};
     cursor: pointer;
-    background-color: whitesmoke;
+    background-image: url(${background});
+    background-repeat: repeat;
+    background-attachment: fixed;
   }
 
   &.selected {
     color: ${styleHelpers.colors.rangoon};
-    background-color: whitesmoke;
+    background-image: url(${background});
+    background-repeat: repeat;
+    background-attachment: fixed;
   }
 `
 

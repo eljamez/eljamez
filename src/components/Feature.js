@@ -4,8 +4,8 @@ import {Grid, GridCol} from 'griz';
 import styleHelpers from 'constants/StyleHelpers'
 
 const StyledFeature = styled.section`
-  background-color: ${styleHelpers.colors.pine};
-  border: 1px solid ${styleHelpers.colors.rangoon};
+  //background-color: ${styleHelpers.colors.pine};
+  //border: 1px solid ${styleHelpers.colors.rangoon};
   border-radius: 5px;
   margin: 0px;
   padding: 0px;

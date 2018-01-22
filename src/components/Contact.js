@@ -1,23 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Grid, GridCol} from 'griz'
 
-const Contact = styled.section`
+export default ({h2Pos}) => {
+  const Contact = styled.section`
+    margin: 0px;
 
-  > h2 {
-    
-  }
+    > h2 {
+      cursor: pointer;
+      transform: translateX(${h2Pos}px);
+    }
 
-  > p {
-    line-height: auto;
-  }
-`
+    > p {
+      line-height: auto;
+    }
+  `
 
-export default ({isShowing}) => {
   return (
-    <Contact className={isShowing}>
+    <Contact>
       <h2>Contact</h2>
         <div>
-            <p>What goes on in my mind</p>
+          <Grid responsiveMd gutterless>
+            <GridCol column="60">
+             Contact Form
+            </GridCol>
+            <GridCol column="40">
+              Something else
+            </GridCol>
+          </Grid>
         </div>
     </Contact>
   )

@@ -8,11 +8,18 @@ class SectionContainer extends React.Component {
     this.scrolling = false
   }
 
+  static propTypes = {
+    getYPos: PropTypes.func.isRequired,
+    isCurrentSection: PropTypes.func.isRequired,
+    scrollToSection: PropTypes.func.isRequired,
+    currentSection: PropTypes.object.isRequired,
+  }
+
   /**
    * @returns {number} the current y position of the component
    */
   getYPos = () => {
-    return window.scrollY + ReactDOM.findDOMNode(this).getBoundingClientRect().top
+    return window.scrollY + ReactDOM.findDOMNode(this).getBoundingClientRect().top + 1
   }
 
   /**
@@ -38,13 +45,10 @@ class SectionContainer extends React.Component {
     });
   }
 
-  static propTypes = {
-    currentSection: PropTypes.object.isRequired,
-  }
-
   componentDidUpdate() {
     this.yPos = this.getYPos()
     this.isCurrent = this.isCurrentSection()
+    this.h2Pos = 0//(this.yPos - window.scrollY > 0 ) ? this.yPos - window.scrollY : 0;
 
     // this is no longer scrolling if section has changed 
     if (this.props.currentSection.name !== this.sectionName) {
