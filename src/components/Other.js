@@ -3,7 +3,6 @@ import { OtherSingle } from 'components'
 import styled from 'styled-components'
 import styleHelpers from 'constants/StyleHelpers'
 import OtherData from 'constants/OtherData'
-import { Grid, GridCol } from 'griz'
 
 export default ({ h2Pos }) => {
   const StyledFeatured = styled.section`
@@ -23,17 +22,9 @@ export default ({ h2Pos }) => {
     <StyledFeatured>
       <h2>Other</h2>
       <div>
-        <Grid responsiveMd gutterless>
-          <GridCol>
-            <OtherSingle otherData={OtherData.EnslyMogul} />
-          </GridCol>
-          <GridCol>
-            <OtherSingle otherData={OtherData.CodePen} />
-          </GridCol>
-          <GridCol column="100">
-            <OtherSingle otherData={OtherData.EnemyWithin} />
-          </GridCol>
-        </Grid>
+        <OtherSingle otherData={OtherData.EnslyMogul} />
+        <OtherSingle otherData={OtherData.CodePen} />
+        <OtherSingle otherData={OtherData.EnemyWithin} />
       </div>
     </StyledFeatured>
   )
