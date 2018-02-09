@@ -13,7 +13,8 @@ injectGlobal`
     box-sizing: border-box;
     color: ${styleHelpers.colors.rangoon};
     height: 100%;
-    padding-top: ${Math.round(window.innerHeight)}px;
+    padding-top: ${Math.round(window.innerHeight - styleHelpers.headerHeight)}px;
+    scroll-behavior: smooth;
     width: 100%;
   }
 
@@ -30,18 +31,18 @@ injectGlobal`
     width: 100%;
 
     > h2 {
-      background-color: ${styleHelpers.colors.myMaroon};
       box-sizing: border-box;
       color: ${styleHelpers.colors.myWhite};
       display: inline-block;
       text-transform: uppercase;
-      ${styleHelpers.fonts.block};
+      ${styleHelpers.fonts.videogame};
       font-size: 2em;
       line-height: 2em;
+      left: -${styleHelpers.leftSitePadding}px;
       margin: 0;
-      padding: 0px 20px 0;
+      padding: 0 0 0 ${styleHelpers.leftSitePadding}px;
       position: relative;
-      width: calc(100% - ${styleHelpers.gridGutterWidth}px);
+      width: ${window.innerWidth}px;
     }
 
     h3 {

@@ -1,14 +1,16 @@
 import React from 'react'
-import { Feature } from 'components'
+import { OtherSingle } from 'components'
 import styled from 'styled-components'
 import styleHelpers from 'constants/StyleHelpers'
-import {Grid, GridCol} from 'griz'
+import OtherData from 'constants/OtherData'
+import { Grid, GridCol } from 'griz'
 
-export default ({h2Pos}) => {
+export default ({ h2Pos }) => {
   const StyledFeatured = styled.section`
     margin: 0px;
 
     > h2 {
+      background-color: ${styleHelpers.colors.Featured};
       cursor: pointer;
       transform: translateX(${h2Pos}px);
     }
@@ -19,18 +21,17 @@ export default ({h2Pos}) => {
   `
   return (
     <StyledFeatured>
-      <h2>Featured</h2>
+      <h2>Other</h2>
       <div>
-        <h3>just a few recent things...</h3>
-        <Grid responsiveMd gutterWidth={styleHelpers.gridGutterWidth}>
+        <Grid responsiveMd gutterless>
           <GridCol>
-            <Feature title="Nike.com" />
+            <OtherSingle otherData={OtherData.EnslyMogul} />
           </GridCol>
           <GridCol>
-            <Feature title="Codepen Fun" />
+            <OtherSingle otherData={OtherData.CodePen} />
           </GridCol>
-          <GridCol>
-            <Feature title="AquafinaSparkling.com" />
+          <GridCol column="100">
+            <OtherSingle otherData={OtherData.EnemyWithin} />
           </GridCol>
         </Grid>
       </div>

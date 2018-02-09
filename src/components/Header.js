@@ -5,10 +5,9 @@ import styleHelpers from 'constants/StyleHelpers'
 import NavButton from './NavButton'
 import heroBackground from 'assets/background.jpg'
 
-export default ({scrollPos, handleNavClick, currentSection}) => {
-
+export default ({ scrollPos, handleNavClick, currentSection }) => {
   // The header height depending on the sites scroll position
-  let headerHeight = window.innerHeight - scrollPos;// * 3;
+  let headerHeight = window.innerHeight - scrollPos // * 3;
 
   // the header height never gets too small
   if (headerHeight <= styleHelpers.headerHeight) {
@@ -16,30 +15,35 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
   }
 
   // the border of the avatar, used for calculations n' such
-  const avatarBorderWidth = 20;
+  const avatarBorderWidth = 20
 
-  // the starting positions of the avatar, centered and above 
-  const avatarTopStart = headerHeight;
-  const avatarLeftStart = (window.innerWidth / 2) - (styleHelpers.headerHeight / 2 * 2) - avatarBorderWidth;
+  // the starting positions of the avatar, centered and above
+  const avatarTopStart = headerHeight
+  const avatarLeftStart = window.innerWidth / 2 - styleHelpers.headerHeight / 2 * 2 - avatarBorderWidth
 
   // the calculated avatar position depending on the scrolled position
-  const calculatedTop = (avatarTopStart - scrollPos) / 6;
-  const calculatedLeft = avatarLeftStart - (scrollPos * 2);
+  const calculatedTop = (avatarTopStart - scrollPos) / 6
+  const calculatedLeft = avatarLeftStart - scrollPos * 2
 
   // and what is it's y pos as we scroll
-  const topHeader = Math.round(window.innerHeight / 3);
+  const topHeader = Math.round(window.innerHeight / 3)
 
   // Also, make sure the avatar never leaves
-  const avatarTop = calculatedTop < 0 ? 0 : calculatedTop;
-  const avatarLeft = calculatedLeft < 0 ? 0 : calculatedLeft;
+  const avatarTop = calculatedTop < 0 ? 0 : calculatedTop
+  const avatarLeft = calculatedLeft < 0 ? 0 : calculatedLeft
+
+  // bottom border current section color
+  const bottomBorderColor = styleHelpers.colors[currentSection]
+  const bottomBorderWidth = currentSection === 'Hero' ? 0 : 10
 
   const TopBar = styled.div`
     background-color: ${styleHelpers.colors.headerBG};
     background-image: url(${heroBackground});
     background-repeat: no-repeat;
-    background-size: auto ${window.innerHeight}px;
+    background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
+    border-bottom: ${bottomBorderWidth}px solid ${bottomBorderColor};
     color: whitesmoke;
     height: ${headerHeight}px;
     margin: 0px;
@@ -62,9 +66,10 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
       }
 
       > h2 {
-        ${styleHelpers.fonts.handwriting};
-        font-size: 2.1em;
+        ${styleHelpers.fonts.videogame};
+        font-size: 1.61em;
         margin: 0px;
+        text-transform: uppercase;
         top: -10px;
       }
     }
@@ -76,7 +81,7 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
     }
   `
 
-  const AvatarHolder = styled.div`    
+  const AvatarHolder = styled.div`
     margin: 0;
     position: fixed;
     top: 0px;
@@ -127,13 +132,15 @@ export default ({scrollPos, handleNavClick, currentSection}) => {
       <TopBar>
         <div className="titleHolder">
           <h1>eljamez.com</h1>
-          <h2>My name is james and I am a <span>Front End Engineer</span></h2>
+          <h2>
+            My name is james and I am a <span>Front End Engineer</span>
+          </h2>
         </div>
         <nav>
-          <NavButton section="Featured" handleNavClick={handleNavClick} currentSection={currentSection}/>
-          <NavButton section="About" handleNavClick={handleNavClick} currentSection={currentSection}/>
-          <NavButton section="Work" handleNavClick={handleNavClick} currentSection={currentSection}/>
-          <NavButton section="Contact" handleNavClick={handleNavClick} currentSection={currentSection}/>
+          <NavButton section="About" handleNavClick={handleNavClick} currentSection={currentSection} />
+          <NavButton section="Work" handleNavClick={handleNavClick} currentSection={currentSection} />
+          <NavButton section="Contact" handleNavClick={handleNavClick} currentSection={currentSection} />
+          <NavButton section="Other" handleNavClick={handleNavClick} currentSection={currentSection} />
         </nav>
       </TopBar>
     </div>

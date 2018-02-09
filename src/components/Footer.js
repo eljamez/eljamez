@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import styleHelpers from 'constants/StyleHelpers'
-import {Grid, GridCol} from 'griz';
+import { Grid, GridCol } from 'griz'
 
 export default () => {
   const Footer = styled.footer`
@@ -20,6 +20,11 @@ export default () => {
     a {
       color: ${styleHelpers.colors.myWhite};
     }
+
+    p {
+      margin: 0px;
+      text-align: right;
+    }
   `
 
   return (
@@ -27,17 +32,33 @@ export default () => {
       <Grid gutterWidth="{styleHelpers.gridGutterWidth}">
         <GridCol>
           <nav>
-            <a href="http://codepen.io/eljamez/"><i class="fa fa-codepen"></i></a>
-            <a href="http://eljamez.github.io/"><i class="fa fa-github"></i></a>
-            <a href="https://twitter.com/eljamez"><i class="fa fa-twitter"></i></a>
-            <a href="https://instagram.com/eljamez"><i class="fa fa-instagram"></i></a>
-            <a href="http://jaugustus.tumblr.com/"><i class="fa fa-tumblr"></i></a>
-            <a href="http://www.linkedin.com/in/eljamez"><i class="fa fa-linkedin"></i></a>
-            <a href="https://soundcloud.com/eljamez"><i class="fa fa-soundcloud"></i></a>
+            <a href="http://codepen.io/eljamez/">
+              <i className="fab fa-codepen" />
+            </a>
+            <a href="http://eljamez.github.io/">
+              <i className="fab fa-github" />
+            </a>
+            <a href="https://twitter.com/eljamez">
+              <i className="fab fa-twitter" />
+            </a>
+            <a href="https://instagram.com/eljamez">
+              <i className="fab fa-instagram" />
+            </a>
+            <a href="http://jaugustus.tumblr.com/">
+              <i className="fab fa-tumblr" />
+            </a>
+            <a href="http://www.linkedin.com/in/eljamez">
+              <i className="fab fa-linkedin" />
+            </a>
+            <a href="https://soundcloud.com/eljamez">
+              <i className="fab fa-soundcloud" />
+            </a>
           </nav>
         </GridCol>
         <GridCol>
-          &copy; eljamez.com Date
+          <p>
+            <i class="fas fa-copyright" /> eljamez.com 2018
+          </p>
         </GridCol>
       </Grid>
     </Footer>

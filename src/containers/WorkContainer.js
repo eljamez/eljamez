@@ -13,17 +13,13 @@ class WorkContainer extends SectionContainer {
   }
 
   render() {
-    return (
-      <Work h2Pos={this.h2Pos}/>
-    )
+    return <Work h2Pos={this.h2Pos} />
   }
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentSection: createSelector(
-    (state) => state.currentSection,
-    (currentSectionState) => currentSectionState,
-  ),
+  currentSection: createSelector(state => state.currentSection, currentSectionState => currentSectionState),
+  sectionTops: createSelector(state => state.sectionTops, sectionTopsState => sectionTopsState),
 })
 
 function mapDispatchToProps(dispatch) {

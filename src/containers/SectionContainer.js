@@ -9,17 +9,69 @@ class SectionContainer extends React.Component {
   }
 
   static propTypes = {
-    getYPos: PropTypes.func.isRequired,
-    isCurrentSection: PropTypes.func.isRequired,
-    scrollToSection: PropTypes.func.isRequired,
+    currentSectionYAction: PropTypes.func.isRequired,
+    currentSectionAction: PropTypes.func.isRequired,
     currentSection: PropTypes.object.isRequired,
+  }
+
+  /**
+   * doing all of the checking to see if it's the current section
+   */
+  sectionSettings = () => {
+    this.yPos = this.getYPos()
+    this.isCurrent = this.isCurrentSection()
+    //this.h2Pos = 0//(this.yPos - window.scrollY > 0 ) ? this.yPos - window.scrollY : 0;
+
+    // this is no longer scrolling if section has changed
+    if (this.props.currentSection.name !== this.sectionName) {
+      console.log('scrolling?')
+      this.scrolling = false
+    }
+
+    /*
+    // scroll to section when nav is clicked
+    if (this.props.currentSection.name === this.sectionName &&
+      this.props.currentSection.navClicked &&
+      !this.scrolling
+    ) {
+      console.log('scrolling when nav clicked')
+      //this.props.currentSectionYAction(this.yPos);
+      this.scrolling = true
+      this.scrollToSection(this.yPos)
+    }*/
+
+    // when scrolling through, change section
+    if (
+      this.isCurrent &&
+      this.props.currentSection.name !== this.sectionName &&
+      !this.props.currentSection.navClicked
+    ) {
+      console.log('change section')
+      this.props.currentSectionAction(this.sectionName)
+    }
+
+    /*
+    //// navclicked is no more when section top and scrollY are the same
+    if(window.scrollY === this.yPos && this.props.currentSection.navClicked){
+      console.log('current section y position for ' + this.sectionName + " " + this.yPos)
+      console.log('this should be in header?')
+      this.props.sectionNavClickAction(false)
+    }
+    */
+  }
+
+  /**
+   * handling the scroll, and checking all the good stuff
+   */
+  handleScroll = () => {
+    this.sectionSettings()
   }
 
   /**
    * @returns {number} the current y position of the component
    */
   getYPos = () => {
-    return window.scrollY + ReactDOM.findDOMNode(this).getBoundingClientRect().top + 1
+    return Math.round(window.scrollY + ReactDOM.findDOMNode(this).getBoundingClientRect().top + 1)
   }
 
   /**
@@ -28,50 +80,45 @@ class SectionContainer extends React.Component {
   isCurrentSection = () => {
     if (
       window.scrollY > this.yPos &&
-      window.scrollY < this.yPos + ReactDOM.findDOMNode(this).getBoundingClientRect().height) {
-        return true;
+      window.scrollY < this.yPos + ReactDOM.findDOMNode(this).getBoundingClientRect().height
+    ) {
+      return true
     }
-    return false;
+    return false
   }
 
   /**
    * @param {number} toScrollPos the destination scroll position top of the component
    */
-  scrollToSection = (toScrollPos) => {
-    window.scrollTo({ 
+  scrollToSection = toScrollPos => {
+    window.scrollTo({
       top: toScrollPos, // could be negative value
-      left: 0, 
-      behavior: 'smooth' 
-    });
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll.bind(this))
+    // add resizing
+    /*
+    let thisSectionName = this.sectionName;
+    this.props.setTopAction({
+      thisSectionName : ReactDOM.findDOMNode(this).getBoundingClientRect().top
+    })*/
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll.bind(this))
+    // remove resizing
   }
 
   componentDidUpdate() {
-    this.yPos = this.getYPos()
-    this.isCurrent = this.isCurrentSection()
-    this.h2Pos = 0//(this.yPos - window.scrollY > 0 ) ? this.yPos - window.scrollY : 0;
+    this.sectionSettings()
+  }
 
-    // this is no longer scrolling if section has changed 
-    if (this.props.currentSection.name !== this.sectionName) {
-      this.scrolling = false
-    }
-
-    // scroll to section when nav is clicked
-    if (this.props.currentSection.name === this.sectionName &&
-      this.props.currentSection.navClicked &&
-      !this.scrolling
-    ) {
-      this.props.currentSectionYAction(this.yPos);
-      this.scrolling = true
-      this.scrollToSection(this.yPos)
-    }
-
-    // when scrolling through, change section
-    if (this.isCurrent &&
-      this.props.currentSection.name !== this.sectionName &&
-      !this.props.currentSection.navClicked
-    ) {
-      this.props.currentSectionAction(this.sectionName)
-    }
+  shouldComponentUpdate() {
+    return false
   }
 }
 

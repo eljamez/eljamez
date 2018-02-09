@@ -12,18 +12,35 @@ class ContactContainer extends SectionContainer {
     this.sectionName = 'Contact'
   }
 
+  handleChange(values) {
+    console.log(values)
+  }
+
+  handleUpdate(form) {
+    console.log(form)
+  }
+
+  handleSubmit(values) {
+    console.log('submit the form')
+    console.log(values)
+  }
+
   render() {
     return (
-      <Contact h2Pos={this.h2Pos}/>
+      <Contact
+        h2Pos={this.h2Pos}
+        handleChange={this.handleChange}
+        handleUpdate={this.handleUpdate}
+        handleSubmit={this.handleSubmit}
+        renderExtra={this.renderExtra}
+      />
     )
   }
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentSection: createSelector(
-    (state) => state.currentSection,
-    (currentSectionState) => currentSectionState,
-  ),
+  currentSection: createSelector(state => state.currentSection, currentSectionState => currentSectionState),
+  sectionTops: createSelector(state => state.sectionTops, sectionTopsState => sectionTopsState),
 })
 
 function mapDispatchToProps(dispatch) {
