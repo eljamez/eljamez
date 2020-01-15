@@ -1,0 +1,12 @@
+@import "./scss/header.scss";
+@import "./scss/letters.scss";
+@import "./scss/section.scss";
+@import "./scss/footer.scss";
+
+.page {
+  background-image: url("./images/synthwave-3941721.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}

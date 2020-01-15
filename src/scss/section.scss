@@ -1,0 +1,12 @@
+@import "./shared.scss";
+
+section {
+  @include copy-font;
+  background-color: rgba(black, 0.8);
+  color: white;
+  padding: 40px;
+  height: calc(100vh - 6rem);
+}
+
+h2 {
+}
