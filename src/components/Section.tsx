@@ -32,10 +32,10 @@ const Section: FunctionComponent<Props> = ({
             <h2>{section.name}</h2>
             {/*
  // @ts-ignore */}
-            <p>{section.description}</p>
+            {section.link && getLink(section.link)}
             {/*
  // @ts-ignore */}
-            {section.link && getLink(section.link)}
+            <p>{section.description}</p>
             {content && <div className="contentContainer">
                 {content.map((cont: BoxType) => {
                     return (<Box
