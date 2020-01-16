@@ -26,7 +26,7 @@ export const SECTIONS = [
   {
     name: "Code",
     letterIndex: 1,
-    description: "I write JavaScript, CSS, PHP, Ruby (on Rails)",
+    description: "JavaScript, CSS, PHP, Ruby (on Rails)",
     content: [
       {
         title: "CodePen ✍️",
