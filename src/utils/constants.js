@@ -3,10 +3,10 @@ export const SECTION_NAMES = [
   "Me",
   "Code",
   "Work",
-  "Fun",
+  "Space",
   "Contact",
   "Music",
-  "All this space"
+  "More"
 ];
 
 export const BACKGROUNDS = [
@@ -21,7 +21,7 @@ export const SECTIONS = [
     name: "Me",
     letterIndex: 0,
     description:
-      "My name is James Augustus Hall and I write code for websites and make music for ears. I also enjoy comedy and other forms of content. Thanks for stoping by my homepage."
+      "My name is James Augustus Hall and I write code for websites and make music for ears. I also enjoy comedy and other forms of content. Thanks for stopping by my homepage."
   },
   {
     name: "Code",
@@ -95,35 +95,26 @@ export const SECTIONS = [
     ]
   },
   {
-    name: "Fun",
+    name: "Space",
     letterIndex: 3,
-    description: "I like making videos on occasion",
-    content: [
-      {
-        title: "youTube 📺",
-        link: {
-          href: "https://youtube.com/user/eljamez",
-          text: "youtube.com/user/eljamez"
-        }
-      },
-      {
-        title: "Tumblr 🥤",
-        link: {
-          href: "https://jaugustus.tumblr.com/",
-          text: "jaugustus.tumblr.com/"
-        }
-      }
-    ]
+    description: ""
   },
   {
     name: "Contact",
     letterIndex: 4,
     content: [
       {
-        title: "Contact Me",
+        title: "email",
         link: {
           href: "mailto://eljamez@gmail.com",
           text: "eljames(at)gmail(dot)com"
+        }
+      },
+      {
+        title: "linkedin",
+        link: {
+          href: "http://www.linkedin.com/in/eljamez",
+          text: "linkedin.com/in/eljamez"
         }
       }
     ]
@@ -131,7 +122,7 @@ export const SECTIONS = [
   {
     name: "Music",
     letterIndex: 5,
-    description: "I write, record, and sometimes perform music.",
+    description: "I write, record, and sometimes perform music",
     content: [
       {
         title: "Ensly Mogul 🎹",
@@ -161,9 +152,8 @@ export const SECTIONS = [
     ]
   },
   {
-    name: "All this space",
+    name: "More",
     letterIndex: 6,
-    description:
-      "With all this extra space on my webpage, I'm going to have to put something cool up here soon."
+    description: "More to come"
   }
 ];
