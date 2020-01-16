@@ -1,29 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import './App.scss';
+import React, { useState } from 'react';
+import { BACKGROUNDS } from './utils/constants';
 import Header from './components/Header';
 import Section from './components/Section';
 import Footer from './components/Footer';
 
+import './App.scss';
+
 const App = () => {
 
-  const [currentLetter, setCurrentLetter] = useState('');
-  const [currentSection, setCurrentSection] = useState('');
+  const [currentSection, setCurrentSection] = useState('Home');
+  const [goCurrentSection, setGoCurrentSection] = useState('Home');
+  const [fading, setFading] = useState(false);
+  const [backgroundImage] = useState(BACKGROUNDS[Math.floor(Math.random() * BACKGROUNDS.length)]);
+  const [pageClasses, setPageClasses] = useState('page');
+
+  const pageStyles = {
+    backgroundImage: `url('${backgroundImage}')`,
+  };
 
   const onLetterClick = ({ currentTarget }) => {
-    console.log(currentTarget.name);
-    setCurrentLetter(currentTarget.name);
-    setCurrentSection(currentTarget.dataset.section)
+    if (fading === false || currentTarget.dataset.section !== currentSection) {
+      setFading(true);
+      setCurrentSection(currentTarget.dataset.section);
+      setPageClasses('page transitioning');
+      setTimeout(() => {
+        setGoCurrentSection(currentTarget.dataset.section);
+        setFading(false);
+        setPageClasses('page');
+      }, 500)
+    }
   };
 
   return (
-    <div className="page">
+    <div className={pageClasses} style={pageStyles}>
       <Header
         onClick={onLetterClick}
         currentSectionName={currentSection}
       />
-      <Section
-        currentSectionName={currentSection}
-      />
+      {goCurrentSection !== "Home" &&
+        <Section
+          currentSectionName={goCurrentSection}
+          isFading={fading}
+        />
+      }
       <Footer
       />
     </div>

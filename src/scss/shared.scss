@@ -4,3 +4,31 @@
 @mixin copy-font {
   font-family: "IBM Plex Mono", monospace;
 }
+
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  70% {
+    transform: translateY(35px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
