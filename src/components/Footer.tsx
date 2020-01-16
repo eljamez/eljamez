@@ -1,13 +1,10 @@
 import React, { FunctionComponent } from 'react';
-import { LETTERS, SECTION_NAMES } from './../utils/constants';
 
 type Props = {
     currentSectionName: string;
 }
 
-const Footer: FunctionComponent<Props> = ({
-    currentSectionName,
-}) => {
+const Footer: FunctionComponent<Props> = () => {
 
     return (
         <footer>

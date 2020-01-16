@@ -1,5 +1,29 @@
 @import "./shared.scss";
 
+.box {
+  flex: 1 0 21%;
+  padding-right: 2%;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  // TODO:: Needs work
+  .box-image {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+
+    img {
+      width: 80px;
+      height: 80px;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+}
+
 section {
   @include copy-font;
   background-color: rgba(black, 0.8);
@@ -7,14 +31,11 @@ section {
   padding: 40px;
   height: calc(100vh - 6rem);
 
-  a {
-    color: white;
-    transition: all 0.2s ease;
-
-    &:hover {
-      background-color: white;
-      color: gray;
-    }
+  h2 {
+    animation-duration: 0.5s;
+    animation-name: fadeInFromTop;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
   }
 
   &.sectionFading {
@@ -32,10 +53,6 @@ section {
   }
 }
 
-.contentContainer {
-  display: flex;
-  flex-wrap: wrap;
-}
 // have everything slide down and settle into place on transition.
 
 @keyframes fade {

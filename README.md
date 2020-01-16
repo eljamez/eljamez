@@ -1,6 +1,12 @@
 # eljamez.com
 
-A personal website of mine.
+🎲A personal website of mine.
+
+## Todos
+
+- update this readme
+- add snake
+- and so so much more 😅
 
 Below is the boilerplate readme from [Create React App](https://github.com/facebook/create-react-app).
 

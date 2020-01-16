@@ -16,6 +16,10 @@
   outline-width: 0;
   cursor: pointer;
 
+  &:hover {
+    text-shadow: 0px 50px 20px white;
+  }
+
   &.selected {
     z-index: 1;
     text-shadow: 0px 0px 5px rgb(172, 123, 233);
@@ -34,11 +38,11 @@
   }
 
   70% {
-    transform: translateY(35px);
+    transform: translateY(35px) rotate(380deg);
   }
 
   100% {
-    transform: translateY(5px);
+    transform: translateY(5px) rotate(360deg);
     font-size: 6rem;
   }
 }
