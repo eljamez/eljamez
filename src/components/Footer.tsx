@@ -12,7 +12,7 @@ const Footer: FunctionComponent<Props> = () => {
                 <a href="http://codepen.io/eljamez/">
                     <i className="fab fa-codepen" />
                 </a>
-                <a href="http://eljamez.github.io/">
+                <a href="http://github.com/eljamez">
                     <i className="fab fa-github" />
                 </a>
                 <a href="https://twitter.com/eljamez">
