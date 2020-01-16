@@ -14,9 +14,9 @@
     "typescript": "^3.7.2"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "ts": "tslint -p"
   },
   "eslintConfig": {
@@ -35,10 +35,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
     "customize-cra": "^0.9.1",
-    "react-app-rewired": "^2.1.5",
     "tslint": "^5.20.1"
   }
 }

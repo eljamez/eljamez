@@ -23,13 +23,19 @@ const Section: FunctionComponent<Props> = ({
     // @ts-ignorets-ignore
     const { content } = section;
 
-    const getLink = (link: Link) => (<a href={link?.href}>{link?.text}</a>);
+    const getLink = (link: Link) => (<a href={link.href}>{link.text}</a>);
 
     return (
         <section className={sectionClasses}>
-            <h2>{section?.name}</h2>
-            <p>{section?.description}</p>
-            {section?.link && getLink(section?.link)}
+            {/*
+ // @ts-ignore */}
+            <h2>{section.name}</h2>
+            {/*
+ // @ts-ignore */}
+            <p>{section.description}</p>
+            {/*
+ // @ts-ignore */}
+            {section.link && getLink(section.link)}
             {content && <div className="contentContainer">
                 {content.map((cont: BoxType) => {
                     return (<Box
