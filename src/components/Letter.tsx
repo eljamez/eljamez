@@ -3,17 +3,13 @@ import React, { MouseEventHandler, FunctionComponent } from 'react';
 type Props = {
     character: string;
     sectionName: string;
+    letterClass?: string;
     onClick: MouseEventHandler<HTMLElement>;
-    selected: boolean;
 };
 
-const Letter: FunctionComponent<Props> = ({ character, sectionName, onClick, selected }) => {
-    const className = 'letter';
-    const selectedClass = selected
-        ? 'selected'
-        : '';
+const Letter: FunctionComponent<Props> = ({ character, sectionName, letterClass, onClick }) => {
     return (
-        <button className={`${className} ${selectedClass}`} data-section={sectionName} name={character} onClick={onClick}>
+        <button className={`letter ${letterClass}`} data-section={sectionName} name={character} onClick={onClick}>
             {character}
         </button>
     )

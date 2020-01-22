@@ -20,6 +20,13 @@ body {
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 
+  &.fadeIn {
+    animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+
   &.transitioning {
     animation-duration: 0.5s;
     animation-name: outIn;
@@ -28,9 +35,20 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes fadeInGrow {
   0% {
-    transform: translateY(10px);
+    transform: translateY(0px);
   }
 
   50% {
@@ -52,6 +70,6 @@ body {
   }
 
   100% {
-    transform: translateY(10px);
+    transform: translateY(0px);
   }
 }

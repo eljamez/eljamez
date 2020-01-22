@@ -1,15 +1,14 @@
-import React, { FunctionComponent, ReactNode } from 'react';
+import React, { FunctionComponent } from 'react';
 
-type Link = {
+export type LinkType = {
     href: string;
     text: string;
 }
 
 export type BoxType = {
-    title: string;
+    title?: string;
     details?: string;
-    link?: Link;
-    getLink: (arg1: Link) => ReactNode;
+    link?: LinkType;
     image?: string;
 }
 
@@ -17,7 +16,6 @@ const Box: FunctionComponent<BoxType> = ({
     title,
     details,
     link,
-    getLink,
     image,
 }) => {
 
@@ -28,7 +26,7 @@ const Box: FunctionComponent<BoxType> = ({
             </div>}
             <div className="box-content">
                 <h3>{title}</h3>
-                {link && getLink(link)}
+                {link && <a href={link.href}>{link.text}</a>}
                 <p>
                     {details && details}
                 </p>

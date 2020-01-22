@@ -21,7 +21,8 @@ export const SECTIONS = [
     name: "Me",
     letterIndex: 0,
     description:
-      "My name is James Augustus Hall and I write code for websites and make music for ears. I also enjoy comedy and other forms of content. Thanks for stopping by my homepage."
+      "My name is James Augustus Hall and I write code for websites and make music for ears. I also enjoy comedy and other forms of content. Thanks for stopping by my homepage.",
+    content: []
   },
   {
     name: "Code",
@@ -93,11 +94,13 @@ export const SECTIONS = [
   {
     name: "Space",
     letterIndex: 3,
-    description: ""
+    description: "",
+    content: []
   },
   {
     name: "Contact",
     letterIndex: 4,
+    description: "",
     content: [
       {
         title: "email",

@@ -1,48 +1,38 @@
 import React, { FunctionComponent } from 'react';
-import Box, { BoxType } from './Box';
-import { SECTIONS } from './../utils/constants';
+import Box, { BoxType, LinkType } from './Box';
+
+type Section = {
+    name: string;
+    letterIndex: number;
+    description?: string;
+    link?: LinkType;
+    content: BoxType[];
+}
 
 type Props = {
-    currentSectionName: string;
+    currentSectionData: Section;
     isFading: boolean;
 }
 
-type Link = {
-    href: string;
-    text: string;
-}
-
 const Section: FunctionComponent<Props> = ({
-    currentSectionName,
+    currentSectionData,
     isFading,
 }) => {
     const sectionClasses = isFading ? 'sectionFading' : 'sectionEnter';
 
-    const section = SECTIONS.find((section) => section.name === currentSectionName);
-
-    // @ts-ignorets-ignore
-    const { content } = section;
-
-    const getLink = (link: Link) => (<a href={link.href}>{link.text}</a>);
+    const { content } = currentSectionData;
 
     return (
         <section className={sectionClasses}>
-            {/*
- // @ts-ignore */}
-            <h2>{section.name}</h2>
-            {/*
- // @ts-ignore */}
-            {section.link && getLink(section.link)}
-            {/*
- // @ts-ignore */}
-            <p>{section.description}</p>
+            <h2>{currentSectionData.name}</h2>
+            {currentSectionData.link && <a href={currentSectionData.link.href}>{currentSectionData.link.text}</a>}
+            <p>{currentSectionData.description}</p>
             {content && <div className="contentContainer">
                 {content.map((cont: BoxType) => {
                     return (<Box
                         title={cont.title}
                         details={cont.details}
                         link={cont.link}
-                        getLink={getLink}
                         image={cont.image}
                         key={cont.title}
                     />)

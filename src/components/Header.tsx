@@ -11,16 +11,21 @@ const Header: FunctionComponent<Props> = ({
     onClick,
     currentSectionName,
 }) => {
-
+    let letterClass = 'fadeIn';
     return (
         <header className="header">
             {LETTERS.map((letter, index) => {
-                const isSelected = SECTION_NAMES[index] === currentSectionName;
+                const unselectedClass = letterClass !== 'fadeIn'
+                    ? 'unselected'
+                    : '';
+                letterClass = SECTION_NAMES[index] === currentSectionName
+                    ? 'selected'
+                    : unselectedClass;
                 return (<Letter
                     character={letter}
                     sectionName={SECTION_NAMES[index]}
                     onClick={onClick}
-                    selected={isSelected}
+                    letterClass={letterClass}
                     key={index}
                 />)
             })}

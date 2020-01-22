@@ -4,20 +4,23 @@
   @include header-font;
   background-color: transparent;
   color: white;
-  font-size: 3rem;
-  line-height: 6rem;
+  font-size: 1rem;
+  line-height: 3rem;
   border: none;
   flex: 1;
-  animation-duration: 0.5s;
-  animation-name: unselectIt;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
   transition: all 0.3s ease;
   outline-width: 0;
   cursor: pointer;
 
   &:hover {
     text-shadow: 0px 50px 20px white;
+  }
+
+  &.fadeIn {
+    animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
   }
 
   &.selected {
@@ -27,30 +30,64 @@
     animation-name: selectIt;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    font-size: 6rem;
+    font-size: 2rem;
     transform: translateY(5px);
+  }
+
+  &.unselected {
+    animation-duration: 0.5s;
+    animation-name: unselectIt;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+    line-height: 6rem;
+
+    &.selected {
+      font-size: 6rem;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes selectIt {
   0% {
-    font-size: 3rem;
+    font-size: 1rem;
+    @include desktop {
+      font-size: 3rem;
+    }
   }
 
   70% {
-    transform: translateY(35px) rotate(380deg);
+    transform: translateY(35px);
+    font-size: 2rem;
+    @include desktop {
+      font-size: 6rem;
+    }
   }
 
   100% {
-    transform: translateY(5px) rotate(360deg);
-    font-size: 6rem;
+    transform: translateY(5px);
   }
 }
 
 @keyframes unselectIt {
   0% {
+    font-size: 2rem;
     transform: translateY(5px);
-    font-size: 6rem;
+    @include desktop {
+      font-size: 6rem;
+    }
   }
 
   30% {
@@ -58,6 +95,9 @@
   }
 
   100% {
-    font-size: 3rem;
+    font-size: 1rem;
+    @include desktop {
+      font-size: 3rem;
+    }
   }
 }

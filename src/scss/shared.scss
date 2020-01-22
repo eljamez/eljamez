@@ -5,6 +5,12 @@
   font-family: "IBM Plex Mono", monospace;
 }
 
+@mixin desktop {
+  @media only screen and (min-width: 30em) {
+    @content;
+  }
+}
+
 @keyframes fadeInFromTop {
   0% {
     opacity: 0;

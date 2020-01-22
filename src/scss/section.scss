@@ -7,6 +7,12 @@ section {
   padding: 40px;
   height: calc(100vh - 6rem);
 
+  p {
+    @include desktop {
+      width: 50%;
+    }
+  }
+
   a {
     color: white;
     transition: all 0.2s ease;
