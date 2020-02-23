@@ -2,18 +2,15 @@
 
 footer {
   @include copy-font;
-  display: flex;
-  flex-direction: row;
   align-items: stretch;
   position: absolute;
   bottom: 0px;
-  height: 40px;
+  height: 80px;
   width: 100vw;
   padding: 10px;
   color: white;
 
   nav {
-    flex: 1;
     a {
       color: white;
       padding: 0 10px;
@@ -30,9 +27,22 @@ footer {
   }
 
   p {
-    flex: 1;
     margin: 0;
     line-height: 0;
-    text-align: right;
+    padding: 10px;
+  }
+
+  @media (min-width: $min-width) {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    nav,
+    p {
+      flex: 1;
+    }
+    p {
+      padding: 0px;
+      text-align: right;
+    }
   }
 }

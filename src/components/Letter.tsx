@@ -5,15 +5,19 @@ type Props = {
     sectionName: string;
     onClick: MouseEventHandler<HTMLElement>;
     selected: boolean;
+    prevSelected: boolean;
 };
 
-const Letter: FunctionComponent<Props> = ({ character, sectionName, onClick, selected }) => {
+const Letter: FunctionComponent<Props> = ({ character, sectionName, onClick, selected, prevSelected }) => {
     const className = 'letter';
     const selectedClass = selected
         ? 'selected'
         : '';
+    const unselectedClass = prevSelected
+        ? 'unselected'
+        : '';
     return (
-        <button className={`${className} ${selectedClass}`} data-section={sectionName} name={character} onClick={onClick}>
+        <button className={`${className} ${selectedClass} ${unselectedClass}`} data-section={sectionName} name={character} onClick={onClick}>
             {character}
         </button>
     )

@@ -4,20 +4,27 @@
   @include header-font;
   background-color: transparent;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 6rem;
   border: none;
   flex: 1;
-  animation-duration: 0.5s;
-  animation-name: unselectIt;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
   transition: all 0.3s ease;
   outline-width: 0;
   cursor: pointer;
 
   &:hover {
-    text-shadow: 0px 50px 20px white;
+    color: white;
+    animation-duration: 0.5s;
+    animation-name: hovered;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  &.unselected {
+    animation-duration: 0.5s;
+    animation-name: unselectIt;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
   }
 
   &.selected {
@@ -27,30 +34,64 @@
     animation-name: selectIt;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    font-size: 6rem;
+    font-size: 3rem;
     transform: translateY(5px);
+  }
+
+  @media (min-width: $min-width) {
+    font-size: 3rem;
+    &.selected {
+      font-size: 6rem;
+    }
+  }
+}
+
+@keyframes hovered {
+  0% {
+    color: white;
+  }
+  25% {
+    color: $orange;
+  }
+  50% {
+    color: $blue;
+  }
+  75% {
+    color: $green;
+  }
+  100% {
+    color: white;
   }
 }
 
 @keyframes selectIt {
   0% {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    @media (min-width: $min-width) {
+      font-size: 3rem;
+    }
   }
 
   70% {
-    transform: translateY(35px) rotate(380deg);
+    transform: translateY(35px);
   }
 
   100% {
-    transform: translateY(5px) rotate(360deg);
-    font-size: 6rem;
+    transform: translateY(5px);
+    font-size: 3rem;
+    @media (min-width: $min-width) {
+      font-size: 6rem;
+    }
   }
 }
 
 @keyframes unselectIt {
   0% {
     transform: translateY(5px);
-    font-size: 6rem;
+    font-size: 3rem;
+    @media (min-width: $min-width) {
+      font-size: 6rem;
+    }
   }
 
   30% {
@@ -58,6 +99,9 @@
   }
 
   100% {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    @media (min-width: $min-width) {
+      font-size: 3rem;
+    }
   }
 }
