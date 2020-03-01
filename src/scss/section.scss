@@ -33,8 +33,11 @@ section {
 }
 
 .contentContainer {
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: $mid-width-mid) {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
 }
 // have everything slide down and settle into place on transition.
 

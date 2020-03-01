@@ -1,12 +1,12 @@
 @import "./shared.scss";
 
 .box {
-  flex: 1 0 21%;
   padding-right: 2%;
   background-size: cover;
   background-position: center center;
   position: relative;
-
+  border-top: 1px solid $green;
+  margin-top: $spacing-mid;
   // TODO:: Needs work
   .box-image {
     position: absolute;
@@ -21,6 +21,12 @@
       display: block;
       border-radius: 50%;
     }
+  }
+
+  @media (min-width: $mid-width-mid) {
+    flex: 1;
+    border-top: 0px;
+    padding: 0px $spacing-small;
   }
 }
 

@@ -24,14 +24,19 @@ const Section: FunctionComponent<Props> = ({
     const { content } = section;
 
     const getLink = (link: Link) => (<a href={link?.href}>{link?.text}</a>);
+    const isContentList = content?.contentType === 'list';
 
     return (
         <section className={sectionClasses}>
             <h2>{section?.name}</h2>
             <p>{section?.description}</p>
             {section?.link && getLink(section?.link)}
+
             {content && <div className="contentContainer">
                 {content.map((cont: BoxType) => {
+                    if (isContentList) {
+                        return (<p key={cont.title}>{cont.title}</p>)
+                    }
                     return (<Box
                         title={cont.title}
                         details={cont.details}

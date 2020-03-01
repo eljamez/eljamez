@@ -77,6 +77,7 @@ export const SECTIONS = [
       href: "https://1stdibs.com",
       text: "I'm a Senior Frontend Engineer at 1stdibs.com"
     },
+    contentType: "list",
     content: [
       {
         title: "Nike"

@@ -3,6 +3,11 @@ $blue: blue;
 $green: green;
 
 $min-width: 415px;
+$min-width-mid: 769px;
+
+$spacing-small: 10px;
+$spacing-mid: 20px;
+$spacing-large: 40px;
 
 @mixin header-font {
   font-family: "Odibee Sans", cursive;
