@@ -10,9 +10,12 @@ section {
   ul {
     list-style: none;
     padding: 0;
+    border-left: 1px solid rgba(white, 0.5);
 
     li {
       margin-top: $spacing-small;
+      padding-left: $spacing-mid;
+      font-weight: bold;
     }
   }
 

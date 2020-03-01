@@ -72,7 +72,8 @@ export const SECTIONS = [
   {
     name: "Work",
     letterIndex: 2,
-    description: "I have worked with many illustrious clients in the past.",
+    description:
+      "I have worked with many illustrious clients in the past, including...",
     link: {
       href: "https://1stdibs.com",
       text: "I'm currently a Senior Frontend Engineer at 1stdibs.com"
