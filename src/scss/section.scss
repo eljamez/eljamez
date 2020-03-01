@@ -7,9 +7,19 @@ section {
   padding: 40px;
   height: calc(100vh - 6rem);
 
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-top: $spacing-small;
+    }
+  }
+
   a {
     color: white;
     transition: all 0.2s ease;
+    margin-top: $spacing-small;
 
     &:hover {
       background-color: white;
@@ -33,7 +43,7 @@ section {
 }
 
 .contentContainer {
-  @media (min-width: $mid-width-mid) {
+  @media (min-width: $min-width-mid) {
     display: flex;
     flex-direction: row;
     align-items: stretch;

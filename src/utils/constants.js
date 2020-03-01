@@ -75,7 +75,7 @@ export const SECTIONS = [
     description: "I have worked with many illustrious clients in the past.",
     link: {
       href: "https://1stdibs.com",
-      text: "I'm a Senior Frontend Engineer at 1stdibs.com"
+      text: "I'm currently a Senior Frontend Engineer at 1stdibs.com"
     },
     contentType: "list",
     content: [
