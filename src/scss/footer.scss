@@ -3,7 +3,7 @@
 footer {
   @include copy-font;
   align-items: stretch;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   height: 80px;
   width: 100vw;
@@ -35,7 +35,7 @@ footer {
   @media (min-width: $min-width-mid) {
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: absolute;
     height: 40px;
     nav,
     p {
