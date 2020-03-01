@@ -28,10 +28,6 @@ body {
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
   }
-
-  @media (min-width: $min-width-mid) {
-    height: 100vh;
-  }
 }
 
 @keyframes fadeInGrow {

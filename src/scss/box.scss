@@ -23,8 +23,8 @@
     }
   }
 
-  @media (min-width: $mid-width-mid) {
-    flex: 1;
+  @media (min-width: $min-width-mid) {
+    flex: 1 0 21%;
     border-top: 0px;
     padding: 0px $spacing-small;
   }
