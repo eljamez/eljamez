@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { BACKGROUNDS } from './utils/constants';
+import { BACKGROUNDS, LETTERS, SECTION_NAMES } from './utils/constants';
 import Header from './components/Header';
+import Letter from './components/Letter';
 import Section from './components/Section';
 import Footer from './components/Footer';
 
@@ -35,11 +36,20 @@ const App = () => {
 
   return (
     <div className={pageClasses} style={pageStyles}>
-      <Header
-        onClick={onLetterClick}
-        currentSectionName={currentSection}
-        prevSectionName={prevSection}
-      />
+      <Header>
+        {LETTERS.map((letter, index) => {
+          const isSelected = SECTION_NAMES[index] === currentSection;
+          const lastSelected = SECTION_NAMES[index] === prevSection;
+          return (<Letter
+            character={letter}
+            sectionName={SECTION_NAMES[index]}
+            onClick={onLetterClick}
+            selected={isSelected}
+            prevSelected={lastSelected}
+            key={index}
+          />)
+        })}
+      </ Header>
       {goCurrentSection !== "Home" &&
         <Section
           currentSectionName={goCurrentSection}

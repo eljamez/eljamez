@@ -6,14 +6,14 @@ export const SECTION_NAMES = [
   "Fun",
   "Links",
   "Music",
-  "All this space"
+  "All this space",
 ];
 
 export const BACKGROUNDS = [
   "/images/synthwave-3941721.jpg",
   "/images/stars-964022.png",
   "/images/retro-2426631.png",
-  "/images/wormhole-739872.png"
+  "/images/wormhole-739872.png",
 ];
 
 export const SECTIONS = [
@@ -25,17 +25,17 @@ export const SECTIONS = [
     content: [
       {
         title: "Work 🕸",
-        details: "I created my first website in 1996"
+        details: "I created my first website in 1996",
       },
       {
         title: "Music 🎹",
-        details: "I purchased my first drumset at 15"
+        details: "I purchased my first drumset at 15",
       },
       {
         title: "Other Things 🤔",
-        details: "I'm pretty sure I did all this other stuff too..."
-      }
-    ]
+        details: "I'm pretty sure I did all this other stuff too...",
+      },
+    ],
   },
   {
     name: "Code",
@@ -48,26 +48,26 @@ export const SECTIONS = [
         details: "My language of choice",
         link: {
           href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-          text: "javascript (MDN)"
-        }
+          text: "javascript (MDN)",
+        },
       },
       {
         title: "CodePen ✍️",
         details: "I add some crazy things here sometime",
         link: {
           href: "http://codepen.io/eljamez/",
-          text: "codepen.io/eljamez/"
-        }
+          text: "codepen.io/eljamez/",
+        },
       },
       {
         title: "GitHub 🐙",
         details: "Push, Pull, Merge, and all that",
         link: {
           href: "https://github.com/eljamez",
-          text: "github.com/eljamez"
-        }
-      }
-    ]
+          text: "github.com/eljamez",
+        },
+      },
+    ],
   },
   {
     name: "Work",
@@ -76,43 +76,43 @@ export const SECTIONS = [
       "I have worked with many illustrious clients in the past, including...",
     link: {
       href: "https://1stdibs.com",
-      text: "I'm currently a Senior Frontend Engineer at 1stdibs.com"
+      text: "I'm currently a Senior Frontend Engineer at 1stdibs.com",
     },
     contentType: "list",
     content: [
       {
-        title: "Nike"
+        title: "Nike",
         //image: "swoosh.jpg"
       },
       {
-        title: "Mastercard"
+        title: "Mastercard",
         //image: "mastercard.jpg"
       },
       {
-        title: "Aquafina"
+        title: "Aquafina",
         //image: "aquafina.jpg"
       },
       {
-        title: "Kombucha Wonder Drink"
+        title: "Kombucha Wonder Drink",
         //image: "kombucha.jpg"
       },
       {
-        title: "Kettle Chips"
+        title: "Kettle Chips",
         //image: "kettls.jpg"
       },
       {
-        title: "HBO"
+        title: "HBO",
         //image: "hbo.jpg"
       },
       {
-        title: "Travelocity Business"
+        title: "Travelocity Business",
         //image: "kettls.jpg"
       },
       {
-        title: "Vagrant Records"
+        title: "Vagrant Records",
         //image: "kettls.jpg"
-      }
-    ]
+      },
+    ],
   },
   {
     name: "Fun",
@@ -124,18 +124,18 @@ export const SECTIONS = [
         details: "Just a bit of fun",
         link: {
           href: "https://youtube.com/user/eljamez",
-          text: "youtube.com/user/eljamez"
-        }
+          text: "youtube.com/user/eljamez",
+        },
       },
       {
         title: "Tumblr 🥤",
         details: "An old stash of funny stuff",
         link: {
           href: "https://jaugustus.tumblr.com/",
-          text: "jaugustus.tumblr.com/"
-        }
-      }
-    ]
+          text: "jaugustus.tumblr.com/",
+        },
+      },
+    ],
   },
   {
     name: "Links",
@@ -146,10 +146,10 @@ export const SECTIONS = [
         title: "Contact Me",
         link: {
           href: "mailto://eljamez@gmail.com",
-          text: "eljames(at)gmail(dot)com"
-        }
-      }
-    ]
+          text: "eljames(at)gmail(dot)com",
+        },
+      },
+    ],
   },
   {
     name: "Music",
@@ -162,8 +162,8 @@ export const SECTIONS = [
         details: "Electronical Musics",
         link: {
           href: "https://enslymogul.com",
-          text: "enslymogul.com"
-        }
+          text: "enslymogul.com",
+        },
       },
       {
         title: "Soundcloud 🎸",
@@ -171,8 +171,8 @@ export const SECTIONS = [
         details: "A Variety, good times",
         link: {
           href: "https://soundcloud.com/eljamez",
-          text: "soundcloud.com/eljamez"
-        }
+          text: "soundcloud.com/eljamez",
+        },
       },
       {
         title: "Spotify 🔈",
@@ -181,15 +181,34 @@ export const SECTIONS = [
         link: {
           href:
             "https://open.spotify.com/playlist/4yQ0U5YrMbK2IKqFYT0O0n?si=cPlAiI-0QLaWdLKmYgO7ug",
-          text: "spotify.com"
-        }
-      }
-    ]
+          text: "spotify.com",
+        },
+      },
+    ],
   },
   {
     name: "All this space",
     letterIndex: 6,
     description:
-      "With all this extra space on my webpage, I'm going to have to put something cool up here soon."
-  }
+      "With all this extra space on my webpage, I'm going to have to put something cool up here soon.",
+  },
+];
+
+// need to complete
+export const linkBox = [
+  {
+    title: "jamescript.com",
+    details: "The home of my code",
+  },
+  {
+    title: "jsmerch.",
+    details: "Purchase some JavaScripty Nerdy goods.",
+  },
+  {
+    title: "thegameofcatch.com",
+    details: "a card game in development",
+  },
+  {
+    title: "enslymogul.com",
+  },
 ];

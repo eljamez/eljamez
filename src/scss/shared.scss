@@ -10,10 +10,16 @@ $spacing-mid: 20px;
 $spacing-large: 40px;
 
 @mixin header-font {
-  font-family: "Odibee Sans", cursive;
+  font-family: "Bungee", cursive;
+}
+@mixin thin-font {
+  font-family: "Bungee Hairline", cursive;
+}
+@mixin cursive-font {
+  font-family: "Sarina", cursive;
 }
 @mixin copy-font {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 @keyframes fadeInFromTop {
