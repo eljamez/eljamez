@@ -7,6 +7,7 @@ export const YouTubeEmbed = ({ videoId }: { videoId: string }) => {
 
   useEffect(() => {
     if (embedContainerRef.current) {
+      //@ts-ignore
       embedContainerRef.current.innerHTML = `
         <iframe
           width="560"
