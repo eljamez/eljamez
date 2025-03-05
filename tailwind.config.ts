@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssMotion from "tailwindcss-motion";
 
 const config: Config = {
   content: [
@@ -18,8 +19,14 @@ const config: Config = {
         russoOne: ["var(--font-russo-one)", "sans-serif"],
         silkscreen: ["var(--font-silkscreen)", "sans-serif"],
       },
+      motionScale: {
+        "200": "200%",
+      },
+      motionTimingFunction: {
+        custom: "cubic-bezier(0.4, 0, 0.2, 1)",
+      },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssMotion],
 };
 export default config;

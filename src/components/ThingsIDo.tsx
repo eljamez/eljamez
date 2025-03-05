@@ -8,11 +8,11 @@ const thingsIDo = [
   "write code 💻",
   "build apps 📱",
   "make music 🎵",
-  "draw maps 🗺️",
-  "wear flannel 🪓",
+  "like to draw maps 🗺️",
+  "roll 20 sided dice 🎲",
   "drink coffee ☕",
-  "play D&D 🎲",
-  "review movies 🎥",
+  "like good and bad movies 🎥",
+  "look at the internet 🖥️",
 ];
 
 export default function ThingsIDo() {
@@ -28,19 +28,17 @@ export default function ThingsIDo() {
   }, 5000);
 
   return (
-    <div className="flex gap-4 font-silkscreen font-bold drop-shadow-lg py-4 px-8">
-      <div className="">
-        <h1 className="w-full text-3xl">My name is James and I</h1>
-      </div>
+    <div className="flex gap-4 font-silkscreen font-bold drop-shadow-lg text-3xl">
+      <p>I</p>
       <div className="relative flex-1">
         {thingsIDo.map((thing) => (
           <h2
             key={thing}
             className={cx(
               thing === thingsIDo[doIndex]
-                ? "opacity-100"
-                : "opacity-0 translate-x-8",
-              "absolute transition-all text-3xl w-full text-green-500"
+                ? "motion-opacity-in-0 motion-translate-y-in-100 motion-blur-in-md"
+                : "opacity-0 motion-translate-y-out-100",
+              "absolute transition-all w-full text-green-500"
             )}
           >
             {thing}
