@@ -19,6 +19,7 @@ export const SoundcloudEmbed = ({
 
   useEffect(() => {
     if (embedContainerRef.current) {
+      //@ts-ignore
       embedContainerRef.current.innerHTML = `
       <iframe
           width="100%"
@@ -30,7 +31,7 @@ export const SoundcloudEmbed = ({
         ></iframe>   
       `;
     }
-  }, [artist, id, link, title]);
+  }, [artist, id, link, title, type]);
 
   return <div ref={embedContainerRef} />;
 };
