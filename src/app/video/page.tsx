@@ -8,7 +8,7 @@ export default function Page() {
         I make the occasional <b className="text-lime-500">short film</b> or{" "}
         <i className="text-sky-500">YouTube</i> video
       </p>
-      <p className="text-2xl mb-8">
+      <p className="text-2xl mb-0 sm:mb-8">
         Sometimes I do things with my friend Peter
         <br />@{" "}
         <Link
@@ -23,7 +23,8 @@ export default function Page() {
       </p>
       <YouTubeEmbed videoId="e4s_AEOtLrE" />
       <p className="text-2xl my-8">
-        I have also made silly random videos throughout the years.
+        I have also made silly random videos throughout the years. Here is a fun
+        playlist.
       </p>
       <YouTubeEmbed videoId="videoseries?si=6kTSIDL8s3M5BrLE&amp;list=PL503Oa3NWf3acHbLC1QQgpb-E1FW6WFyu" />
       <p className="text-2xl my-8">I made this one 20 years ago.</p>

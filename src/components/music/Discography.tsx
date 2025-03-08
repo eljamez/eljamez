@@ -23,6 +23,22 @@ const myMusic = [
     link: "https://enslymogul.bandcamp.com/track/grid-victory-team-theme-single",
   },
   {
+    id: "299400823",
+    service: "soundcloud",
+    artist: "James Augustus Hall",
+    title: "Father Christmas (Kinks Cover)",
+    type: "tracks",
+    link: "https://soundcloud.com/eljamez/father-christmas-cover-kinks",
+  },
+  {
+    id: "186924852",
+    service: "soundcloud",
+    artist: "James Augustus Hall",
+    title: "Kokomo (Beach Boys Cover)",
+    type: "tracks",
+    link: "https://soundcloud.com/eljamez/kokomo",
+  },
+  {
     id: "3236673844",
     service: "bandcamp",
     artist: "Ensly Mogul",
@@ -54,6 +70,14 @@ const myMusic = [
     title: "Drug (Huey Lewis Remix) Single",
     type: "tracks",
     link: "https://soundcloud.com/ensly-mogul/drug-1",
+  },
+  {
+    id: "77544710",
+    service: "soundcloud",
+    artist: "James Augustus Hall",
+    title: "Last Halloween",
+    type: "tracks",
+    link: "https://soundcloud.com/eljamez/last-halloween",
   },
 ];
 

@@ -27,11 +27,6 @@ const navLinks = [
 
 const socialLinks = [
   {
-    href: "https://soundcloud.com/eljamez",
-    text: "SoundCloud",
-    icon: <FaSoundcloud />,
-  },
-  {
     href: "https://substack.com/@jamesaugustushall",
     text: "Substack",
     icon: <BsSubstack />,
@@ -41,14 +36,19 @@ const socialLinks = [
     text: "LinkedIn",
     icon: <FaLinkedin />,
   },
+  {
+    href: "https://soundcloud.com/eljamez",
+    text: "SoundCloud",
+    icon: <FaSoundcloud />,
+  },
 ];
 
 export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="flex p-8 flex-col gap-4 w-1/4 bg-zinc-900 hover:bg-zinc-800 transition-all rounded-r-3xl duration-400">
-      <ul className="text-3xl">
+    <aside className="flex p-4 sm:p-8 sm:flex-col gap-4 w-full sm:w-1/4 bg-zinc-900 hover:bg-zinc-800 transition-all sm:rounded-r-3xl duration-400">
+      <ul className="text-xl sm:text-3xl flex sm:flex-col gap-4">
         {navLinks.map((link) => (
           <li
             key={link.href}
@@ -63,7 +63,7 @@ export const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <ul className="text-sm mt-20">
+      <ul className="text-sm mt-20 hidden sm:block">
         {socialLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -77,7 +77,7 @@ export const Sidebar = () => {
         ))}
       </ul>
 
-      <p>Copyright 20xx</p>
+      <p className="hidden sm:block">Copyright 20xx</p>
     </aside>
   );
 };

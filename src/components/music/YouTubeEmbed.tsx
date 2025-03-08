@@ -10,8 +10,8 @@ export const YouTubeEmbed = ({ videoId }: { videoId: string }) => {
       //@ts-ignore
       embedContainerRef.current.innerHTML = `
         <iframe
-          width="560"
-          height="315"
+          width="100%"
+          height="100%"
           src="https://www.youtube.com/embed/${videoId}"
           title="YouTube video player"
           frameBorder="0"
@@ -22,7 +22,11 @@ export const YouTubeEmbed = ({ videoId }: { videoId: string }) => {
     }
   }, [videoId]);
 
-  return <div ref={embedContainerRef} />;
+  return (
+    <div className="w-full h-auto flex justify-center sm:w-[560px] sm:h-[315px]">
+      <div className="w-full h-[300px] sm:h-auto" ref={embedContainerRef} />
+    </div>
+  );
 };
 
 export default YouTubeEmbed;

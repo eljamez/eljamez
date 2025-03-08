@@ -8,7 +8,7 @@ export default function Page() {
         I <b className="text-orange-500">write</b> and{" "}
         <i className="text-teal-500">make</i> music
       </p>
-      <p className="text-2xl mb-8">
+      <p className="text-2xl mb-2 sm:mb-8">
         Here is a discography of sorts, songs I write and record as{" "}
         <span className="text-lime-500">Myself</span> or as{" "}
         <Link
