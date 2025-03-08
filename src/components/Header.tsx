@@ -28,14 +28,14 @@ export const Header = () => {
 
   return (
     <nav
-      className="w-full py-4 px-8 flex justify-between group"
+      className="w-full p-4 sm:py-4 sm:px-8 flex justify-between group"
       onMouseEnter={() => setEmoji(Math.floor(Math.random() * emojis.length))}
     >
-      <Link className="flex text-5xl" href="/">
-        <div className="group-hover:translate-x-0 transition -translate-x-24">
+      <Link className="flex text-3xl sm:text-5xl" href="/">
+        <div className="hidden sm:block group-hover:translate-x-0 transition sm:-translate-x-24">
           {emojis[emoji]}
         </div>
-        <p className="-translate-x-12 flex flex-1 transition-all ease-in-out group-hover:gap-8 group-hover:translate-x-12">
+        <p className="sm:-translate-x-12 flex flex-1 transition-all ease-in-out group-hover:gap-8 group-hover:translate-x-12">
           <span className="group-hover:-rotate-45 transition-all delay-75">
             e
           </span>
@@ -71,7 +71,6 @@ export const Header = () => {
           </span>
         </p>
       </Link>
-      <p>copyright 20xx</p>
     </nav>
   );
 };
