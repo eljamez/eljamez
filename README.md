@@ -7,9 +7,7 @@ I am a Software Engineer who's been messin' around with codes since the 90's.
 
 Currently I am a Senior Software Engineer at [aimi.fm](https://aimi.fm)
 
-
-
 ### More Fun
-- [Codepen.io](https://codepen.io/eljamez)
 - [eljamez.com](https://eljamez.com)
+- [codepen.io](https://codepen.io/eljamez)
 - [vibecodingsucks.com](https://vibecodingsucks.com)
