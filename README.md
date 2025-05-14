@@ -10,4 +10,3 @@ Currently I am a Senior Software Engineer at [aimi.fm](https://aimi.fm)
 ### More Fun
 - [eljamez.com](https://eljamez.com)
 - [codepen.io](https://codepen.io/eljamez)
-- [vibecodingsucks.com](https://vibecodingsucks.com)
