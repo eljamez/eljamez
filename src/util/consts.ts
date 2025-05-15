@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: "Whatsoever.biz",
     description:
-      "A web app for naming work, bringing the steps of the naming process under one roof.",
+      "A web app for naming work, bringing the steps of the naming process under one roof. I am a co-founder of this company and head up engineering initiatives.",
     link: "https://whatsoever.biz",
     image: "/whatsoever-biz.png",
     tech: [

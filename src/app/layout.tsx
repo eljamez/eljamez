@@ -29,6 +29,31 @@ export const metadata: Metadata = {
   title: "eljamez.com - James Augustus Hall",
   description:
     "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
+  openGraph: {
+    title: "eljamez.com - James Augustus Hall",
+    description:
+      "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
+    url: "https://eljamez.com/",
+    siteName: "eljamez.com",
+    images: [
+      {
+        url: "/profile.png", // You can change this to a more appropriate image if needed
+        width: 1200,
+        height: 630,
+        alt: "James Augustus Hall profile image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "eljamez.com - James Augustus Hall",
+    description:
+      "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
+    images: ["/profile.png"],
+    creator: "@eljamez", // Update if you have a Twitter handle
+  },
 };
 
 export default function RootLayout({
@@ -38,6 +63,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* Google Analytics - requires NEXT_PUBLIC_GOOGLE_ANALYTICS_ID in your .env */}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+            ></script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
+      </head>
       <body className="">
         <main
           className={`${inter.variable} ${russoOne.variable} ${silkscreen.variable} font-silkscreen flex flex-col gap-0 bg-zinc-950`}
