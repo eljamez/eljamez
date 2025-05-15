@@ -3,6 +3,8 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL;
+const FROM_EMAIL =
+  process.env.CONTACT_FROM_EMAIL || "noreply@bleepsandbloops.com";
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,7 +20,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    const subject = `New Contact Form Submission from ${name}`;
     const html = `
       <h2>Contact Form Submission</h2>
       <p><b>Name:</b> ${name}</p>
@@ -28,9 +29,9 @@ export async function POST(req: NextRequest) {
     `;
 
     await resend.emails.send({
-      from: `Contact Form <noreply@${TO_EMAIL.split("@")[1]}>`,
-      to: TO_EMAIL,
-      subject,
+      from: FROM_EMAIL,
+      to: [TO_EMAIL],
+      subject: `New Contact Form Submission from ${name} (eljamez.com)`,
       html,
       replyTo: email,
     });
