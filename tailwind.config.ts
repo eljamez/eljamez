@@ -25,6 +25,15 @@ const config: Config = {
       motionTimingFunction: {
         custom: "cubic-bezier(0.4, 0, 0.2, 1)",
       },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 1s ease-out forwards",
+      },
     },
   },
   plugins: [tailwindcssMotion],
