@@ -6,7 +6,7 @@ export default function HomePageHeroContent() {
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold font-russo-one text-white drop-shadow-lg text-center">
           Hi, I&apos;m James —{" "}
           <span className="text-yellow-300">Senior Software Engineer</span>,{" "}
-          <span className="text-purple-300">CoFounder</span>,{" "}
+          <span className="text-purple-300">Co-Founder</span>,{" "}
           <span className="text-green-300">Application Builder</span>, and{" "}
           <span className="text-pink-300">Musician</span>.
         </h1>
