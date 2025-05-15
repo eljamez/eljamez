@@ -17,7 +17,7 @@ export default function WorkPage() {
       </section>
 
       {/* Social Links Section */}
-      <section className="flex justify-center gap-6 mt-2 mb-2">
+      <section className="flex flex-col sm:flex-row gap-4 sm:gap-x-4">
         <a
           href="https://github.com/eljamez"
           target="_blank"

@@ -1,10 +1,10 @@
 export default function HomePageMusicContent() {
   return (
     <>
-      <h2 className="text-2xl md:text-4xl font-bold text-pink-400 mb-4">
+      <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-pink-400 mb-4 text-center">
         Music
       </h2>
-      <p className="text-zinc-300 text-lg">
+      <p className="text-zinc-300 text-base sm:text-lg text-center px-2 sm:px-0">
         I write and record music as{" "}
         <a
           href="https://soundcloud.com/eljamez"

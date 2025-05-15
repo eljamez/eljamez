@@ -10,23 +10,27 @@ import HomePageProjectsContent from "./HomePageProjectsContent";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-20 h-full items-center justify-center text-center py-0">
+    <div className="flex flex-col gap-12 sm:gap-20 h-full items-center justify-center text-center py-0 w-full">
       {/* Hero Section with vibrant gradient background */}
       <div
         id="hero"
-        className="w-full flex flex-col items-center justify-center px-4 rounded-3xl relative overflow-hidden min-h-[80vh] h-[80vh]"
+        className="w-full flex flex-col items-center justify-center px-2 sm:px-4 rounded-3xl relative overflow-hidden min-h-[80vh] h-[80vh]"
       >
         <HomePageHeroContent />
-        <HomeNextSectionButton sectionId="about" />
+        <div className="hidden sm:block">
+          <HomeNextSectionButton sectionId="about" />
+        </div>
       </div>
 
       <FadeInSection>
         <section
           id="about"
-          className="min-h-[90vh] flex flex-col justify-center items-center w-full mx-auto relative"
+          className="min-h-[90vh] flex flex-col justify-center items-center w-full mx-auto relative px-2 sm:px-0"
         >
           <HomePageAboutContent />
-          <HomeNextSectionButton sectionId="projects" />
+          <div className="hidden sm:block">
+            <HomeNextSectionButton sectionId="projects" />
+          </div>
         </section>
       </FadeInSection>
 
@@ -34,27 +38,31 @@ export default function HomePage() {
       <FadeInSection>
         <section
           id="projects"
-          className="min-h-[90vh] flex flex-col justify-center mx-auto w-full relative"
+          className="min-h-[90vh] flex flex-col justify-center mx-auto w-full relative px-2 sm:px-0"
         >
           <HomePageProjectsContent />
-          <HomeNextSectionButton sectionId="music" />
+          <div className="hidden sm:block">
+            <HomeNextSectionButton sectionId="music" />
+          </div>
         </section>
       </FadeInSection>
 
       <FadeInSection>
         <section
           id="music"
-          className="min-h-[90vh] flex flex-col justify-center max-w-2xl mx-auto relative"
+          className="min-h-[90vh] flex flex-col justify-center max-w-2xl mx-auto relative px-2 sm:px-0"
         >
           <HomePageMusicContent />
-          <HomeNextSectionButton sectionId="contact" />
+          <div className="hidden sm:block">
+            <HomeNextSectionButton sectionId="contact" />
+          </div>
         </section>
       </FadeInSection>
 
       <FadeInSection>
         <section
           id="contact"
-          className="min-h-[90vh] flex flex-col justify-center max-w-2xl mx-auto relative"
+          className="min-h-[90vh] flex flex-col justify-center max-w-2xl mx-auto relative px-2 sm:px-0"
         >
           <HomePageContactContent />
         </section>
