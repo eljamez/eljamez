@@ -28,9 +28,9 @@ export default function ThingsIDo() {
   }, 5000);
 
   return (
-    <div className="flex gap-4 font-silkscreen font-bold drop-shadow-lg text-3xl">
+    <div className="flex gap-2 sm:gap-4 font-silkscreen font-bold drop-shadow-lg text-xl sm:text-3xl flex-wrap sm:flex-nowrap items-center justify-center w-full">
       <p>I</p>
-      <div className="relative flex-1">
+      <div className="relative flex-1 min-w-[120px]">
         {thingsIDo.map((thing) => (
           <h2
             key={thing}
