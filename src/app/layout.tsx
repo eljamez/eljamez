@@ -1,5 +1,4 @@
 import { Footer } from "@/components/Footer";
-import { Sidebar } from "@/components/Sidebar";
 import type { Metadata } from "next";
 import { Inter, Russo_One, Silkscreen } from "next/font/google";
 import React from "react";
@@ -41,12 +40,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="">
         <main
-          className={`${inter.variable} ${russoOne.variable} ${silkscreen.variable} font-silkscreen flex flex-col h-screen sm:gap-4 bg-zinc-950`}
+          className={`${inter.variable} ${russoOne.variable} ${silkscreen.variable} font-silkscreen flex flex-col gap-0 bg-zinc-950`}
         >
           <Header />
-          <div className="flex flex-col h-full sm:h-auto sm:flex-row gap-4 md:gap-12">
-            <Sidebar />
-            <section className="flex-1 bg-zinc-900 hover:bg-zinc-800 sm:rounded-l-3xl p-4 sm:p-8 duration-400 transition-all">
+          <div className="flex flex-col sm:h-auto flex-1">
+            <section className="flex-1 bg-zinc-900 h-full  p-4 sm:p-8 duration-400 transition-all">
               {children}
             </section>
             <Footer />

@@ -1,12 +1,24 @@
 # James Augustus Hall
-## Software Engineer, Music Person
 
-I am a Software Engineer who's been messin' around with codes since the 90's.
+## Senior Software Engineer, Music Person
+
+I am a Senior Software Engineer who's been building websites since the 90's. Front-End focused and a fan of Databases.
 
 ### What am I doing now
 
-Currently I am a Senior Software Engineer at [aimi.fm](https://aimi.fm)
+I am building [whatsoever.biz](https://whatsoever.biz)
 
-### More Fun
+I'm working on [Grid.lol](https://grid.lol)
+
+I'm getting better at Python via [boot.dev](https://boot.dev)
+
+I am exploring opportunities. 🗺️
+
+### Links
+
+- [linkedin](https://www.linkedin.com/in/eljamez/)
 - [eljamez.com](https://eljamez.com)
 - [codepen.io](https://codepen.io/eljamez)
+
+Enjoy a remix of a Huey Lewis and the News song
+[Drug (Huey Lewis Remix)](https://soundcloud.com/ensly-mogul/drug-1?in=ensly-mogul/sets/remixs)
