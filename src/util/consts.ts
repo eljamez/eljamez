@@ -27,7 +27,7 @@ export const projects: Project[] = [
     ],
     slug: "whatsoever-biz",
     details:
-      "Whatsoever is a home for naming work, providing tools and structure to facilitate and enrich the naming process for creative agencies, freelancers, and anyone naming companies, products, or services. The app guides users through industry best practices, from briefing to ideation, shortlisting, validation, and decision-making.",
+      "For Whatsoever.biz, I scaffolded a web app from scratch using NextJS and TailwindCSS. The app had several requirements, including Auth, which I handled with Clerk integration. For a database, I set up a Postgres database on Railway and added Prisma as an ORM to help me define the database schemas. Fetching web results from a simulated web search was also a requirement. I used google’s api for this. Upon fetching the web results, I save them to the database so I don’t have to repeat the api call when returning to the page. I do a similar thing with uspto trademark results using a uspto api. Stripe handles subscription payments.",
     employer: "Whatsoever",
   },
   {
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     ],
     slug: "grid-lol",
     details:
-      "Grid.lol is a web app for curating, organizing, and sharing collections of videos in grid or pair formats. Users can create topic-based video collections, playlists, educational content, or direct video comparisons, and share them publicly or privately. The platform features easy YouTube integration, customizable layouts, and a community-driven showcase of featured grids and pairs.",
+      "I built Grid.lol on my own, with a little help from Vercel’s v0 service and Cursor. I prompted a starting point with the basics on v0, iterated a few times, then ejected the code to my Cursor IDE. From here I set up integration with Appwrite to handle auth and database functionality while Stripe handles the payment side of things. It was built using NextJS and TailwindCSS. I also use Resed as an email sending provider.",
     employer: "Solo",
   },
   {
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     ],
     slug: "aimi-dashboard",
     details:
-      "Aimi Dashboard is a web interface for managing devices and subscriptions for Aimi Player Pro. Users can view eligible devices, add or remove devices, and manage their Pro features, including commercial licenses, multi-device playback, and offline access. The dashboard provides a clear overview of device status and subscription management, streamlining the user experience for commercial and public use.",
+      "For the Aimi Dashboard I had to build an App within an Nx Monorepo. I set it up using the Nx tooling for a fresh NextJS app and was able to get things together pretty quickly using Shadcn/UI components. This app had to integrate with a GraphQL Apollo Client server to communicate to mobile devices which accounts would have Pro features available. Stripe was used for subscribing to Pro. I used Stripe webhooks to listen for stripe events so we could easily update the users data in our database.",
     employer: "Aimi.fm",
   },
   {
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Svelte", "TailwindCSS", "Google Cloud", "Zustand"],
     slug: "aimi-sync",
     details:
-      "Aimi Sync allows users to synchronize royalty-free music with video in real time. Designed for ease of use with commercial and short form video, ensuring everyone stays in perfect sync. The app features controls and options for music genres and preferences.",
+      "I built Aimi Sync from scratch using “create next app”. I did heavy integration with the Aimi Sync API, built custom by the back end team. I set up a step-by-step route for using Aimi Sync. First a user would upload a video, which I would break apart into chunks before sending to the API. From there I would wait for a response from the API that would return data about the generated plan for the music that would sync to the video, beat by beat. On the front end I updated the plan and sent it back to the API. Then the API would return a video url of the updated video with the custom soundtrack, created on the fly.",
     employer: "Aimi.fm",
   },
   {
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "Electron", "TailwindCSS", "Nx", "GraphQL", "Vercel"],
     slug: "aimi-studio",
     details:
-      "Aimi Studio was an innovative web-based platform for creating and sharing generative music. It provides intuitive tools for composing, editing, and creating generative music experiences, leveraging the power of Aimi's generative music models and premium samples for real-time audio creation. Users can experiment with generative elements, and publish their creations to the Aimi ecosystem. The platform is designed for musicians, producers, and enthusiasts seeking new ways to explore and share music.",
+      "Aimi Studio was a desktop app powered by Electron and NextJS. This app was part of an Nx Monorepo and had to interface with a postgres database and GraphQL. I used canvas to create a plotted UI where each dot on the plot represented a musical sample that could be selected (using a select too built in canvas) and added to a custom musical experience. Creators could select from the samples and make several other adjustments to create music on the fly, and save their experiences to the Aimi echosphere.",
     employer: "Aimi.fm",
   },
   {
