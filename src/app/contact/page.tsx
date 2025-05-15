@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 // Contact page for sending messages via Resend
-// TODO: Implement /api/contact route handler to send email using Resend
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<null | "success" | "error" | "loading">(
@@ -19,12 +18,14 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("loading");
     try {
+      console.log("form", form);
       // POST to API route that sends email via Resend
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
+      console.log("res", res);
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", message: "" });
