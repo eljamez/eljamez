@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "eljamez.com",
     images: [
       {
-        url: "/profile.png", // You can change this to a more appropriate image if needed
+        url: "https://www.eljamez.com/profile.png", // You can change this to a more appropriate image if needed
         width: 1200,
         height: 630,
         alt: "James Augustus Hall profile image",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "eljamez.com - James Augustus Hall",
     description:
       "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
-    images: ["/profile.png"],
+    images: ["https://www.eljamez.com/profile.png"],
     creator: "@eljamez", // Update if you have a Twitter handle
   },
 };

@@ -13,7 +13,7 @@ export async function generateMetadata({
   if (!project) return {};
   const imageUrl = project.image.startsWith("http")
     ? project.image
-    : `https://eljamez.com${project.image}`;
+    : `https://www.eljamez.com/${project.image}`;
   return {
     title: project.title,
     description: project.description,
