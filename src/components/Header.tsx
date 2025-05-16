@@ -10,15 +10,15 @@ const rotations = ["-rotate-45", "rotate-45", "-rotate-180", "rotate-180"];
 const navLinks = [
   {
     href: "/",
-    text: "Home",
+    text: "HOME",
   },
   {
     href: "/work",
-    text: "Work",
+    text: "WORK",
   },
   {
     href: "/about",
-    text: "About",
+    text: "ABOUT",
   },
   {
     href: "/contact",
@@ -117,8 +117,8 @@ export const Header = () => {
                     link.isButton
                       ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
                       : link.href === pathname
-                        ? "text-accent"
-                        : "hover:text-accent transition-all"
+                        ? "text-accent font-oswald"
+                        : "hover:text-accent transition-all font-oswald"
                   }
                 >
                   {link.text}

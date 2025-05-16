@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
+import TextContainer from "@/components/TextContainer";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -24,7 +25,7 @@ export default function AboutPage() {
         <PageSubheader title="I'm a Senior Full Stack Engineer." />
       </section>
       {/* Bio Section */}
-      <section className="flex flex-col gap-8 items-center justify-center w-3/4 sm:w-1/2 mx-auto">
+      <section className="flex flex-col gap-8 items-center justify-center w-full sm:w-1/3 mx-auto">
         <div className="flex-shrink-0">
           <Image
             src="/profile.png" // Place your photo in public/profile.png
@@ -35,8 +36,8 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <div>
-          <p className="text-slate-800 mb-2">
+        <TextContainer className="flex flex-col gap-4">
+          <p className="">
             I&apos;m <span className="font-bold">James Augustus Hall</span> — a
             Senior Software Engineer with 20 years of professional experience.
             I&apos;ve worked with a wide range of clients, from small startups
@@ -47,17 +48,17 @@ export default function AboutPage() {
             tooling. In the end, the technology is the tool but the important
             thing is to build something that people like to use.
           </p>
-          <p className="text-slate-800 mb-2">
+          <p className="">
             I strive for clean, readable code that is easy to maintain and
             extend. I believe in getting a product out the door quickly, and
             then iterating on it. You will quickly find out if your product is
             something people want to use, and if not, you can pivot quickly.
           </p>
-          <p className="text-slate-800">
+          <p className="">
             When I&apos;m not coding, you&apos;ll find me making music, drawing
             fantasy maps, or going on fun mini adventures with my family.
           </p>
-        </div>
+        </TextContainer>
       </section>
       <section className="mt-10 flex flex-col gap-6 items-center justify-center">
         <h2 className="text-4xl font-bold">Skills</h2>

@@ -60,7 +60,7 @@ export default function ContactPage() {
           onSubmit={handleSubmit}
         >
           <input
-            className="p-3 rounded bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+            className="p-3 rounded bg-slate-100/80  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             type="text"
             name="name"
             placeholder="Your Name"
@@ -69,7 +69,7 @@ export default function ContactPage() {
             required
           />
           <input
-            className="p-3 rounded bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+            className="p-3 rounded bg-slate-100/80  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             type="email"
             name="email"
             placeholder="Your Email"
@@ -78,7 +78,7 @@ export default function ContactPage() {
             required
           />
           <textarea
-            className="p-3 rounded bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+            className="p-3 rounded bg-slate-100/80  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             name="message"
             placeholder="Your Message"
             rows={6}
