@@ -105,42 +105,42 @@ export const projects: Project[] = [
       "Splice Desktop is a cross-platform desktop app designed for music producers to manage, sync, and organize their sample, plugin, and preset libraries. It offers integration with DAWs, a large sample library, and intuitive tools for browsing, auditioning, and importing samples. Built with Electron and Angular, Splice Desktop streamlines the creative workflow, making it easy to access and use samples in any production environment.",
     employer: "Splice",
   },
-  {
-    title: "1stDibs",
-    description:
-      "A premier online marketplace for luxury furniture, art, jewelry, and fashion from the world's best dealers and designers.",
-    link: "#",
-    image: "/1stDibs.png",
-    tech: ["React", "Relay", "gRPC", "GraphQL", "Redux", "Jest"],
-    slug: "1stdibs",
-    details:
-      "1stDibs is a leading online platform connecting discerning buyers with top dealers and galleries around the globe. The site features a curated selection of high-end furniture, fine art, jewelry, and fashion, offering a seamless shopping experience with advanced search, personalized recommendations, and secure transactions. Built with modern web technologies, 1stDibs delivers a visually rich and user-friendly interface for luxury shopping.",
-    employer: "1stDibs",
-  },
-  {
-    title: "MasterPass",
-    description:
-      "A digital wallet and payment service by Mastercard, designed to simplify and secure online and in-store purchases worldwide.",
-    link: "#",
-    image: "/masterpass.png",
-    tech: ["Vue", "SCSS", "Mastercard APIs", "Vuex", "Jest"],
-    slug: "masterpass",
-    details:
-      "MasterPass by Mastercard was a global digital wallet platform enabling users to store payment and shipping information for fast, secure online and in-store checkouts. Supporting cards from multiple networks, MasterPass offered seamless integration with web and mobile merchants, advanced security features like tokenization, and a user-friendly experience. It was available in over 70 countries and helped millions of consumers and merchants streamline digital payments before transitioning to 'Click to Pay.'",
-    employer: "InRhythm",
-  },
-  {
-    title: "NikeID",
-    description:
-      "An innovative online platform by Nike that allowed users to design and customize their own shoes with unique colors, materials, and personal touches.",
-    link: "#",
-    image: "/NikeID.png",
-    tech: ["jQuery", "Handlebars", "SCSS", "Mocha", "Sinon"],
-    slug: "nikeid",
-    details:
-      "NikeID was a groundbreaking digital experience enabling customers to personalize Nike footwear online. Users could select models, choose colors, materials, and add custom text or graphics, previewing their designs in real time. The platform combined advanced 3D visualization with seamless e-commerce, empowering self-expression and creativity in sneaker culture. NikeID set the standard for mass customization in the footwear industry and evolved into Nike By You.",
-    employer: "R/GA",
-  },
+  // {
+  //   title: "1stDibs",
+  //   description:
+  //     "A premier online marketplace for luxury furniture, art, jewelry, and fashion from the world's best dealers and designers.",
+  //   link: "#",
+  //   image: "/1stDibs.png",
+  //   tech: ["React", "Relay", "gRPC", "GraphQL", "Redux", "Jest"],
+  //   slug: "1stdibs",
+  //   details:
+  //     "1stDibs is a leading online platform connecting discerning buyers with top dealers and galleries around the globe. The site features a curated selection of high-end furniture, fine art, jewelry, and fashion, offering a seamless shopping experience with advanced search, personalized recommendations, and secure transactions. Built with modern web technologies, 1stDibs delivers a visually rich and user-friendly interface for luxury shopping.",
+  //   employer: "1stDibs",
+  // },
+  // {
+  //   title: "MasterPass",
+  //   description:
+  //     "A digital wallet and payment service by Mastercard, designed to simplify and secure online and in-store purchases worldwide.",
+  //   link: "#",
+  //   image: "/masterpass.png",
+  //   tech: ["Vue", "SCSS", "Mastercard APIs", "Vuex", "Jest"],
+  //   slug: "masterpass",
+  //   details:
+  //     "MasterPass by Mastercard was a global digital wallet platform enabling users to store payment and shipping information for fast, secure online and in-store checkouts. Supporting cards from multiple networks, MasterPass offered seamless integration with web and mobile merchants, advanced security features like tokenization, and a user-friendly experience. It was available in over 70 countries and helped millions of consumers and merchants streamline digital payments before transitioning to 'Click to Pay.'",
+  //   employer: "InRhythm",
+  // },
+  // {
+  //   title: "NikeID",
+  //   description:
+  //     "An innovative online platform by Nike that allowed users to design and customize their own shoes with unique colors, materials, and personal touches.",
+  //   link: "#",
+  //   image: "/NikeID.png",
+  //   tech: ["jQuery", "Handlebars", "SCSS", "Mocha", "Sinon"],
+  //   slug: "nikeid",
+  //   details:
+  //     "NikeID was a groundbreaking digital experience enabling customers to personalize Nike footwear online. Users could select models, choose colors, materials, and add custom text or graphics, previewing their designs in real time. The platform combined advanced 3D visualization with seamless e-commerce, empowering self-expression and creativity in sneaker culture. NikeID set the standard for mass customization in the footwear industry and evolved into Nike By You.",
+  //   employer: "R/GA",
+  // },
 ];
 
 export type PastWork = {
@@ -150,6 +150,9 @@ export type PastWork = {
 };
 
 export const pastWork: PastWork[] = [
+  { client: "1stDibs", project: "React/Relay", year: 2019 },
+  { client: "MasterPass", project: "Vue/SCSS", year: 2019 },
+  { client: "NikeID", project: "jQuery/Handlebars", year: 2015 },
   { client: "Alchemy Distillery", project: "WordPress Website", year: 2019 },
   { client: "One Sight", project: "Ruby on Rails", year: 2015 },
   {
