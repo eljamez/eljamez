@@ -87,7 +87,7 @@ export default function RootLayout({
       </head>
       <body className="">
         <main
-          className={`${inter.variable} ${russoOne.variable} ${silkscreen.variable} font-silkscreen flex flex-col gap-0 bg-zinc-950`}
+          className={`${inter.variable} ${russoOne.variable} ${silkscreen.variable} font-silkscreen flex flex-col gap-0 bg-zinc-950 text-zinc-100`}
         >
           <Header />
           <div className="flex flex-col sm:h-auto flex-1">
