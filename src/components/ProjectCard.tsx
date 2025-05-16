@@ -30,10 +30,12 @@ export default function ProjectCard({
           <h3 className="text-lg sm:text-xl font-bold mb-0 font-russo-one drop-shadow">
             {project.title}
           </h3>
-          <span className="text-xs text-zinc-600 mb-2 font-silkscreen tracking-wide">
+          <span className="text-sm sm:text-base text-zinc-600 mb-2 font-silkscreen tracking-wide">
             {project.employer}
           </span>
-          <p className="text-zinc-800 mb-4 text-base">{project.description}</p>
+          <p className="text-zinc-800 mb-4 text-lg sm:text-xl leading-relaxed">
+            {project.description}
+          </p>
           <div className="flex flex-wrap gap-2 mb-4 justify-center">
             {project.tech.map((tech, tIdx) => (
               <TechPill key={tIdx} tech={tech} />

@@ -1,6 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
 import TechPill from "@/components/TechPill";
+import TextContainer from "@/components/TextContainer";
 import { projects } from "@/util/consts";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -82,8 +83,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           />
         </div>
         {/* Info Right */}
-        <div className="md:w-1/2 w-full flex flex-col justify-start">
-          <p className="text-slate-800 mb-4 text-lg">{project.description}</p>
+        <TextContainer className="md:w-1/2 w-full flex flex-col justify-start">
+          <p className="text-slate-800 mb-4 leading-relaxed">
+            {project.description}
+          </p>
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tech.map((tech, idx) => (
               <TechPill key={idx} tech={tech} />
@@ -104,7 +107,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </a>
             )}
           </div>
-        </div>
+        </TextContainer>
       </div>
     </div>
   );

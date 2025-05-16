@@ -1,6 +1,7 @@
 import { Discography } from "@/components/music/Discography";
 import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
+import TextContainer from "@/components/TextContainer";
 import Link from "next/link";
 export default function Page() {
   return (
@@ -17,7 +18,7 @@ export default function Page() {
       </section>
 
       {/* Old Bands Section */}
-      <section className="flex flex-col gap-4 items-center justify-center mt-24">
+      <TextContainer className="flex flex-col gap-4 items-center justify-center mt-24">
         <h2 className="text-2xl font-bold mb-2">Old Bands</h2>
         <ul className="flex flex-col gap-2 text-lg">
           <OldBandListItem
@@ -66,7 +67,7 @@ export default function Page() {
             description="(Albuquerque NM 1996-1998) Drums"
           />
         </ul>
-      </section>
+      </TextContainer>
     </div>
   );
 }

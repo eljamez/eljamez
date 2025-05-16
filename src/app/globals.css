@@ -18,8 +18,22 @@
 }
 
 main {
-  background: url("/bg.jpg") no-repeat center center fixed;
+  position: relative;
+  z-index: 0;
+}
+
+main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("/bg.png") no-repeat center center fixed;
   background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
 }
 
 @layer utilities {
@@ -28,5 +42,9 @@ main {
   }
   .shadow-white-glow {
     box-shadow: 0 4px 24px 0 rgba(255, 255, 255, 0.25);
+  }
+  .drop-shadow-hero {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5))
+      drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
   }
 }

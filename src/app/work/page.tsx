@@ -1,6 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
 import ProjectCard from "@/components/ProjectCard";
+import TextContainer from "@/components/TextContainer";
 import { PastWork, pastWork, Project, projects } from "@/util/consts";
 import { FaCodepen, FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -43,7 +44,7 @@ export default function WorkPage() {
       </section>
 
       {/* Past Client Work Section */}
-      <section className="mt-8">
+      <TextContainer className="mt-8 text-lg">
         <h2 className="text-2xl font-silkscreen mb-4">Past Client Work</h2>
         <ul className="list-disc list-inside text-slate-800 space-y-1">
           {pastWork.map((work: PastWork, idx: number) => (
@@ -52,7 +53,7 @@ export default function WorkPage() {
             </li>
           ))}
         </ul>
-      </section>
+      </TextContainer>
     </div>
   );
 }

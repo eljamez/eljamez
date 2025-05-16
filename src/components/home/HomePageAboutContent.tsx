@@ -6,8 +6,9 @@ export default function HomePageAboutContent() {
     <div className="fadeIn flex flex-col items-center justify-center max-w-2xl mx-auto px-2 sm:px-0">
       <HomeHeader href="/about">About Me</HomeHeader>
       <HomeSubheader>
-        I&apos;m a Senior Full Stack Software Engineer. I focus on clean
-        maintainable code and user experience.
+        I&apos;m a Senior Full Stack Software Engineer based in Ojai, CA. I
+        focus on clean maintainable code and user experience. I like to make
+        things that people like to use.
       </HomeSubheader>
     </div>
   );

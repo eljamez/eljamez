@@ -49,12 +49,12 @@ export const Footer = () => {
           </li>
         ))}
       </ul>
-      <Link
+      {/* <Link
         href="/contact"
         className="ml-2 px-4 py-2 hover:shadow-lg bg-accent text-white font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
       >
         Contact
-      </Link>
+      </Link> */}
     </footer>
   );
 };
