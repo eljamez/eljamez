@@ -83,7 +83,7 @@ const myMusic = [
 
 export const Discography = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 text-slate-800">
       {myMusic.map((value, index) => (
         <div className="flex flex-col gap-2" key={index}>
           <h3>
@@ -111,10 +111,9 @@ export const Discography = () => {
       ))}
       <Link
         href="https://enslymogul.com"
-        className="text-sky-500 transition-all hover:text-pink-500 group mt-4 text-3xl"
+        className=" transition-all group mt-4 text-3xl hover:scale-110 text-center hover:underline"
       >
-        More Ensly Mogul{" "}
-        <span className="group-hover:opacity-100 opacity-0">HERE</span>
+        More Ensly Mogul
       </Link>
     </div>
   );

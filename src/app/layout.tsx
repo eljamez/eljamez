@@ -1,38 +1,32 @@
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
-import { Inter, Russo_One, Silkscreen } from "next/font/google";
+import { Merriweather, Zilla_Slab } from "next/font/google";
 import React from "react";
 import { Header } from "../components/Header";
 import "./globals.css";
 
-const inter = Inter({
+const merriweather = Merriweather({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-merriweather",
   display: "swap",
+  weight: ["300", "400", "700", "900"],
 });
 
-const russoOne = Russo_One({
+const zillaSlab = Zilla_Slab({
   subsets: ["latin"],
-  variable: "--font-russo-one",
+  variable: "--font-zilla-slab",
+  weight: ["400", "700"],
   display: "swap",
-  weight: ["400"],
-});
-
-const silkscreen = Silkscreen({
-  subsets: ["latin"],
-  variable: "--font-silkscreen",
-  display: "swap",
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
   title: "eljamez.com - James Augustus Hall",
   description:
-    "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
+    "Internet homepage of James Augustus Hall, Senior Software Engineer, Full Stack",
   openGraph: {
     title: "eljamez.com - James Augustus Hall",
     description:
-      "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
+      "Internet homepage of James Augustus Hall, Senior Software Engineer, Full Stack",
     url: "https://eljamez.com/",
     siteName: "eljamez.com",
     images: [
@@ -50,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "eljamez.com - James Augustus Hall",
     description:
-      "Internet homepage of James Augustus Hall. Musician, Software Engineer, and World's number something Dad",
+      "Internet homepage of James Augustus Hall, Senior Software Engineer, Full Stack",
     images: ["https://www.eljamez.com/profile.png"],
     creator: "@eljamez", // Update if you have a Twitter handle
   },
@@ -64,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         {/* Google Analytics - requires NEXT_PUBLIC_GOOGLE_ANALYTICS_ID in your .env */}
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
@@ -87,13 +82,12 @@ export default function RootLayout({
       </head>
       <body className="">
         <main
-          className={`${inter.variable} ${russoOne.variable} ${silkscreen.variable} font-silkscreen flex flex-col gap-0 bg-zinc-950 text-zinc-100`}
+          className={`${merriweather.variable} ${zillaSlab.variable} font-serif flex flex-col gap-0 min-h-screen text-primary`}
         >
           <Header />
           <div className="flex flex-col sm:h-auto flex-1">
-            <section className="flex-1 bg-zinc-900 h-full  p-4 sm:p-8 duration-400 transition-all">
-              {children}
-            </section>
+            <div className="p-4 sm:p-8">{children}</div>
+
             <Footer />
           </div>
         </main>

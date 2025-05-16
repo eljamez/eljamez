@@ -1,3 +1,6 @@
+import PageHeader from "@/components/PageHeader";
+import PageSubheader from "@/components/PageSubheader";
+import TechPill from "@/components/TechPill";
 import { projects } from "@/util/consts";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -49,49 +52,59 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (!project) return notFound();
 
   return (
-    <div className="max-w-3xl mx-auto flex flex-col gap-8">
+    <div className="w-full mx-auto flex flex-col gap-8 px-2 sm:px-0 min-h-[73vh] pb-10">
       <a
         href="/work"
-        className="flex items-center gap-2 text-sky-400 hover:underline font-silkscreen mb-4"
+        className="flex items-center group font-bold gap-2 text-slate-800 origin-center hover:underline transition-all w-auto"
       >
-        <FaArrowLeft /> Back to Work
-      </a>
-      <div className="bg-zinc-900 rounded-lg shadow p-6 border border-zinc-800">
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={1000}
-          height={1000}
-          className="w-full h-56 object-cover object-top rounded mb-6 border-zinc-700 border-2"
-        />
-        <h1 className="text-3xl font-russo-one mb-2">{project.title}</h1>
-        <span className="text-sm text-zinc-400 mb-2 font-silkscreen tracking-wide block">
-          {project.employer}
+        <FaArrowLeft />
+        <span className="text-lg group-hover:translate-x-4 group-hover:scale-125 transition-all">
+          Back to Work
         </span>
-        <p className="text-zinc-400 mb-4 text-lg">{project.description}</p>
-        <div className="flex flex-wrap gap-2 mb-6">
-          {project.tech.map((tech, idx) => (
-            <span
-              key={idx}
-              className="bg-sky-800 text-sky-200 px-3 py-1 rounded-full text-xs font-silkscreen tracking-wide border border-sky-700 shadow-sm"
-            >
-              {tech}
-            </span>
-          ))}
+      </a>
+
+      {/* Title and Subtitle */}
+      <div className="flex flex-col items-center text-center mb-4">
+        <PageHeader title={project.title} />
+        <PageSubheader title={project.employer} />
+      </div>
+
+      {/* 2 Column Layout */}
+      <div className="flex flex-col md:flex-row gap-8 w-full">
+        {/* Image Left */}
+        <div className="md:w-1/2 w-full flex justify-center items-start">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={1000}
+            height={1000}
+            className="w-full h-80 object-cover object-top rounded  border-2"
+          />
         </div>
-        <div className="text-zinc-200 leading-relaxed mb-6 whitespace-pre-line">
-          {project.details}
+        {/* Info Right */}
+        <div className="md:w-1/2 w-full flex flex-col justify-start">
+          <p className="text-slate-800 mb-4 text-lg">{project.description}</p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {project.tech.map((tech, idx) => (
+              <TechPill key={idx} tech={tech} />
+            ))}
+          </div>
+          <div className="text-slate-800 leading-relaxed mb-6 whitespace-pre-line">
+            {project.details}
+          </div>
+          <div className="flex gap-2">
+            {project.link && project.link !== "#" && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
+              >
+                Visit {project.title}
+              </a>
+            )}
+          </div>
         </div>
-        {project.link && project.link !== "#" && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 px-6 py-2 bg-sky-700 hover:bg-sky-600 text-white rounded font-silkscreen transition-colors"
-          >
-            View Live / Source
-          </a>
-        )}
       </div>
     </div>
   );
