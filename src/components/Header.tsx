@@ -4,28 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { BsSubstack } from "react-icons/bs";
-import { FaLinkedin, FaSoundcloud } from "react-icons/fa";
-
-const emojis: string[] = [
-  "😀",
-  "😅",
-  "😍",
-  "🤔",
-  "👍",
-  "🎉",
-  "❤️",
-  "☕️",
-  "🖥️",
-  "🌊",
-  "🚀",
-  "🎈",
-  "👏",
-  "☕️",
-  "🚪",
-  "🎶",
-  "👌",
-];
 
 const rotations = ["-rotate-45", "rotate-45", "-rotate-180", "rotate-180"];
 
@@ -44,31 +22,26 @@ const navLinks = [
   },
   {
     href: "/contact",
-    text: "Hire Me",
+    text: "Contact",
     isButton: true,
   },
 ];
 
-const socialLinks = [
-  {
-    href: "https://substack.com/@jamesaugustushall",
-    text: "Substack",
-    icon: <BsSubstack />,
-  },
-  {
-    href: "https://www.linkedin.com/in/eljamez/",
-    text: "LinkedIn",
-    icon: <FaLinkedin />,
-  },
-  {
-    href: "https://soundcloud.com/eljamez",
-    text: "SoundCloud",
-    icon: <FaSoundcloud />,
-  },
+const delays = [
+  "delay-[100ms]",
+  "delay-[200ms]",
+  "delay-[300ms]",
+  "delay-[400ms]",
+  "delay-[500ms]",
+  "delay-[600ms]",
+  "delay-[700ms]",
+  "delay-[800ms]",
+  "delay-[900ms]",
+  "delay-[1000ms]",
+  "delay-[1100ms]",
 ];
 
 export const Header = () => {
-  const [emoji, setEmoji] = useState(0);
   const [rotation, setRotation] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -99,21 +72,17 @@ export const Header = () => {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group bg-zinc-950/95 backdrop-blur relative"
+        className="sticky top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group bg-background/50 backdrop-blur shadow-card"
         onMouseEnter={() => {
-          setEmoji(Math.floor(Math.random() * emojis.length));
           setRotation(Math.floor(Math.random() * rotations.length));
         }}
       >
-        <Link className="flex text-3xl sm:text-5xl" href="/">
-          <div className="hidden sm:block group-hover:translate-x-0 transition sm:-translate-x-24">
-            {emojis[emoji]}
-          </div>
-          <p className="sm:-translate-x-12 flex flex-1 transition-all ease-in-out group-hover:translate-x-8">
+        <Link className="flex text-3xl sm:text-5xl text-primary" href="/">
+          <p className="flex flex-1 transition-all ease-in-out font-oswald font-bold tracking-tighter uppercase">
             {logoLetters.map((item, i) => (
               <span
                 key={i}
-                className={`origin-center group-hover:${rotations[rotation]} transition-all delay-[${100 * (i + 1)}ms]`}
+                className={`origin-center group-hover:rotate-180 mr-1 transition-all ${delays[i]} group-hover:translate-y-1`}
               >
                 {item.l}
               </span>
@@ -126,27 +95,30 @@ export const Header = () => {
           onClick={() => setMobileMenuOpen((v) => !v)}
         >
           <span
-            className={`block w-6 h-0.5 bg-white mb-1 transition-all ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 bg-primary mb-1 transition-all ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-white mb-1 transition-all ${mobileMenuOpen ? "opacity-0" : ""}`}
+            className={`block w-6 h-0.5 bg-primary mb-1 transition-all ${mobileMenuOpen ? "opacity-0" : ""}`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-white transition-all ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 bg-primary transition-all ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           ></span>
         </button>
         <div className="hidden sm:flex items-center gap-6">
-          <ul className="flex gap-4 text-lg sm:text-xl">
+          <ul className="flex gap-6 text-lg sm:text-xl">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li
+                key={link.href}
+                className="hover:scale-125 transition-transform"
+              >
                 <Link
                   href={link.href}
                   className={
                     link.isButton
-                      ? "ml-2 px-4 py-2 bg-green-500 text-zinc-950 font-bold rounded-lg shadow hover:bg-green-400 transition-all text-base sm:text-lg"
+                      ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
                       : link.href === pathname
-                        ? "text-green-500"
-                        : "hover:text-green-500 transition-all"
+                        ? "text-accent"
+                        : "hover:text-accent transition-all"
                   }
                 >
                   {link.text}
@@ -159,9 +131,9 @@ export const Header = () => {
       {typeof window !== "undefined" &&
         mobileMenuOpen &&
         createPortal(
-          <div className="fixed inset-0 z-[100] bg-zinc-950 flex flex-col sm:hidden animate-fade-in min-h-0 font-silkscreen">
+          <div className="fixed inset-0 z-[100] bg-background/95 flex flex-col sm:hidden animate-fade-in min-h-0 font-sans border-t border-border shadow-card">
             <button
-              className="absolute top-4 right-4 text-3xl text-white"
+              className="absolute top-4 right-4 text-3xl text-primary"
               aria-label="Close menu"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -172,16 +144,16 @@ export const Header = () => {
                 {navLinks.map((link) => (
                   <li
                     key={link.href}
-                    className="w-full flex justify-center font-silkscreen"
+                    className="w-full flex justify-center font-sans"
                   >
                     <Link
                       href={link.href}
                       className={
                         link.isButton
-                          ? "px-6 py-3 bg-green-500 text-zinc-950 font-bold rounded-lg shadow hover:bg-green-400 transition-all text-xl w-4/5 text-center font-silkscreen"
+                          ? "px-6 py-3 bg-accent text-white font-bold rounded-lg shadow-card hover:bg-orange-500 transition-all text-xl w-4/5 text-center"
                           : link.href === pathname
-                            ? "text-green-500 w-4/5 text-center font-silkscreen"
-                            : "hover:text-green-500 transition-all w-4/5 text-center font-silkscreen"
+                            ? "text-accent w-4/5 text-center"
+                            : "hover:text-accent transition-all w-4/5 text-center"
                       }
                       onClick={() => setMobileMenuOpen(false)}
                     >
