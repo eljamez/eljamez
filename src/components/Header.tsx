@@ -127,7 +127,7 @@ export const Header = () => {
                   href={link.href}
                   className={
                     link.isButton
-                      ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
+                      ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-800 hover:bg-pink-300 transition-all hover:scale-110 text-base sm:text-lg"
                       : link.href === pathname
                         ? "text-white font-oswald drop-shadow-hero"
                         : "hover:text-white transition-all font-oswald hover:drop-shadow-hero"

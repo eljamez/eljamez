@@ -147,6 +147,7 @@ export const pastWork: PastWork[] = [
   { client: "1stDibs", project: "React/Relay", year: 2019 },
   { client: "MasterPass by Mastercard", project: "Vue/SCSS", year: 2019 },
   { client: "NikeID", project: "jQuery/Handlebars", year: 2015 },
+  { client: "LifeWater", project: "WordPress Website", year: 2015 },
   { client: "Alchemy Distillery", project: "WordPress Website", year: 2019 },
   { client: "One Sight", project: "Ruby on Rails", year: 2015 },
   {
