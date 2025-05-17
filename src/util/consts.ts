@@ -12,8 +12,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Whatsoever.biz",
-    description:
-      "A web app for naming work, bringing the steps of the naming process under one roof. I am a co-founder of this company and head up engineering initiatives.",
+    description: "A web app for naming",
     link: "https://whatsoever.biz",
     image: "/whatsoever-biz.png",
     tech: [
@@ -28,12 +27,11 @@ export const projects: Project[] = [
     slug: "whatsoever-biz",
     details:
       "For Whatsoever.biz, I scaffolded a web app from scratch using NextJS and TailwindCSS. The app had several requirements, including Auth, which I handled with Clerk integration. For a database, I set up a Postgres database on Railway and added Prisma as an ORM to help me define the database schemas. Fetching web results from a simulated web search was also a requirement. I used google’s api for this. Upon fetching the web results, I save them to the database so I don’t have to repeat the api call when returning to the page. I do a similar thing with uspto trademark results using a uspto api. Stripe handles subscription payments.",
-    employer: "Whatsoever",
+    employer: "Co-Founder",
   },
   {
     title: "Grid.lol",
-    description:
-      "Create and share video grids and pairs. Organize your favorite videos into customizable layouts and share them with friends or keep them private.",
+    description: "Create and share video grid playlists and pairs",
     link: "https://www.grid.lol",
     image: "/grid-lol.png",
     tech: [
@@ -46,13 +44,12 @@ export const projects: Project[] = [
     ],
     slug: "grid-lol",
     details:
-      "I built Grid.lol on my own, with a little help from Vercel’s v0 service and Cursor. I prompted a starting point with the basics on v0, iterated a few times, then ejected the code to my Cursor IDE. From here I set up integration with Appwrite to handle auth and database functionality while Stripe handles the payment side of things. It was built using NextJS and TailwindCSS. I also use Resed as an email sending provider.",
-    employer: "Solo",
+      "I built Grid.lol on my own, with a little help from Vercel’s v0 service and Cursor. I prompted a starting point with the basics on v0, iterated a few times, then ejected the code to my Cursor IDE. From here I set up integration with Appwrite to handle auth and database functionality while Stripe handles the payment side of things. It was built using NextJS and TailwindCSS. I also use Resend as an email sending provider.",
+    employer: "Self",
   },
   {
     title: "Aimi Dashboard",
-    description:
-      "A device management dashboard for Aimi Player Pro, enabling users to manage device licenses, subscriptions, and more.",
+    description: "A dashboard to manage your Aimi subscriptions",
     link: "#",
     image: "/aimi-dashboard.png",
     tech: [
@@ -71,8 +68,7 @@ export const projects: Project[] = [
   },
   {
     title: "Aimi Sync",
-    description:
-      "A web app for synchronizing royalty-free music with video. The music is generated and synced in real time.",
+    description: "Generate and add royalty-free music to video on the fly",
     link: "https://sync.aimi.fm",
     image: "/aimi-sync.png",
     tech: ["Next.js", "Svelte", "TailwindCSS", "Google Cloud", "Zustand"],
@@ -83,8 +79,7 @@ export const projects: Project[] = [
   },
   {
     title: "Aimi Studio",
-    description:
-      "A collaborative music creation platform that empowers users to compose, edit, and share generative music experiences.",
+    description: "Compose, edit, and create generative musical experiences.",
     link: "https://studio.aimi.fm",
     image: "/aimi-studio.png",
     tech: ["Next.js", "Electron", "TailwindCSS", "Nx", "GraphQL", "Vercel"],
@@ -95,14 +90,13 @@ export const projects: Project[] = [
   },
   {
     title: "Splice Desktop",
-    description:
-      "A desktop application for seamless sample, plugin, and preset management, and integration with music production workflows.",
-    link: "#",
+    description: "Search samples, presets, and plugins for music production",
+    link: "https://splice.com",
     image: "/splice-desktop.png",
     tech: ["Electron", "TypeScript", "Angular", "GraphQL", "Nx"],
     slug: "splice-desktop",
     details:
-      "Splice Desktop is a cross-platform desktop app designed for music producers to manage, sync, and organize their sample, plugin, and preset libraries. It offers integration with DAWs, a large sample library, and intuitive tools for browsing, auditioning, and importing samples. Built with Electron and Angular, Splice Desktop streamlines the creative workflow, making it easy to access and use samples in any production environment.",
+      "I worked on a team that owned the Splice Desktop app. I was responsible for adding new features, planning feature releases, and managing the desktop app release process. It was built with Electron and Angular within an Nx monorepo.",
     employer: "Splice",
   },
   // {
@@ -151,7 +145,7 @@ export type PastWork = {
 
 export const pastWork: PastWork[] = [
   { client: "1stDibs", project: "React/Relay", year: 2019 },
-  { client: "MasterPass", project: "Vue/SCSS", year: 2019 },
+  { client: "MasterPass by Mastercard", project: "Vue/SCSS", year: 2019 },
   { client: "NikeID", project: "jQuery/Handlebars", year: 2015 },
   { client: "Alchemy Distillery", project: "WordPress Website", year: 2019 },
   { client: "One Sight", project: "Ruby on Rails", year: 2015 },
@@ -169,5 +163,7 @@ export const pastWork: PastWork[] = [
   },
   { client: "Nike Corre", project: "WordPress Running Blog", year: 2009 },
   { client: "Nike Spark", project: "Flash Website", year: 2008 },
+  { client: "HBO", project: "Flash Website", year: 2007 },
   { client: "The Shins", project: "Flash Website", year: 2007 },
+  { client: "Kettle Chips", project: "Flash Website", year: 2006 },
 ];
