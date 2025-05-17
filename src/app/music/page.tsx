@@ -5,20 +5,20 @@ import TextContainer from "@/components/TextContainer";
 import Link from "next/link";
 export default function Page() {
   return (
-    <div className="flex flex-col gap-8 text-slate-800 pb-10">
+    <div className="flex flex-col gap-8 text-slate-800 pb-10 justify-center items-center">
       <section className="flex flex-col gap-4 items-center justify-center mt-10">
         <PageHeader title="Music" />
         <PageSubheader title="I write and make music." />
       </section>
 
       {/* Discography Section */}
-      <section className="flex flex-col gap-6 items-center justify-center">
+      <TextContainer className="flex flex-col gap-4 items-center justify-center mt-24 sm:w-1/2">
         <h2 className="text-2xl font-bold mb-2">Discography Selections</h2>
         <Discography />
-      </section>
+      </TextContainer>
 
       {/* Old Bands Section */}
-      <TextContainer className="flex flex-col gap-4 items-center justify-center mt-24">
+      <TextContainer className="flex flex-col gap-4 items-center justify-center mt-24 sm:w-1/2">
         <h2 className="text-2xl font-bold mb-2">Old Bands</h2>
         <ul className="flex flex-col gap-2 text-lg">
           <OldBandListItem

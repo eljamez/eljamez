@@ -22,7 +22,8 @@ const config: Config = {
       colors: {
         background: "#F8F9FB",
         primary: "#2D3142",
-        accent: "rgb(130, 167, 172)",
+        //accent: "rgb(130, 167, 172)",
+        accent: "rgb(154, 62, 80)",
         secondary: "rgb(242, 191, 65)",
         card: "#FFFFFF",
         border: "#BFC0C0",

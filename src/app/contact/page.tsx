@@ -1,6 +1,7 @@
 "use client";
 import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
+import TextContainer from "@/components/TextContainer";
 import { useState } from "react";
 
 // Contact page for sending messages via Resend
@@ -44,7 +45,7 @@ export default function ContactPage() {
       {/* Summary Section */}
       <section className="flex flex-col gap-4 items-center justify-center mt-10">
         <PageHeader title="Contact" />
-        <div className="flex gap-2 items-center">
+        <div className="flex sm:flex-row flex-col gap-2 items-center">
           <PageSubheader title="email me:" />
           <a
             href="mailto:eljamez@gmail.com"
@@ -60,7 +61,7 @@ export default function ContactPage() {
           onSubmit={handleSubmit}
         >
           <input
-            className="p-3 rounded bg-slate-100/80  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+            className="p-3 rounded bg-slate-100/90  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             type="text"
             name="name"
             placeholder="Your Name"
@@ -69,7 +70,7 @@ export default function ContactPage() {
             required
           />
           <input
-            className="p-3 rounded bg-slate-100/80  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+            className="p-3 rounded bg-slate-100/90  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             type="email"
             name="email"
             placeholder="Your Email"
@@ -78,7 +79,7 @@ export default function ContactPage() {
             required
           />
           <textarea
-            className="p-3 rounded bg-slate-100/80  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
+            className="p-3 rounded bg-slate-100/90  border-zinc-700 text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"
             name="message"
             placeholder="Your Message"
             rows={6}
@@ -88,16 +89,16 @@ export default function ContactPage() {
           />
           <button
             type="submit"
-            className="bg-secondary hover:scale-105 transition-all text-zinc-900 font-bold py-3 rounded hover:bg-secondary transition-all disabled:opacity-60"
+            className="bg-secondary hover:scale-105 transition-all text-zinc-900 font-bold py-3 rounded hover:bg-secondary disabled:opacity-60"
             disabled={status === "loading"}
           >
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
         </form>
         {status === "success" && (
-          <p className="mt-4 text-green-400 font-bold">
+          <TextContainer className="mt-4 text-slate-100 border-1 border-green-500 font-bold">
             Thank you! Your message has been sent.
-          </p>
+          </TextContainer>
         )}
         {status === "error" && (
           <p className="mt-4 text-red-400 font-bold">

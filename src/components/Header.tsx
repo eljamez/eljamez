@@ -44,7 +44,17 @@ const delays = [
 export const Header = () => {
   const [rotation, setRotation] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 4);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // set initial state
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -72,7 +82,9 @@ export const Header = () => {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group bg-background/50 backdrop-blur shadow-card"
+        className={`sticky top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group transition-all duration-300 ${
+          scrolled ? "bg-white/70 backdrop-blur shadow-card" : "bg-transparent"
+        }`}
         onMouseEnter={() => {
           setRotation(Math.floor(Math.random() * rotations.length));
         }}
@@ -131,7 +143,7 @@ export const Header = () => {
       {typeof window !== "undefined" &&
         mobileMenuOpen &&
         createPortal(
-          <div className="fixed inset-0 z-[100] bg-background/95 flex flex-col sm:hidden animate-fade-in min-h-0 font-sans border-t border-border shadow-card">
+          <div className="fixed inset-0 z-[100] bg-background/90 flex flex-col sm:hidden animate-fade-in min-h-0 font-sans border-t border-border shadow-card">
             <button
               className="absolute top-4 right-4 text-3xl text-primary"
               aria-label="Close menu"
@@ -144,7 +156,7 @@ export const Header = () => {
                 {navLinks.map((link) => (
                   <li
                     key={link.href}
-                    className="w-full flex justify-center font-sans"
+                    className="w-full flex justify-center font-oswald"
                   >
                     <Link
                       href={link.href}

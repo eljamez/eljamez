@@ -32,13 +32,13 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full flex flex-col sm:flex-row sm:justify-between items-center justify-center gap-2 p-4 sm:p-6 bg-background border-t border-border shadow-card">
+    <footer className="w-full flex flex-col sm:flex-row sm:justify-between items-center justify-center gap-2 p-4 sm:p-6">
       <ul className="flex gap-4 sm:gap-6 text-xl sm:text-2xl mb-2 items-center w-full justify-center">
         {socialLinks.map((link) => (
           <li key={link.href} className="w-full sm:w-auto flex justify-center">
             <Link
               href={link.href}
-              className="hover:text-accent flex gap-2 items-center justify-center text-primary"
+              className=" hover:scale-125 transition-all drop-shadow-hero flex gap-2 items-center justify-center text-slate-100"
               target="_blank"
               rel="noopener noreferrer"
               title={link.text}

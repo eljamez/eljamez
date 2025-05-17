@@ -8,7 +8,7 @@ export default function HomePageAboutContent() {
       <HomeSubheader>
         I&apos;m a Senior Full Stack Software Engineer based in Ojai, CA. I
         focus on clean maintainable code and user experience. I like to make
-        things that people like to use.
+        apps that people like to use.
       </HomeSubheader>
     </div>
   );
