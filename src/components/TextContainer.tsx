@@ -7,7 +7,7 @@ export default function TextContainer({
 }) {
   return (
     <div
-      className={`bg-gradient-to-br bg-blend-saturation from-zinc-400/40 to-white/30
+      className={`bg-blend-saturation bg-white/50
           rounded-lg text-slate-800 shadow overflow-hidden backdrop-blur-md p-8 text-lg sm:text-xl ${className}`}
     >
       {children}

@@ -61,8 +61,8 @@ export default function AboutPage() {
         </TextContainer>
       </section>
       <section className="mt-10 flex flex-col gap-6 items-center justify-center">
-        <h2 className="text-4xl font-bold">Skills</h2>
-        <p className="text-slate-800 mb-4">but not limited to:</p>
+        <PageHeader title="Skills" />
+        <PageSubheader title="including, but not limited to:" />
         <div className="w-full sm:w-2/3 px-10">
           <ul className="flex flex-wrap w-full justify-center items-center gap-2">
             <SkillPill skill="React" icon={<SiReact size={24} />} />
@@ -87,7 +87,7 @@ export default function AboutPage() {
       <section className="flex justify-center gap-6 my-4">
         <Link
           href="/music"
-          className="text-2xl font-bold hover:scale-110 transition-all duration-200 hover:underline"
+          className="text-2xl text-white drop-shadow-hero font-bold hover:scale-110 transition-all duration-200 hover:underline"
         >
           Music I Make
         </Link>

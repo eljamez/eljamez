@@ -7,7 +7,7 @@ import { FaCodepen, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function WorkPage() {
   return (
-    <div className="flex flex-col gap-8 pb-10">
+    <div className="flex flex-col gap-8 pb-10 justify-center items-center">
       {/* Summary Section */}
       <section className="flex flex-col gap-4 items-center justify-center mt-10">
         <PageHeader title="Work & Projects" />
@@ -35,7 +35,6 @@ export default function WorkPage() {
 
       {/* Projects Section */}
       <section>
-        <h2 className="text-2xl text-center mb-4">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {projects.map((project: Project, idx: number) => (
             <ProjectCard key={idx} project={project} className="h-full" />
@@ -44,7 +43,7 @@ export default function WorkPage() {
       </section>
 
       {/* Past Client Work Section */}
-      <TextContainer className="mt-8 text-lg">
+      <TextContainer className="mt-8 text-lg sm:w-1/2">
         <h2 className="text-2xl font-silkscreen mb-4">Past Client Work</h2>
         <ul className="list-disc list-inside text-slate-800 space-y-1">
           {pastWork.map((work: PastWork, idx: number) => (
