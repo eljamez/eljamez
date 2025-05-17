@@ -3,7 +3,6 @@ import PageSubheader from "@/components/PageSubheader";
 import ProjectCard from "@/components/ProjectCard";
 import TextContainer from "@/components/TextContainer";
 import { PastWork, pastWork, Project, projects } from "@/util/consts";
-import { FaCodepen, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function WorkPage() {
   return (
@@ -11,11 +10,10 @@ export default function WorkPage() {
       {/* Summary Section */}
       <section className="flex flex-col gap-4 items-center justify-center mt-10">
         <PageHeader title="Work & Projects" />
-        <PageSubheader title="Here is a selection of my professional and personal projects." />
       </section>
 
       {/* Social Links Section */}
-      <section className="flex flex-col items-center justify-center sm:flex-row gap-4 sm:gap-x-4">
+      {/* <section className="flex flex-col items-center justify-center sm:flex-row gap-4 sm:gap-x-4">
         <SocialLink
           href="https://github.com/eljamez"
           icon={<FaGithub size={22} />}
@@ -31,10 +29,10 @@ export default function WorkPage() {
           icon={<FaCodepen size={22} />}
           label="CodePen"
         />
-      </section>
+      </section> */}
 
       {/* Projects Section */}
-      <section>
+      <section className="mb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {projects.map((project: Project, idx: number) => (
             <ProjectCard key={idx} project={project} className="h-full" />
@@ -42,12 +40,12 @@ export default function WorkPage() {
         </div>
       </section>
 
+      <PageSubheader title="Past Client Work" />
       {/* Past Client Work Section */}
       <TextContainer className="mt-8 text-lg sm:w-1/2">
-        <h2 className="text-2xl font-silkscreen mb-4">Past Client Work</h2>
-        <ul className="list-disc list-inside text-slate-800 space-y-1">
+        <ul className="list-disc list-inside leading-relaxed">
           {pastWork.map((work: PastWork, idx: number) => (
-            <li key={idx}>
+            <li key={idx} className="drop-shadow-hero">
               {work.client} – {work.project}
             </li>
           ))}

@@ -1,6 +1,5 @@
 "use client";
 import PageHeader from "@/components/PageHeader";
-import PageSubheader from "@/components/PageSubheader";
 import TextContainer from "@/components/TextContainer";
 import { useState } from "react";
 
@@ -46,10 +45,9 @@ export default function ContactPage() {
       <section className="flex flex-col gap-4 items-center justify-center mt-10">
         <PageHeader title="Contact" />
         <div className="flex sm:flex-row flex-col gap-2 items-center">
-          <PageSubheader title="email me:" />
           <a
             href="mailto:eljamez@gmail.com"
-            className="text-2xl hover:underline"
+            className="text-center text-white drop-shadow-hero text-2xl max-w-2xl"
           >
             eljamez@gmail.com
           </a>

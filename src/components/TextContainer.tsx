@@ -7,8 +7,8 @@ export default function TextContainer({
 }) {
   return (
     <div
-      className={`bg-blend-saturation bg-white/50
-          rounded-lg text-slate-800 shadow overflow-hidden backdrop-blur-md p-8 text-lg sm:text-xl ${className}`}
+      className={`
+          text-slate-100 drop-shadow-hero leading-relaxed rounded-lg text-lg sm:text-xl ${className}`}
     >
       {children}
     </div>

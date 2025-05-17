@@ -26,26 +26,26 @@ export default function ProjectCard({
           height={1000}
           className="w-full h-32 sm:h-40 object-cover object-top transition-all duration-300 group-hover:brightness-110 group-hover:scale-105"
         />
-        <div className="p-3 sm:p-5 flex flex-col h-full flex-1">
-          <h3 className="text-lg sm:text-xl font-bold mb-0 font-russo-one drop-shadow">
+        <div className="p-3 sm:p-5 flex flex-col h-full flex-1 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold mb-0 font-russo-one drop-shadow">
             {project.title}
           </h3>
           <span className="text-sm sm:text-base text-zinc-600 mb-2 font-silkscreen tracking-wide">
             {project.employer}
           </span>
-          <p className="text-zinc-800 mb-4 text-lg sm:text-xl leading-relaxed">
+          <p className="text-zinc-800 mb-4 text-lg flex-1 sm:text-xl leading-relaxed">
             {project.description}
           </p>
-          <div className="flex flex-wrap gap-2 mb-4 justify-center">
+          <div className="flex flex-wrap gap-2  mb-4 justify-center">
             {project.tech.map((tech, tIdx) => (
               <TechPill key={tIdx} tech={tech} />
             ))}
           </div>
-          <div className="flex flex-1 gap-2 items-end justify-center">
+          {/* <div className="flex flex-1 gap-2 items-end justify-center">
             <span className="hover:scale-110 transition-all text-zinc-800 hover:underline font-silkscreen mt-auto text-sm sm:text-base">
               View Project
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>

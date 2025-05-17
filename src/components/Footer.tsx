@@ -9,6 +9,11 @@ const socialLinks = [
     icon: <FaGithub />,
   },
   {
+    href: "https://www.linkedin.com/in/eljamez/",
+    text: "LinkedIn",
+    icon: <FaLinkedin />,
+  },
+  {
     href: "https://codepen.io/eljamez",
     text: "CodePen",
     icon: <FaCodepen />,
@@ -17,11 +22,6 @@ const socialLinks = [
     href: "https://substack.com/@jamesaugustushall",
     text: "Substack",
     icon: <BsSubstack />,
-  },
-  {
-    href: "https://www.linkedin.com/in/eljamez/",
-    text: "LinkedIn",
-    icon: <FaLinkedin />,
   },
   {
     href: "https://soundcloud.com/eljamez",

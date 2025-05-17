@@ -56,7 +56,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <div className="w-full mx-auto flex flex-col gap-8 px-2 sm:px-0 min-h-[73vh] pb-10">
       <a
         href="/work"
-        className="flex items-center group font-bold gap-2 text-slate-800 origin-center hover:underline transition-all w-auto"
+        className="flex drop-shadow-hero items-center group font-bold gap-2 text-slate-100 origin-center hover:underline transition-all w-auto"
       >
         <FaArrowLeft />
         <span className="text-lg group-hover:translate-x-4 group-hover:scale-125 transition-all">
@@ -84,16 +84,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
         {/* Info Right */}
         <TextContainer className="md:w-1/2 w-full flex flex-col justify-start">
-          <p className="text-slate-800 mb-4 leading-relaxed">
+          {/* <p className="text-slate-800 mb-4 leading-relaxed">
             {project.description}
-          </p>
+          </p> */}
+          <div className="text-slate-100 leading-relaxed mb-6 whitespace-pre-line">
+            {project.details}
+          </div>
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tech.map((tech, idx) => (
               <TechPill key={idx} tech={tech} />
             ))}
-          </div>
-          <div className="text-slate-800 leading-relaxed mb-6 whitespace-pre-line">
-            {project.details}
           </div>
           <div className="flex gap-2">
             {project.link && project.link !== "#" && (
