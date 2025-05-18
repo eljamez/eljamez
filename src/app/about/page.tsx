@@ -1,4 +1,3 @@
-import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
 import TextContainer from "@/components/TextContainer";
 import Image from "next/image";
@@ -19,9 +18,9 @@ import {
 export default function AboutPage() {
   return (
     <div className="flex flex-col gap-8 pb-10">
-      <section className="flex flex-col gap-4 items-center justify-center mt-10">
+      {/* <section className="flex flex-col gap-4 items-center justify-center mt-10">
         <PageHeader title="About Me" />
-      </section>
+      </section> */}
       {/* Bio Section */}
       <section className="flex flex-col gap-8 items-center justify-center w-full sm:w-1/3 mx-auto">
         <div className="flex-shrink-0">
@@ -37,12 +36,9 @@ export default function AboutPage() {
         <PageSubheader title="James Augustus Hall" />
         <TextContainer className="flex flex-col gap-4">
           <p className="text-center">
-            I&apos;m a Senior Software Engineer based in Ojai, CA that enjoys
-            writing code and making apps that people like to use.
-            <br />
-            <br />
-            Past Clients Include: Nike, LifeWater, HBO, Kettle Chips, and
-            Mastercard.
+            I&apos;m a Senior Software Engineer. I like to make apps that people
+            like to use, with a focus on clean maintainable code and user
+            experience. I&apos;m based in Ojai, CA.
           </p>
         </TextContainer>
       </section>
@@ -82,7 +78,7 @@ export default function AboutPage() {
 
 function SkillPill({ skill, icon }: { skill: string; icon: React.ReactNode }) {
   return (
-    <li className="bg-accent border-2 border-secondary text-white rounded-md p-2 flex items-center gap-2">
+    <li className="bg-accent text-white rounded-md p-2 flex items-center gap-2">
       {icon}
       <span className="font-bold">{skill}</span>
     </li>

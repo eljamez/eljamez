@@ -9,7 +9,7 @@ export default function WorkPage() {
     <div className="flex flex-col gap-8 pb-10 justify-center items-center">
       {/* Summary Section */}
       <section className="flex flex-col gap-4 items-center justify-center mt-10">
-        <PageHeader title="Work & Projects" />
+        <PageHeader title="Work" />
       </section>
 
       {/* Social Links Section */}
