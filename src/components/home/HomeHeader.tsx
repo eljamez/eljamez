@@ -12,7 +12,7 @@ export default function HomeHeader({
   return (
     <Link
       href={href}
-      className="text-3xl sm:text-6xl font-bold mb-6 text-white drop-shadow-hero text-center hover:scale-110 transition-all cursor-pointer hover:underline"
+      className="text-3xl sm:text-5xl font-bold mb-6 text-white drop-shadow-hero text-center hover:scale-110 transition-all cursor-pointer hover:underline"
     >
       {children}
     </Link>
