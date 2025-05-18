@@ -17,7 +17,7 @@ export default function ProjectCard({
       className="block focus:outline-none focus:ring-2 focus:ring-sky-400"
     >
       <div
-        className={`bg-blend-saturation bg-white/50 rounded-lg p-0 shadow overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group min-h-[320px] sm:min-h-[420px] flex flex-col backdrop-blur-md ${className}`}
+        className={`bg-blend-saturation bg-slate-100 rounded-lg p-0 shadow overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group min-h-[320px] sm:min-h-[420px] flex flex-col ${className}`}
       >
         <Image
           src={project.image}

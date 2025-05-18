@@ -8,7 +8,7 @@ import HomePageProjectsContent from "./HomePageProjectsContent";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-12 sm:gap-20 h-full items-center justify-center text-center py-0 w-full">
+    <div className="flex flex-col gap-0 h-full items-center justify-center text-center py-0 w-full">
       <div
         id="hero"
         className="w-full flex flex-col items-center justify-center px-2 sm:px-4 rounded-3xl relative overflow-hidden h-[70vh]"
@@ -22,7 +22,7 @@ export default function HomePage() {
       <FadeInSection>
         <section
           id="about"
-          className="min-h-[90vh] flex flex-col justify-center items-center w-full mx-auto relative px-2 sm:px-0"
+          className="h-[90vh] flex flex-col justify-center items-center w-full mx-auto relative px-2 sm:px-0"
         >
           <HomePageAboutContent />
           {/* <div className="hidden sm:block">
@@ -47,7 +47,7 @@ export default function HomePage() {
       <FadeInSection>
         <section
           id="contact"
-          className="min-h-[90vh] flex flex-col justify-center max-w-2xl mx-auto relative px-2 sm:px-0"
+          className="h-[90vh] flex flex-col justify-center max-w-2xl mx-auto relative px-2 sm:px-0"
         >
           <HomePageContactContent />
         </section>
