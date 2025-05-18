@@ -12,12 +12,12 @@ export default function HomeSubheader({
       {href ? (
         <Link
           href={href}
-          className="text-white drop-shadow-hero text-[1.5rem] sm:text-[2.5rem] text-center hover:scale-105 transition-all cursor-pointer hover:underline leading-normal"
+          className="text-white drop-shadow-hero text-[1.5rem] sm:text-[2rem] text-center hover:scale-105 transition-all cursor-pointer hover:underline leading-normal"
         >
           {children}
         </Link>
       ) : (
-        <p className="text-white drop-shadow-hero text-[1.5rem] sm:text-[2.5rem] text-center leading-normal">
+        <p className="text-white drop-shadow-hero text-[1.5rem] sm:text-[2rem] text-center leading-normal">
           {children}
         </p>
       )}

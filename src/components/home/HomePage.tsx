@@ -11,7 +11,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-12 sm:gap-20 h-full items-center justify-center text-center py-0 w-full">
       <div
         id="hero"
-        className="w-full flex flex-col items-center justify-center px-2 sm:px-4 rounded-3xl relative overflow-hidden min-h-[80vh] h-[80vh]"
+        className="w-full flex flex-col items-center justify-center px-2 sm:px-4 rounded-3xl relative overflow-hidden h-[70vh]"
       >
         <HomePageHeroContent />
         {/* <div className="hidden sm:block">
