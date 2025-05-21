@@ -1,6 +1,6 @@
 # James Augustus Hall
 
-## Senior Software Engineer, Music Person
+## Senior Software Engineer
 
 I am a Senior Software Engineer who's been building websites since the 90's. Front-End focused and a fan of Databases.
 
