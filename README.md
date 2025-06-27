@@ -8,11 +8,9 @@ I am a Senior Software Engineer who's been building websites since the 90's. Fro
 
 I am building [whatsoever.biz](https://whatsoever.biz)
 
-I'm working on [Grid.lol](https://grid.lol)
+I'm working on [pairs.lol](https://pairs.lol)
 
-I'm getting better at Python via [boot.dev](https://boot.dev)
-
-I am exploring opportunities. 🗺️
+I am exploring 🗺️
 
 ### Links
 
