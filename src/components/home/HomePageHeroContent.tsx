@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import HomePageSectionContainer from "./HomePageSectionContainer";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function HomePageHeroContent() {
   const nameRef = useRef<HTMLDivElement>(null);

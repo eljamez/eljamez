@@ -28,9 +28,9 @@ export default function GridDrop() {
       swapy.current = createSwapy(container.current);
 
       // Your event listeners
-      swapy.current.onSwap((event) => {
-        console.log("swap", event);
-      });
+      // swapy.current.onSwap((event) => {
+      //   console.log("swap", event);
+      // });
     }
 
     return () => {

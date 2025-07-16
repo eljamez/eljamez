@@ -14,6 +14,8 @@ import {
 } from "react-icons/si";
 import H3 from "../H3";
 
+gsap.registerPlugin(SplitText);
+
 const frontendTech = [
   {
     name: "HTML",
@@ -86,7 +88,6 @@ export default function HomeFrontend() {
 
         // Top line animation
         if (splitTextIUseRef.current) {
-          console.log("split text");
           gsap.from(splitTextIUseRef.current.chars, {
             opacity: 0,
             y: 200,

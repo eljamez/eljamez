@@ -20,14 +20,12 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("loading");
     try {
-      console.log("form", form);
       // POST to API route that sends email via Resend
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      console.log("res", res);
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", message: "" });

@@ -6,6 +6,8 @@ import SplitText from "gsap/SplitText";
 import { useRef } from "react";
 import HomePageSectionContainer from "./HomePageSectionContainer";
 
+gsap.registerPlugin(SplitText);
+
 export default function HomeHero() {
   const titleRef = useRef<HTMLDivElement>(null);
   const downArrowRef = useRef<HTMLDivElement>(null);
@@ -25,7 +27,6 @@ export default function HomeHero() {
       opacity: 0,
       y: 100,
       scale: 0.3,
-      blur: 10,
       letterSpacing: 40,
       stagger: {
         each: 0.1,

@@ -14,6 +14,8 @@ import {
 } from "react-icons/si";
 import H3 from "../H3";
 
+gsap.registerPlugin(SplitText);
+
 const backendTech = [
   {
     name: "PostgreSQL",
