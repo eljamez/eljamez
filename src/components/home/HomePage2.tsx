@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { BsSubstack } from "react-icons/bs";
 import { FaCodepen, FaGithub, FaLinkedin, FaSoundcloud } from "react-icons/fa";
+import H3 from "../H3";
 import HomeBackend from "./HomeBackend";
 import HomeFrontend from "./HomeFrontend";
 import HomeHero from "./HomeHero";
@@ -55,6 +56,11 @@ export default function HomePage2() {
   const socialLinksRef = useRef<HTMLUListElement>(null);
   useGSAP(
     () => {
+      // if the window is less than 640px, don't scroll
+      if (window.innerWidth < 640) {
+        return;
+      }
+
       if (!wrapperRef.current || !contentRef.current) {
         return;
       }
@@ -67,10 +73,15 @@ export default function HomePage2() {
         effects: true, // looks for data-speed and data-lag attributes on children
       });
 
-      gsap.from(socialLinksRef.current, {
+      if (!socialLinksRef.current) {
+        return;
+      }
+
+      gsap.to(socialLinksRef.current.children, {
         duration: 1,
-        y: -500,
-        ease: "power2.out",
+        y: 0,
+        ease: "power2.inOut",
+        stagger: 0.1,
         scrollTrigger: {
           trigger: socialLinksContentRef.current,
           start: "top bottom", // when the top of the element hits 50% of the viewport height
@@ -93,17 +104,17 @@ export default function HomePage2() {
         <HomePlatforms />
 
         <div
-          className="bg-gradient-to-b to-green-900 from-green-500 text-white rounded-none flex flex-col items-center justify-center text-center px-6 py-16 relative h-screen"
+          className="bg-gradient-to-b to-green-900 from-green-500 text-white rounded-none flex flex-col items-center justify-center text-center px-6 py-16 relative sm:h-screen max-sm:py-10 max-sm:gap-8"
           ref={socialLinksContentRef}
         >
           <ul
-            className="absolute top-0 left-0 flex gap-4 sm:gap-10 text-2xl sm:text-4xl mb-2 items-center justify-center z-50 p-10"
+            className="sm:absolute sm:top-0 sm:left-0 flex gap-4 sm:gap-10 text-2xl sm:text-4xl mb-2 items-center justify-center z-50 sm:p-10"
             ref={socialLinksRef}
           >
             {socialLinks.map((link) => (
               <li
                 key={link.href}
-                className="w-full sm:w-auto flex items-center justify-center"
+                className="w-full sm:w-auto flex items-center justify-center sm:-translate-y-[600%]"
               >
                 <Link
                   href={link.href}
@@ -118,9 +129,7 @@ export default function HomePage2() {
               </li>
             ))}
           </ul>
-          <h2 className="text-white font-bold text-[5rem]">
-            Have a wonderful day!
-          </h2>
+          <H3>Have a wonderful day!</H3>
         </div>
       </div>
     </div>

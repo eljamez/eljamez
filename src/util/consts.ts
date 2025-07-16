@@ -1,7 +1,7 @@
 export type Project = {
   title: string;
   description: string;
-  link: string;
+  link?: string;
   image: string;
   tech: string[];
   slug: string;
@@ -12,7 +12,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Whatsoever.biz",
-    description: "A web app for naming",
+    description:
+      "Whatsoever is a home for naming work, bringing the steps under one roof.",
     link: "https://whatsoever.biz",
     image: "/whatsoever-biz.png",
     tech: [
@@ -30,10 +31,11 @@ export const projects: Project[] = [
     employer: "Co-Founder",
   },
   {
-    title: "Grid.lol",
-    description: "Create and share video grid playlists and pairs",
-    link: "https://www.grid.lol",
-    image: "/grid-lol.png",
+    title: "Pairs.lol",
+    description:
+      "Create and share video pairs side by side. Play separately or synced.",
+    link: "https://www.pairs.lol",
+    image: "/pairs-lol.png",
     tech: [
       "Next.js",
       "Appwrite",
@@ -80,7 +82,6 @@ export const projects: Project[] = [
   {
     title: "Aimi Studio",
     description: "Compose, edit, and create generative musical experiences.",
-    link: "https://studio.aimi.fm",
     image: "/aimi-studio.png",
     tech: ["Next.js", "Electron", "TailwindCSS", "Nx", "GraphQL", "Vercel"],
     slug: "aimi-studio",

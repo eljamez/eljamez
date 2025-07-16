@@ -7,7 +7,7 @@ export default function TechPill({
 }) {
   return (
     <span
-      className={`text-slate-100 drop-shadow-xl  bg-accent px-2 sm:px-3 py-1 rounded-full text-sm font-silkscreen tracking-wide shadow-sm ${className}`}
+      className={`text-slate-100 drop-shadow-xl bg-accent px-2 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-silkscreen tracking-wide shadow-sm ${className}`}
     >
       {tech}
     </span>

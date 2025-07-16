@@ -54,6 +54,10 @@ export default function HomeBackend() {
 
   useGSAP(
     () => {
+      if (window.innerWidth < 768) {
+        return;
+      }
+
       if (!frontendContainerRef.current) {
         return;
       }
@@ -145,7 +149,7 @@ export default function HomeBackend() {
 
   return (
     <div
-      className="bg-gradient-to-b from-blue-900 to-blue-500 text-white rounded-none h-screen w-screen flex flex-col relative items-center justify-center gap-10 px-6 overflow-hidden"
+      className="bg-gradient-to-b from-blue-900 to-blue-500 text-white rounded-none sm:h-screen w-screen flex flex-col relative items-center justify-center gap-10 px-6 overflow-hidden max-sm:py-10"
       ref={frontendContainerRef}
     >
       <div ref={iUseRef} className="flex flex-col items-center justify-center ">
@@ -153,12 +157,12 @@ export default function HomeBackend() {
       </div>
 
       <div
-        className="flex flex-nowrap gap-10 h-auto min-w-auto translate-x-0 self-end px-60"
+        className="flex flex-col sm:flex-row sm:flex-nowrap gap-10 h-auto min-w-auto translate-x-0 max-sm:text-center sm:self-end px-60"
         ref={techRef}
       >
         {backendTech.map((tech, idx) => (
           <h2
-            className="text-nowrap text-green-500 font-bold text-[5rem] -rotate-12 opacity-0"
+            className="text-nowrap text-green-500 font-bold text-2xl sm:text-[5rem] sm:-rotate-12 sm:opacity-0"
             key={idx}
           >
             {tech.name}

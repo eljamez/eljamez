@@ -70,6 +70,10 @@ export default function HomeFrontend() {
 
   useGSAP(
     () => {
+      if (window.innerWidth < 768) {
+        return;
+      }
+
       if (!frontendContainerRef.current) {
         return;
       }
@@ -160,7 +164,7 @@ export default function HomeFrontend() {
 
   return (
     <div
-      className="bg-gradient-to-b from-purple-900 to-violet-500 text-white h-screen w-screen flex flex-col relative items-center justify-center gap-10 px-6 overflow-hidden"
+      className="bg-gradient-to-b from-purple-900 to-violet-500 text-white sm:h-screen w-screen flex flex-col relative items-center justify-center gap-10 px-6 overflow-hidden max-sm:py-10"
       ref={frontendContainerRef}
     >
       <div ref={iUseRef} className="flex flex-col items-center justify-center">
@@ -168,12 +172,12 @@ export default function HomeFrontend() {
       </div>
 
       <div
-        className="flex flex-nowrap gap-10 h-auto min-w-auto translate-x-0 self-start px-60"
+        className="flex flex-col sm:flex-row sm:flex-nowrap gap-10 h-auto min-w-auto translate-x-0 max-sm:text-center sm:self-start px-60"
         ref={techRef}
       >
         {frontendTech.map((tech, idx) => (
           <h2
-            className="text-nowrap text-green-500 font-bold text-[5rem] rotate-12 opacity-0"
+            className="text-nowrap text-green-500 font-bold text-2xl sm:text-[5rem] sm:rotate-12 sm:opacity-0"
             key={idx}
           >
             {tech.name}
@@ -182,7 +186,7 @@ export default function HomeFrontend() {
       </div>
 
       <div className="flex flex-col items-center justify-center" ref={line2Ref}>
-        <H3>to make a pleasant UX.</H3>
+        <H3>for a great UX.</H3>
       </div>
     </div>
   );

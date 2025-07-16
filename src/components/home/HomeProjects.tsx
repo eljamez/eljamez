@@ -12,6 +12,10 @@ export default function HomeProjects() {
   const projectsContentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    if (window.innerWidth < 768) {
+      return;
+    }
+
     if (projectsSectionRef.current && projectsContentRef.current) {
       const horizontalContentWidth = projectsContentRef.current.scrollWidth;
 
@@ -27,7 +31,6 @@ export default function HomeProjects() {
           scrub: true,
           pin: true,
           pinSpacing: true,
-          //markers: true,
         },
       });
     }
@@ -35,7 +38,7 @@ export default function HomeProjects() {
 
   return (
     <div
-      className="w-screen flex flex-col relative overflow-hidden bg-gradient-to-b from-red-900 to-red-500 text-white h-screen  items-center justify-center text-center gap-10"
+      className="w-screen flex flex-col relative sm:overflow-hidden bg-gradient-to-b from-red-900 to-red-500 text-white sm:h-screen items-center justify-center text-center gap-10 max-sm:py-10"
       ref={projectsSectionRef}
     >
       <div className="flex flex-col items-center justify-center">
@@ -45,7 +48,7 @@ export default function HomeProjects() {
       </div>
 
       <div
-        className="flex flex-nowrap w-auto gap-10 h-[80vh] translate-x-0 self-start px-10"
+        className="flex flex-col sm:flex-row sm:flex-nowrap w-auto gap-10 sm:h-[75vh] sm:translate-x-0 sm:self-start px-10 pb-2"
         ref={projectsContentRef}
       >
         {projects.slice(0, 6).map((project, idx) => (

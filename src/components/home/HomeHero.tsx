@@ -45,13 +45,14 @@ export default function HomeHero() {
     });
   });
   return (
-    <HomePageSectionContainer className="bg-black text-5xl sm:text-[10rem]">
+    <HomePageSectionContainer className="bg-black text-5xl sm:text-[10rem] max-sm:py-10">
       <div ref={titleRef} className="flex flex-col items-center justify-center">
-        <h1 data-speed="0.5" className="text-center text-5xl sm:text-[10rem]">
-          Hello
-        </h1>
+        <h1 data-speed="0.5">Hello</h1>
       </div>
-      <div ref={downArrowRef} className="flex items-center justify-center">
+      <div
+        ref={downArrowRef}
+        className="max-sm:hidden flex items-center justify-center"
+      >
         <h3 data-speed="0.4" className="">
           ⤵️
         </h3>
