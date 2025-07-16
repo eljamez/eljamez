@@ -82,8 +82,8 @@ export const Header = () => {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group transition-all duration-300 ${
-          scrolled ? "bg-white/70 backdrop-blur shadow-card" : "bg-transparent"
+        className={`fixed top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group transition-all duration-300 ${
+          scrolled ? "bg-white/20 backdrop-blur" : "bg-transparent"
         }`}
         onMouseEnter={() => {
           setRotation(Math.floor(Math.random() * rotations.length));
@@ -127,10 +127,10 @@ export const Header = () => {
                   href={link.href}
                   className={
                     link.isButton
-                      ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-800 hover:bg-pink-500 transition-all hover:scale-110 text-base sm:text-lg"
+                      ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
                       : link.href === pathname
-                        ? "text-white font-oswald drop-shadow-hero"
-                        : "hover:text-white transition-all font-oswald hover:drop-shadow-hero"
+                        ? "text-accent font-oswald"
+                        : "hover:text-accent transition-all font-oswald"
                   }
                 >
                   {link.text}
@@ -165,7 +165,7 @@ export const Header = () => {
                           ? "px-6 py-3 bg-accent text-white font-bold rounded-lg shadow-card hover:bg-orange-500 transition-all text-xl w-4/5 text-center"
                           : link.href === pathname
                             ? "text-accent w-4/5 text-center"
-                            : "hover:text-secondary transition-all w-4/5 text-center"
+                            : "hover:text-accent transition-all w-4/5 text-center"
                       }
                       onClick={() => setMobileMenuOpen(false)}
                     >

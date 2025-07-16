@@ -1,35 +1,29 @@
+"use client";
+
 import { Project } from "@/util/consts";
 import Image from "next/image";
-import Link from "next/link";
 import TechPill from "./TechPill";
 interface ProjectCardProps {
   project: Project;
-  className?: string;
 }
 
-export default function ProjectCard({
-  project,
-  className = "",
-}: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Link
-      href={`/work/${project.slug}`}
-      className="block focus:outline-none focus:ring-2 focus:ring-sky-400"
-    >
-      <div
-        className={`bg-blend-saturation bg-slate-100 rounded-lg p-0 shadow overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group min-h-[320px] sm:min-h-[420px] flex flex-col ${className}`}
-      >
+    <div className="h-full bg-blend-saturation bg-slate-100 rounded-lg p-0 shadow overflow-hidden transform transition-all duration-300 min-h-[320px] sm:min-h-[420px] flex w-1/3 flex-shrink-0">
+      <div className="w-20 bg-zinc-800 flex items-center justify-center">
+        <h3 className="text-xl -rotate-90 sm:text-5xl font-bold text-zinc-100 mt-10 whitespace-nowrap">
+          {project.title}
+        </h3>
+      </div>
+      <div className="flex-1 flex flex-col items-center justify-center">
         <Image
           src={project.image}
           alt={project.title}
-          width={1000}
-          height={1000}
-          className="w-full h-32 sm:h-40 object-cover object-top transition-all duration-300 group-hover:brightness-110 group-hover:scale-105"
+          width={300}
+          height={300}
+          className="w-full flex-1 sm:h-40 object-cover object-top"
         />
-        <div className="p-3 sm:p-5 flex flex-col h-full flex-1 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-0 font-russo-one drop-shadow">
-            {project.title}
-          </h3>
+        <div className="p-3 sm:p-5 flex flex-col gap-6 h-full flex-1 text-center">
           <span className="text-sm sm:text-base text-zinc-600 mb-2 font-silkscreen tracking-wide">
             {project.employer}
           </span>
@@ -48,6 +42,6 @@ export default function ProjectCard({
           </div> */}
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
