@@ -11,7 +11,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import H3 from "../H3";
-import Database from "../svgs/database";
+import Database from "../svgs/Database";
 import Ui from "../svgs/Ui";
 import HomePageSectionContainer from "./HomePageSectionContainer";
 
