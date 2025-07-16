@@ -11,7 +11,7 @@ gsap.registerPlugin(SplitText);
 export default function HomeHero() {
   const titleRef = useRef<HTMLDivElement>(null);
   const downArrowRef = useRef<HTMLDivElement>(null);
-  const splitTextTitleRef = useRef<SplitText>(null);
+  const splitTextTitleRef = useRef<SplitText | null>(null);
   useGSAP(() => {
     // check for refs
     if (!titleRef.current || !downArrowRef.current) {

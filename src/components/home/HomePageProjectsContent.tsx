@@ -9,7 +9,7 @@ export default function HomePageProjectsContent() {
       <HomeHeader href="/work">Work</HomeHeader>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-20 items-stretch mb-6">
         {projects.slice(0, 6).map((project, idx) => (
-          <ProjectCard key={idx} project={project} className="h-full" />
+          <ProjectCard key={idx} project={project} />
         ))}
       </div>
       <div className="flex justify-center">

@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function HomePageAboutContent() {
   const helloRef = useRef<HTMLHeadingElement>(null);
-  const splitTextHelloRef = useRef<SplitText>(null);
+  const splitTextHelloRef = useRef<SplitText | null>(null);
 
   useGSAP(() => {
     if (helloRef.current) {

@@ -12,10 +12,10 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function HomePageHeroContent() {
   const nameRef = useRef<HTMLDivElement>(null);
-  const splitTextNameRef = useRef<SplitText>(null);
+  const splitTextNameRef = useRef<SplitText | null>(null);
 
   const titleRef = useRef<HTMLDivElement>(null);
-  const splitTextTitleRef = useRef<SplitText>(null);
+  const splitTextTitleRef = useRef<SplitText | null>(null);
 
   useGSAP(() => {
     if (nameRef.current) {

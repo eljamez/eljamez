@@ -11,8 +11,8 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export default function HomePage3() {
   const wrapperRef = useRef(null);
   const contentRef = useRef(null);
-  const horizontalSectionRef = useRef(null);
-  const horizontalContentRef = useRef(null);
+  const horizontalSectionRef = useRef<HTMLDivElement>(null);
+  const horizontalContentRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {

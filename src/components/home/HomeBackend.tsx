@@ -47,12 +47,12 @@ export default function HomeBackend() {
   const frontendContainerRef = useRef<HTMLDivElement>(null);
   // line 1
   const iUseRef = useRef<HTMLHeadingElement>(null);
-  const splitTextIUseRef = useRef<SplitText>(null);
+  const splitTextIUseRef = useRef<SplitText | null>(null);
   // tech
   const techRef = useRef<HTMLDivElement>(null);
   // line 2
   const line2Ref = useRef<HTMLHeadingElement>(null);
-  const splitTextLine2Ref = useRef<SplitText>(null);
+  const splitTextLine2Ref = useRef<SplitText | null>(null);
 
   useGSAP(
     () => {
