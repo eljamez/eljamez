@@ -22,6 +22,10 @@ export default function HomeHero() {
       type: "words,chars", // Split by words and characters
     });
 
+    gsap.set(titleRef.current, {
+      opacity: 1,
+    });
+
     // Animate the title
     gsap.from(splitTextTitleRef.current.chars, {
       opacity: 0,
@@ -37,9 +41,9 @@ export default function HomeHero() {
       //direction: "reverse",
     });
 
-    gsap.from(downArrowRef.current, {
-      opacity: 0,
-      y: -500,
+    gsap.to(downArrowRef.current, {
+      opacity: 1,
+      y: 0,
       duration: 1,
       delay: 5,
       ease: "power3.out",
@@ -53,16 +57,17 @@ export default function HomeHero() {
   });
   return (
     <HomePageSectionContainer className="bg-black text-5xl sm:text-[10rem] max-sm:py-10">
-      <div ref={titleRef} className="flex flex-col items-center justify-center">
+      <div
+        ref={titleRef}
+        className="flex flex-col items-center justify-center opacity-0"
+      >
         <h1 data-speed="0.5">Hello</h1>
       </div>
       <div
         ref={downArrowRef}
-        className="max-sm:hidden flex items-center justify-center"
+        className="max-sm:hidden flex items-center justify-center opacity-0 translate-y-[-500px]"
       >
-        <h3 data-speed="0.4" className="">
-          ⤵️
-        </h3>
+        <h3 data-speed="0.4">⤵️</h3>
       </div>
     </HomePageSectionContainer>
   );
