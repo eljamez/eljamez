@@ -50,6 +50,7 @@ export default function HomePageAboutContent() {
         },
       });
     }
+
     return () => {
       if (splitTextHelloRef.current) {
         splitTextHelloRef.current.revert();

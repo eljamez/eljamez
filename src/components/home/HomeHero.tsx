@@ -34,7 +34,7 @@ export default function HomeHero() {
       rotationY: 90,
       duration: 1,
       ease: "power3.out",
-      direction: "reverse",
+      //direction: "reverse",
     });
 
     gsap.from(downArrowRef.current, {
@@ -44,6 +44,12 @@ export default function HomeHero() {
       delay: 5,
       ease: "power3.out",
     });
+
+    return () => {
+      if (splitTextTitleRef.current) {
+        splitTextTitleRef.current.revert();
+      }
+    };
   });
   return (
     <HomePageSectionContainer className="bg-black text-5xl sm:text-[10rem] max-sm:py-10">

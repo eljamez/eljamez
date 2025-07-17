@@ -145,6 +145,12 @@ export default function HomeBackend() {
           },
         });
       }
+
+      return () => {
+        if (splitTextIUseRef.current) {
+          splitTextIUseRef.current.revert();
+        }
+      };
     },
     { scope: frontendContainerRef } // Run only once on mount, no dependencies
   );

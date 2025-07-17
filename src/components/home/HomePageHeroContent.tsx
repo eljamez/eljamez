@@ -68,7 +68,7 @@ export default function HomePageHeroContent() {
         rotationY: 90,
         duration: 2,
         ease: "power3.out",
-        direction: "reverse",
+        //direction: "reverse",
         delay: 1,
       });
     }
@@ -78,6 +78,9 @@ export default function HomePageHeroContent() {
       // Revert the SplitText instance when the component unmounts
       if (splitTextNameRef.current) {
         splitTextNameRef.current.revert();
+      }
+      if (splitTextTitleRef.current) {
+        splitTextTitleRef.current.revert();
       }
     };
   }, []);
