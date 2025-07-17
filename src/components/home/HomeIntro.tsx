@@ -82,7 +82,7 @@ export default function HomeIntro() {
         gsap.from(reactRef.current, {
           y: -200,
           x: 300,
-          scale: 0.5,
+          scale: 0.3,
           scrollTrigger: {
             trigger: introContainerRef.current,
             start: "top bottom",
@@ -96,7 +96,7 @@ export default function HomeIntro() {
         gsap.from(nodeRef.current, {
           y: -300,
           x: -200,
-          scale: 0.4,
+          scale: 0.3,
           scrollTrigger: {
             trigger: introContainerRef.current,
             start: "top bottom",
@@ -110,7 +110,7 @@ export default function HomeIntro() {
         gsap.from(svelteRef.current, {
           y: -300,
           x: 200,
-          scale: 0.5,
+          scale: 0.3,
           scrollTrigger: {
             trigger: introContainerRef.current,
             start: "top bottom",
@@ -124,7 +124,7 @@ export default function HomeIntro() {
         gsap.from(tailwindRef.current, {
           y: -300,
           x: -200,
-          scale: 0.6,
+          scale: 0.3,
           scrollTrigger: {
             trigger: introContainerRef.current,
             start: "top bottom",
@@ -138,7 +138,7 @@ export default function HomeIntro() {
         gsap.from(pythonRef.current, {
           y: -350,
           x: 100,
-          scale: 0.8,
+          scale: 0.3,
           scrollTrigger: {
             trigger: introContainerRef.current,
             start: "top bottom",
@@ -152,7 +152,7 @@ export default function HomeIntro() {
         gsap.from(postgresRef.current, {
           y: -400,
           x: -200,
-          scale: 1.2,
+          scale: 0.3,
           scrollTrigger: {
             trigger: introContainerRef.current,
             start: "top bottom",
@@ -172,18 +172,18 @@ export default function HomeIntro() {
     <HomePageSectionContainer className="bg-gradient-to-b from-teal-900 to-green-500 gap-10 max-sm:py-10">
       <div
         ref={introContainerRef}
-        className="flex flex-col items-center justify-center flex-1 gap-10 max-sm:gap-4"
+        className="flex flex-col items-center justify-center flex-1 gap-40 max-sm:gap-4 h-full"
       >
         <div
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center translate-y-32"
           data-speed="0.9"
         >
           <H3>My name is</H3>
         </div>
-        <h2 className="sm:mix-blend-difference z-20 text-3xl sm:text-[7rem] ">
+        <h2 className="sm:mix-blend-difference z-20 text-3xl sm:text-[7rem] translate-y-20">
           James Augustus Hall.
         </h2>
-        <div className="flex flex-row gap-4 bg-blur">
+        <div className="flex flex-row gap-4 bg-blur translate-y-10">
           <div
             ref={frontendRef}
             className="text-white max-sm:hidden font-bold text-2xl"
