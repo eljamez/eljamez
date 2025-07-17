@@ -1,8 +1,6 @@
-import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 import { Merriweather, Zilla_Slab } from "next/font/google";
 import React from "react";
-import { Header } from "../components/Header";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -80,16 +78,12 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="">
+      <body className="bg-gradient-to-b from-purple-900 to-violet-500">
         <main
-          className={`${merriweather.variable} ${zillaSlab.variable} font-serif flex flex-col gap-0 min-h-screen text-primary`}
+          className={`${merriweather.variable} ${zillaSlab.variable} font-serif gap-0 min-h-screen text-primary`}
         >
-          <Header />
-          <div className="flex flex-col sm:h-auto flex-1">
-            <div className="p-4 sm:p-8">{children}</div>
-
-            <Footer />
-          </div>
+          {/* <Header /> */}
+          <div className="flex flex-col sm:h-auto flex-1">{children}</div>
         </main>
       </body>
     </html>
