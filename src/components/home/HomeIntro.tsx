@@ -172,18 +172,18 @@ export default function HomeIntro() {
     <HomePageSectionContainer className="bg-gradient-to-b from-teal-900 to-green-500 gap-10 max-sm:py-10">
       <div
         ref={introContainerRef}
-        className="flex flex-col items-center justify-center flex-1 gap-40 max-sm:gap-4 h-full"
+        className="flex flex-col items-center justify-center flex-1 gap-10 sm:gap-40 max-sm:gap-4 h-full"
       >
         <div
-          className="flex flex-col items-center justify-center translate-y-32"
+          className="flex flex-col items-center justify-center sm:translate-y-32"
           data-speed="0.9"
         >
           <H3>My name is</H3>
         </div>
-        <h2 className="sm:mix-blend-difference z-20 text-3xl sm:text-[7rem] translate-y-20">
+        <h2 className="sm:mix-blend-difference z-20 text-3xl sm:text-[7rem] sm:translate-y-20">
           James Augustus Hall.
         </h2>
-        <div className="flex flex-row gap-4 bg-blur translate-y-10">
+        <div className="flex flex-row gap-4 bg-blur sm:translate-y-10">
           <div
             ref={frontendRef}
             className="text-white max-sm:hidden font-bold text-2xl"
