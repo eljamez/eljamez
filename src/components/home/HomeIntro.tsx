@@ -180,7 +180,7 @@ export default function HomeIntro() {
         >
           <H3>My name is</H3>
         </div>
-        <h2 className="sm:mix-blend-difference z-20 text-3xl sm:text-[7rem] sm:translate-y-20">
+        <h2 className="sm:mix-blend-overlay z-20 text-3xl sm:text-[7rem] sm:translate-y-20">
           James Augustus Hall.
         </h2>
         <div className="flex flex-row gap-4 bg-blur sm:translate-y-10">

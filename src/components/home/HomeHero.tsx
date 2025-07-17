@@ -33,11 +33,12 @@ export default function HomeHero() {
       scale: 0.3,
       letterSpacing: 40,
       stagger: {
-        each: 0.1,
+        each: 0.05,
       },
       rotationY: 90,
-      duration: 1,
-      ease: "power3.out",
+      duration: 0.5,
+      delay: 0.5,
+      ease: "back.out",
       //direction: "reverse",
     });
 
@@ -46,7 +47,7 @@ export default function HomeHero() {
       y: 0,
       duration: 1,
       delay: 5,
-      ease: "power3.out",
+      ease: "back.out",
     });
 
     return () => {
