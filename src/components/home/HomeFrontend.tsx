@@ -156,7 +156,6 @@ export default function HomeFrontend() {
             trigger: frontendContainerRef.current,
             start: "top 20%",
             end: "bottom top",
-            snap: 1,
           },
         });
       }

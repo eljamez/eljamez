@@ -84,7 +84,6 @@ export default function HomeBackend() {
               trigger: frontendContainerRef.current,
               start: "top 50%",
               end: "bottom 20%",
-              snap: 1,
             },
           });
         }
