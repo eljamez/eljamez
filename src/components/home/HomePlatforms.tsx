@@ -37,7 +37,7 @@ export default function HomePlatforms() {
         trigger: platformsSectionRef.current,
         start: "bottom bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 2,
         pin: true,
         pinSpacing: true,
       },
@@ -52,7 +52,7 @@ export default function HomePlatforms() {
         trigger: platformsSectionRef.current,
         start: "bottom bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 1,
       },
     });
 
@@ -69,7 +69,7 @@ export default function HomePlatforms() {
         trigger: platformsSectionRef.current,
         start: "bottom bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 1,
       },
     });
 
@@ -93,7 +93,7 @@ export default function HomePlatforms() {
         trigger: platformsSectionRef.current,
         start: "bottom bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 2,
       },
     });
   });
