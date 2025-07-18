@@ -86,7 +86,7 @@ export default function HomePage2() {
           trigger: socialLinksContentRef.current,
           start: "top bottom", // when the top of the element hits 50% of the viewport height
           end: "bottom bottom",
-          scrub: true,
+          scrub: 1,
         },
       });
     },
