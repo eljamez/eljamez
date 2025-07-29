@@ -15,7 +15,6 @@ import HomeFrontend from "./HomeFrontend";
 import HomeHero from "./HomeHero";
 import HomeIntro from "./HomeIntro";
 import HomeOjai from "./HomeOjai";
-import HomePlatforms from "./HomePlatforms";
 import HomeProjects from "./HomeProjects";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -101,20 +100,20 @@ export default function HomePage2() {
         <HomeFrontend />
         <HomeBackend />
         <HomeProjects />
-        <HomePlatforms />
+        {/* <HomePlatforms /> */}
 
         <div
           className="bg-gradient-to-b to-green-900 from-green-500 text-white rounded-none flex flex-col items-center justify-center text-center px-6 py-16 relative sm:h-screen max-sm:py-10 max-sm:gap-8"
           ref={socialLinksContentRef}
         >
           <ul
-            className="sm:absolute sm:top-0 sm:left-0 flex gap-4 sm:gap-10 text-2xl sm:text-4xl mb-2 items-center justify-center z-50 sm:p-10"
+            className="sm:absolute sm:top-0 sm:left-0 flex gap-4 sm:gap-10 text-2xl sm:text-4xl mb-2 items-center justify-center sm:p-10"
             ref={socialLinksRef}
           >
             {socialLinks.map((link) => (
               <li
                 key={link.href}
-                className="w-full sm:w-auto flex items-center justify-center sm:-translate-y-[600%]"
+                className="w-full sm:w-auto flex items-center justify-center sm:translate-y-[600%]"
               >
                 <Link
                   href={link.href}
