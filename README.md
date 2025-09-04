@@ -8,8 +8,6 @@ I am a Senior Software Engineer who's been building websites since the 90's. Fro
 
 I am building [whatsoever.biz](https://whatsoever.biz)
 
-I'm working on [pairs.lol](https://pairs.lol)
-
 I am exploring 🗺️
 
 ### Links
