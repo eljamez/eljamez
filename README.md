@@ -4,7 +4,7 @@
 
 I am a Senior Software Engineer who's been building websites since the 90's. Front-End focused and a fan of Databases.
 
-### What am I doing now
+### What I'm doing now
 
 I am building [whatsoever.biz](https://whatsoever.biz)
 
