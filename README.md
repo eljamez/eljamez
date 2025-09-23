@@ -1,4 +1,10 @@
-<h1>Hi there, I'm James 👋</h1>
+<h1>Hi there, I'm James 👋 <a href="https://linkedin.com/in/eljamez" target="blank"
+    ><img
+      src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
+      alt="eljamez-linkedin"
+      height="15"
+      width="20"
+  /></a></h1>
 <h3>A Senior Software Engineer living in Ojai, California</h3>
 
 <br>
@@ -12,30 +18,9 @@
 
 - 🔭 I’m currently working on **[whatsoever.biz](https://whatsoever.biz)**
 - 🌱 I’m currently learning **Things on [boot.dev](https://www.boot.dev/u/eljamez)**
-- 👯 I’m looking to collaborate on **Web App Development**
-- 💬 Ask me about **React, Next.js, and The Beach Boys**
+- 👯 I’m looking to collaborate on **Web Application Development**
+- 💬 Ask me about **React, [Next.js](https://nextjs.org), and The Beach Boys**
 - 📫 How to reach me: **eljamez@gmail.com**
-- ⚡ Fun fact: **I can solve a Rubik's Cube in under a minute.**
-
-<br />
-
-<h3>Connect with me:</h3>
-<p>
-  <a href="https://linkedin.com/in/eljamez" target="blank"
-    ><img
-      src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
-      alt="eljamez-linkedin"
-      height="30"
-      width="40"
-  /></a>
-  <a href="https://codepen.io/eljamez" target="blank"
-    ><img
-      src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg"
-      alt="eljamez-codepen"
-      height="30"
-      width="40"
-  /></a>
-</p>
 
 <br />
 
@@ -45,48 +30,94 @@
     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     target="_blank"
     rel="noreferrer"
-  >
-    <img
-      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+    ><img
+      src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
       alt="javascript"
       width="40"
       height="40"
-    />
-  </a>
+  /></a>
   <a
     href="https://www.typescriptlang.org/"
     target="_blank"
     rel="noreferrer"
-  >
-    <img
-      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+    ><img
+      src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
       alt="typescript"
       width="40"
       height="40"
-    />
-  </a>
-  <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-    <img
-      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+  /></a>
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"
+    ><img
+      src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
       alt="react"
       width="40"
       height="40"
-    />
-  </a>
-  <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-    <img
-      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg"
-      alt="nextjs"
-      width="40"
-      height="40"
-    />
-  </a>
-  <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-    <img
-      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+  /></a>
+  <a href="https://nodejs.org" target="_blank" rel="noreferrer"
+    ><img
+      src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
       alt="nodejs"
       width="40"
       height="40"
-    />
-  </a>
-  <a href="https://www.postgresql.org" target="_blank"
+  /></a>
+  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"
+    ><img
+      src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+      alt="tailwind"
+      width="40"
+      height="40"
+  /></a>
+  <a href="https://graphql.org" target="_blank" rel="noreferrer"
+    ><img
+      src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+      alt="graphql"
+      width="40"
+      height="40"
+  /></a>
+  <a href="https://svelte.dev" target="_blank" rel="noreferrer"
+    ><img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/svelte/svelte-original.svg"
+      alt="svelte"
+      width="40"
+      height="40"
+  /></a>
+  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"
+    ><img
+      src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+      alt="postgresql"
+      width="40"
+      height="40"
+  /></a>
+  <a href="https://git-scm.com/" target="_blank" rel="noreferrer"
+    ><img
+      src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+      alt="git"
+      width="40"
+      height="40"
+  /></a>
+</p>
+<br />
+<p>
+  <!-- Added &count_private=true to include all contributions -->
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs?username=eljamez&show_icons=true&locale=en&layout=compact&count_private=true"
+    alt="eljamez-top-langs"
+  />
+</p>
+<p>
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=eljamez&show_icons=true&locale=en&count_private=true"
+    alt="eljamez-stats"
+  />
+</p>
+<p>
+  <img
+    src="https://github-readme-streak-stats.herokuapp.com/?user=eljamez&"
+    alt="eljamez-streak"
+  />
+</p>
+<br />
+<p>
+  Enjoy a remix of a Huey Lewis and the News song<br/>
+  <a href="https://soundcloud.com/ensly-mogul/drug-1?in=ensly-mogul/sets/remixs">Drug (Huey Lewis Remix)</a>
+</p>
