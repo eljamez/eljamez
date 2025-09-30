@@ -30,25 +30,25 @@ export const projects: Project[] = [
       "For Whatsoever.biz, I scaffolded a web app from scratch using NextJS and TailwindCSS. The app had several requirements, including Auth, which I handled with Clerk integration. For a database, I set up a Postgres database on Railway and added Prisma as an ORM to help me define the database schemas. Fetching web results from a simulated web search was also a requirement. I used google’s api for this. Upon fetching the web results, I save them to the database so I don’t have to repeat the api call when returning to the page. I do a similar thing with uspto trademark results using a uspto api. Stripe handles subscription payments.",
     employer: "Co-Founder",
   },
-  {
-    title: "Pairs.lol",
-    description:
-      "Create and share video pairs side by side. Play separately or synced.",
-    link: "https://www.pairs.lol",
-    image: "/pairs-lol.png",
-    tech: [
-      "Next.js",
-      "Appwrite",
-      "TailwindCSS",
-      "YouTube API",
-      "Vercel",
-      "Zustand",
-    ],
-    slug: "grid-lol",
-    details:
-      "I built Grid.lol on my own, with a little help from Vercel’s v0 service and Cursor. I prompted a starting point with the basics on v0, iterated a few times, then ejected the code to my Cursor IDE. From here I set up integration with Appwrite to handle auth and database functionality while Stripe handles the payment side of things. It was built using NextJS and TailwindCSS. I also use Resend as an email sending provider.",
-    employer: "Self",
-  },
+  // {
+  //   title: "Pairs.lol",
+  //   description:
+  //     "Create and share video pairs side by side. Play separately or synced.",
+  //   link: "https://www.pairs.lol",
+  //   image: "/pairs-lol.png",
+  //   tech: [
+  //     "Next.js",
+  //     "Appwrite",
+  //     "TailwindCSS",
+  //     "YouTube API",
+  //     "Vercel",
+  //     "Zustand",
+  //   ],
+  //   slug: "grid-lol",
+  //   details:
+  //     "I built Grid.lol on my own, with a little help from Vercel’s v0 service and Cursor. I prompted a starting point with the basics on v0, iterated a few times, then ejected the code to my Cursor IDE. From here I set up integration with Appwrite to handle auth and database functionality while Stripe handles the payment side of things. It was built using NextJS and TailwindCSS. I also use Resend as an email sending provider.",
+  //   employer: "Self",
+  // },
   {
     title: "Aimi Dashboard",
     description: "A dashboard to manage your Aimi subscriptions",

@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import tailwindcssMotion from "tailwindcss-motion";
 
 const config: Config = {
   content: [
@@ -36,12 +35,6 @@ const config: Config = {
       boxShadow: {
         card: "0 2px 16px 0 rgba(47, 55, 75, 0.06)",
       },
-      motionScale: {
-        "200": "200%",
-      },
-      motionTimingFunction: {
-        custom: "cubic-bezier(0.4, 0, 0.2, 1)",
-      },
       keyframes: {
         fadeIn: {
           from: { opacity: "0" },
@@ -54,7 +47,6 @@ const config: Config = {
     },
   },
   plugins: [
-    tailwindcssMotion,
     // Custom plugin for blocky-text (text stroke)
     function (pluginApi: {
       addUtilities: (utils: Record<string, any>) => void;
