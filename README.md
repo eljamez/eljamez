@@ -96,27 +96,6 @@
       height="40"
   /></a>
 </p>
-<br />
-<p>
-  <!-- Added &count_private=true to include all contributions -->
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs?username=eljamez&show_icons=true&locale=en&layout=compact&count_private=true"
-    alt="eljamez-top-langs"
-  />
-</p>
-<p>
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=eljamez&show_icons=true&locale=en&count_private=true"
-    alt="eljamez-stats"
-  />
-</p>
-<p>
-  <img
-    src="https://github-readme-streak-stats.herokuapp.com/?user=eljamez&"
-    alt="eljamez-streak"
-  />
-</p>
-<br />
 <p>
   Enjoy a remix of a Huey Lewis and the News song<br/>
   <a href="https://soundcloud.com/ensly-mogul/drug-1?in=ensly-mogul/sets/remixs">Drug (Huey Lewis Remix)</a>
