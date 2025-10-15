@@ -78,7 +78,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="bg-gradient-to-b from-purple-900 to-violet-500">
+      <body className="bg-slate-900">
         <main
           className={`${merriweather.variable} ${zillaSlab.variable} font-serif gap-0 min-h-screen text-primary`}
         >
