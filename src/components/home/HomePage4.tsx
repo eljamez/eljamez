@@ -91,6 +91,7 @@ export default function HomePage4() {
         <div className="flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
           {socialLinks.map((link) => (
             <a
+              key={link.href}
               href={link.href}
               className="hover:text-green-500 transition-all flex gap-2 items-center"
             >
