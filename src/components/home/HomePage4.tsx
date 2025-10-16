@@ -19,13 +19,13 @@ const links = [
     href: "https://www.enslymogul.com/",
     text: "Ensly Mogul",
     icon: <Music />,
-    description: "A music project",
+    description: "A Music Project",
   },
   {
     href: "https://linkedin.com/in/eljamez",
     text: "LinkedIn",
     icon: <FaLinkedin />,
-    description: "My LinkedIn profile",
+    description: "My LinkedIn Profile",
   },
 ];
 
@@ -74,12 +74,12 @@ export default function HomePage4() {
               <a
                 href={link.href}
                 target="_blank"
-                className="hover:text-green-500 group transition-all flex gap-6 items-center"
+                className="hover:text-green-500 group transition-all flex sm:gap-6 gap-4 items-center"
               >
-                <span className="group-hover:rotate-180 transition-transform">
+                <span className="group-hover:rotate-180 transition-transform sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center">
                   {link.icon}
                 </span>
-                {link.text}
+                <span>{link.text}</span>
                 <span className="text-slate-400 text-sm sm:text-3xl">
                   {link.description}
                 </span>
@@ -88,7 +88,7 @@ export default function HomePage4() {
           ))}
         </ul>
 
-        <div className="flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
+        <div className="fixed max-md:bottom-6 max-md:left-6 md:relative flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
           {socialLinks.map((link) => (
             <a
               key={link.href}
@@ -96,7 +96,7 @@ export default function HomePage4() {
               className="hover:text-green-500 transition-all flex gap-2 items-center"
             >
               {link.icon}
-              <span className="hidden sm:inline">{link.text}</span>
+              <span className="hidden md:inline">{link.text}</span>
             </a>
           ))}
         </div>
