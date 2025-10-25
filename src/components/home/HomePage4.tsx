@@ -59,7 +59,7 @@ const socialLinks = [
 
 export default function HomePage4() {
   return (
-      <div className="w-full flex flex-col gap-4 h-auto sm:h-full min-h-screen bg-slate-900 text-slate-100 flex flex-col p-4 sm:p-8 gap-4">
+    <div className="w-full h-auto sm:h-full min-h-screen bg-slate-900 text-slate-100 flex flex-col p-4 sm:p-8 gap-4">
       <div className="flex flex-col flex-1">
         <h1 className="text-[3rem] sm:text-[5rem] md:text-[6rem] font-bold">
           Hello <span className="text-green-500">I&apos;m James</span>
@@ -87,20 +87,20 @@ export default function HomePage4() {
             </li>
           ))}
         </ul>
-        </div>
-
-        <div className="fixed bottom-6 md:bottom-0 left-6 md:left-0 md:relative flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
-          {socialLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hover:text-green-500 transition-all flex gap-2 items-center"
-            >
-              {link.icon}
-              <span className="hidden md:inline">{link.text}</span>
-            </a>
-          ))}
-        </div>
       </div>
+
+      <div className="fixed bottom-6 md:bottom-0 left-6 md:left-0 md:relative flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
+        {socialLinks.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="hover:text-green-500 transition-all flex gap-2 items-center"
+          >
+            {link.icon}
+            <span className="hidden md:inline">{link.text}</span>
+          </a>
+        ))}
+      </div>
+    </div>
   );
 }
