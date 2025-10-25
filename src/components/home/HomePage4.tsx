@@ -59,8 +59,8 @@ const socialLinks = [
 
 export default function HomePage4() {
   return (
-    <>
-      <div className="w-full h-auto sm:h-screen bg-slate-900 text-slate-100 flex flex-col p-4 sm:p-8 gap-4">
+      <div className="w-full flex flex-col gap-4 h-auto sm:h-full min-h-screen bg-slate-900 text-slate-100 flex flex-col p-4 sm:p-8 gap-4">
+      <div className="flex flex-col flex-1">
         <h1 className="text-[3rem] sm:text-[5rem] md:text-[6rem] font-bold">
           Hello <span className="text-green-500">I&apos;m James</span>
         </h1>
@@ -87,8 +87,9 @@ export default function HomePage4() {
             </li>
           ))}
         </ul>
+        </div>
 
-        <div className="fixed max-md:bottom-6 max-md:left-6 md:relative flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
+        <div className="fixed bottom-6 md:bottom-0 left-6 md:left-0 md:relative flex gap-8 text-lg sm:text-xl flex-1 md:items-end items-center">
           {socialLinks.map((link) => (
             <a
               key={link.href}
@@ -101,6 +102,5 @@ export default function HomePage4() {
           ))}
         </div>
       </div>
-    </>
   );
 }
