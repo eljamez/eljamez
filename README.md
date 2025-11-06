@@ -9,12 +9,12 @@
 
 <br>
 
-<p>
+<!-- <p>
   <img
     src="https://komarev.com/ghpvc/?username=eljamez&label=Profile%20views&color=0e75b6&style=flat"
     alt="eljamez"
   />
-</p>
+</p> -->
 
 - 🔭 I’m currently working on **[whatsoever.biz](https://whatsoever.biz)**
 - 🌱 I’m currently learning **Things on [boot.dev](https://www.boot.dev/u/eljamez)**
