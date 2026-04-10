@@ -1,6 +1,7 @@
 "use client";
 import PageHeader from "@/components/PageHeader";
 import TextContainer from "@/components/TextContainer";
+import { Loader2 } from "lucide-react";
 import { useState } from "react";
 
 // Contact page for sending messages via Resend
@@ -85,19 +86,26 @@ export default function ContactPage() {
           />
           <button
             type="submit"
-            className="bg-secondary hover:scale-105 transition-all text-zinc-900 font-bold py-3 rounded hover:bg-secondary disabled:opacity-60"
+            className="bg-secondary hover:scale-105 transition-all text-zinc-900 font-bold py-3 rounded hover:bg-secondary disabled:opacity-60 flex items-center justify-center gap-2"
             disabled={status === "loading"}
           >
-            {status === "loading" ? "Sending..." : "Send Message"}
+            {status === "loading" ? (
+              <>
+                <Loader2 size={18} className="animate-spin" />
+                Sending...
+              </>
+            ) : (
+              "Send Message"
+            )}
           </button>
         </form>
         {status === "success" && (
-          <TextContainer className="mt-4 text-slate-100 border-1 border-green-500 font-bold">
+          <TextContainer className="mt-4 text-slate-100 border-1 border-green-500 font-bold animate-scale-in">
             Thank you! Your message has been sent.
           </TextContainer>
         )}
         {status === "error" && (
-          <p className="mt-4 text-red-400 font-bold">
+          <p className="mt-4 text-red-400 font-bold animate-shake">
             Oops! Something went wrong. Please try again.
           </p>
         )}

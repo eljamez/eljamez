@@ -10,20 +10,22 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="h-full bg-blend-saturation bg-slate-100 rounded-lg p-0 shadow overflow-hidden transform transition-all duration-300 min-h-[320px] sm:min-h-[420px] flex w-full sm:w-1/3 flex-shrink-0 max-sm:h-[50vh]">
-      <div className="w-20 bg-zinc-800 flex items-center justify-center">
+    <div className="group h-full bg-blend-saturation bg-slate-100 rounded-lg p-0 shadow overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl min-h-[320px] sm:min-h-[420px] flex w-full sm:w-1/3 flex-shrink-0 max-sm:h-[50vh]">
+      <div className="w-20 bg-zinc-800 group-hover:bg-zinc-700 transition-colors duration-300 flex items-center justify-center">
         <h3 className="text-xl -rotate-90 sm:text-5xl font-bold text-zinc-100 mt-10 whitespace-nowrap">
           {project.title}
         </h3>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-center">
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={500}
-          height={500}
-          className="w-full flex-1 min-h-40 sm:h-40 object-cover object-top"
-        />
+      <div className="flex-1 flex flex-col items-center justify-center overflow-hidden">
+        <div className="w-full overflow-hidden flex-1 min-h-40 sm:h-40">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
         <div className="p-3 sm:p-5 flex flex-col gap-6 h-full flex-1 text-center">
           <span className="text-sm sm:text-base text-zinc-600 mb-2 font-silkscreen tracking-wide max-sm:hidden">
             {project.employer}
