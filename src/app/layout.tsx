@@ -82,8 +82,7 @@ export default function RootLayout({
         <main
           className={`${merriweather.variable} ${zillaSlab.variable} font-serif gap-0 min-h-screen text-primary`}
         >
-          {/* <Header /> */}
-          <div className="flex flex-col sm:h-auto flex-1">{children}</div>
+            <div className="flex flex-col sm:h-auto flex-1">{children}</div>
         </main>
       </body>
     </html>
