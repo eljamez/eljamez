@@ -5,9 +5,11 @@ import { useEffect, useRef, useState } from "react";
 export default function FadeInSection({
   children,
   className = "",
+  delay = "0ms",
 }: {
   children: React.ReactNode;
   className?: string;
+  delay?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -31,6 +33,7 @@ export default function FadeInSection({
   return (
     <div
       ref={ref}
+      style={{ transitionDelay: delay }}
       className={cx(
         "transition-all duration-1000 motion-safe:opacity-0 motion-safe:translate-y-8", // initial state
         isVisible ? "motion-safe:opacity-100 motion-safe:translate-y-0" : "", // fade in

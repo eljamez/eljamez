@@ -1,3 +1,4 @@
+import FadeInSection from "@/components/FadeInSection";
 import PageHeader from "@/components/PageHeader";
 import PageSubheader from "@/components/PageSubheader";
 import ProjectCard from "@/components/ProjectCard";
@@ -35,22 +36,26 @@ export default function WorkPage() {
       <section className="mb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-20 items-stretch">
           {projects.map((project: Project, idx: number) => (
-            <ProjectCard key={idx} project={project} />
+            <FadeInSection key={idx} delay={`${idx * 120}ms`}>
+              <ProjectCard project={project} />
+            </FadeInSection>
           ))}
         </div>
       </section>
 
       <PageSubheader title="Past Client Work" />
       {/* Past Client Work Section */}
-      <TextContainer className="mt-8 text-lg sm:w-1/2">
-        <ul className="list-disc list-inside leading-relaxed">
-          {pastWork.map((work: PastWork, idx: number) => (
-            <li key={idx} className="drop-shadow-hero">
-              {work.client} – {work.project}
-            </li>
-          ))}
-        </ul>
-      </TextContainer>
+      <FadeInSection>
+        <TextContainer className="mt-8 text-lg sm:w-1/2">
+          <ul className="list-disc list-inside leading-relaxed">
+            {pastWork.map((work: PastWork, idx: number) => (
+              <li key={idx} className="drop-shadow-hero">
+                {work.client} – {work.project}
+              </li>
+            ))}
+          </ul>
+        </TextContainer>
+      </FadeInSection>
     </div>
   );
 }

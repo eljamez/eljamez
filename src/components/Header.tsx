@@ -83,13 +83,13 @@ export const Header = () => {
     <>
       <nav
         className={`fixed top-0 z-50 w-full p-4 sm:py-4 sm:px-8 flex justify-between items-center group transition-all duration-300 ${
-          scrolled ? "bg-white/20 backdrop-blur" : "bg-transparent"
+          scrolled ? "bg-white/20 backdrop-blur shadow-sm" : "bg-gradient-to-b from-black/30 to-transparent"
         }`}
         onMouseEnter={() => {
           setRotation(Math.floor(Math.random() * rotations.length));
         }}
       >
-        <Link className="flex text-3xl sm:text-5xl text-primary" href="/">
+        <Link className={`flex text-3xl sm:text-5xl transition-colors duration-300 ${scrolled ? "text-primary" : "text-white"}`} href="/">
           <p className="flex flex-1 transition-all ease-in-out font-oswald font-bold tracking-tighter uppercase">
             {logoLetters.map((item, i) => (
               <span
@@ -107,13 +107,13 @@ export const Header = () => {
           onClick={() => setMobileMenuOpen((v) => !v)}
         >
           <span
-            className={`block w-6 h-0.5 bg-primary mb-1 transition-all ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 mb-1 transition-all ${scrolled ? "bg-primary" : "bg-white"} ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-primary mb-1 transition-all ${mobileMenuOpen ? "opacity-0" : ""}`}
+            className={`block w-6 h-0.5 mb-1 transition-all ${scrolled ? "bg-primary" : "bg-white"} ${mobileMenuOpen ? "opacity-0" : ""}`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-primary transition-all ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-primary" : "bg-white"} ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           ></span>
         </button>
         <div className="hidden sm:flex items-center gap-6">
@@ -129,8 +129,8 @@ export const Header = () => {
                     link.isButton
                       ? "ml-2 px-4 py-2 bg-accent text-white hover:shadow-lg font-bold rounded-lg shadow-card hover:text-slate-600 hover:bg-secondary transition-all hover:scale-110 text-base sm:text-lg"
                       : link.href === pathname
-                        ? "text-accent font-oswald"
-                        : "hover:text-accent transition-all font-oswald"
+                        ? `font-oswald ${scrolled ? "text-accent" : "text-white"}`
+                        : `font-oswald transition-all ${scrolled ? "text-primary hover:text-accent" : "text-white/80 hover:text-white"}`
                   }
                 >
                   {link.text}

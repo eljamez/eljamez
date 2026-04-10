@@ -40,9 +40,27 @@ const config: Config = {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        slideUpFade: {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        shake: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "20%": { transform: "translateX(-8px)" },
+          "40%": { transform: "translateX(8px)" },
+          "60%": { transform: "translateX(-5px)" },
+          "80%": { transform: "translateX(5px)" },
+        },
+        scaleIn: {
+          from: { opacity: "0", transform: "scale(0.94)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 1s ease-out forwards",
+        "slide-up-fade": "slideUpFade 0.6s cubic-bezier(0.22, 1, 0.36, 1) both",
+        shake: "shake 0.5s ease-in-out",
+        "scale-in": "scaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },
