@@ -10,14 +10,14 @@ const links = [
     description: "An App for Namers",
   },
   {
-    href: "https://polychromerpg.com",
+    href: "https://new.polychromerpg.com",
     text: "Polychrome RPG",
     icon: <Globe />,
     description: "RPG World",
   },
   {
     href: "https://ensembleblock.com",
-    text: "EnsembleBlock",
+    text: "Ensemble Block",
     icon: <Drum />,
     description: "Music Tools for Educators",
   },
@@ -25,7 +25,7 @@ const links = [
     href: "https://neatbudget.app",
     text: "Neat Budget",
     icon: <Wallet />,
-    description: "Budgeting App",
+    description: "Budgeting App (in progress)",
   },
   {
     href: "https://www.enslymogul.com/",
