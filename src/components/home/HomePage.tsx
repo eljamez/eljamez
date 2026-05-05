@@ -67,7 +67,7 @@ export default function HomePage() {
           Hello <span className="text-green-500">I&apos;m James</span>
         </h1>
         <h2 className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 font-light leading-relaxed animate-slide-up-fade delay-[150ms]">
-          Senior Software Engineer based in Ojai, CA. I write code, make music,
+          Senior Software Engineer based in Ojai, CA. I write code, orchestrate agents, make music,
           and build apps that people like to use.
         </h2>
         <ul className="flex flex-col gap-3 sm:gap-4 text-xl sm:text-3xl sm:p-6 p-4 bg-slate-800 rounded-lg animate-slide-up-fade delay-[300ms]">
