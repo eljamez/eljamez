@@ -1,29 +1,18 @@
-<h1>Hi there, I'm James 👋 <a href="https://linkedin.com/in/eljamez" target="blank"
-    ><img
-      src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
-      alt="eljamez-linkedin"
-      height="15"
-      width="20"
-  /></a></h1>
-<h3>A Senior Software Engineer living in Ojai, California</h3>
+# Hi, I'm James 👋
 
-<br>
+Senior software engineer in **Ojai, California**.
 
-<!-- <p>
-  <img
-    src="https://komarev.com/ghpvc/?username=eljamez&label=Profile%20views&color=0e75b6&style=flat"
-    alt="eljamez"
-  />
-</p> -->
+- **[ensembleblock.com](https://ensembleblock.com)** — on-demand video education for music & the arts; masterclasses, school portals, production  
+- **[whatsoever.biz](https://whatsoever.biz)** — naming workflow for agencies & freelancers (brief → ideate → validate → decide)  
+- **[neatbudget.app](https://neatbudget.app)** *(alpha)* — personal budgeting: categories, monthly targets, transactions · *Budget smarter, stress less*  
+- **[Enslymogul.com](https://enslymogul.com)** — music & remixes  
+- **[Gnallix.com](https://gnallix.com)** — side-scroller · [Gnallix](https://new.polychromerpg.com/races/gnallix) are alchemical constructs in **Oda**  
+- **[Polychrome — Oda](https://new.polychromerpg.com)** — site & worldbuilding for the tabletop RPG setting
 
-- 🔭 I’m currently working on **[whatsoever.biz](https://whatsoever.biz)**
-- ♬ I’m currently working on **[ensembleblock.com](https://ensembleblock.com)**
-- 👯 I can help you with **Web Application Development**
-- 💾 I utilize AI coding assistant tools.
-- 💬 Ask me about **React, [Next.js](https://nextjs.org), and The Beach Boys**
-- 📫 How to reach me: **eljamez@gmail.com**
+React · [Next.js](https://nextjs.org) · The Beach Boys · AI-assisted coding  
 
-<p>
-  Enjoy a remix of a Huey Lewis and the News song<br/>
-  <a href="https://soundcloud.com/ensly-mogul/drug-1?in=ensly-mogul/sets/remixs">Drug (Huey Lewis Remix)</a>
-</p>
+**[eljamez@gmail.com](mailto:eljamez@gmail.com)**
+
+---
+
+[Drug (Huey Lewis Remix)](https://soundcloud.com/ensly-mogul/drug-1?in=ensly-mogul/sets/remixs)

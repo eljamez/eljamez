@@ -1,4 +1,4 @@
-import { Drum, Globe, Hash, Music, Wallet } from "lucide-react";
+import { Drum, Globe, Hash, Music, Wallet, Gamepad } from "lucide-react";
 import { BsSubstack } from "react-icons/bs";
 import { FaCodepen, FaGithub, FaLinkedin, FaSoundcloud } from "react-icons/fa";
 
@@ -20,6 +20,12 @@ const links = [
     text: "Ensemble Block",
     icon: <Drum />,
     description: "Music Tools for Educators",
+  },
+  {
+    href: "https://gnallix.com",
+    text: "Gnallix",
+    icon: <Gamepad />,
+    description: "Web based video game (with custom soundtrack)",
   },
   {
     href: "https://neatbudget.app",
