@@ -1,4 +1,4 @@
-import { Drum, Globe, Hash, Music, Wallet } from "lucide-react";
+import { Drum, Globe, Hash, Music, Wallet, Gamepad } from "lucide-react";
 import { BsSubstack } from "react-icons/bs";
 import { FaCodepen, FaGithub, FaLinkedin, FaSoundcloud } from "react-icons/fa";
 
