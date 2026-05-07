@@ -22,6 +22,12 @@ const links = [
     description: "Music Tools for Educators",
   },
   {
+    href: "https://gnallix.com",
+    text: "Gnallix",
+    icon: <Gamepad />,
+    description: "Web based video game (with custom soundtrack)",
+  },
+  {
     href: "https://neatbudget.app",
     text: "Neat Budget",
     icon: <Wallet />,
