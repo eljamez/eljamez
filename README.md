@@ -1,6 +1,6 @@
 # Hi, I'm James 👋
 
-Senior software engineer in **Ojai, California**.
+Senior Software Engineer in **Ojai, California**.
 
 - **[ensembleblock.com](https://ensembleblock.com)** — on-demand video education for music & the arts; masterclasses, school portals, production  
 - **[whatsoever.biz](https://whatsoever.biz)** — naming workflow for agencies & freelancers (brief → ideate → validate → decide)  
@@ -12,7 +12,3 @@ Senior software engineer in **Ojai, California**.
 React · [Next.js](https://nextjs.org) · The Beach Boys · AI-assisted coding  
 
 **[eljamez@gmail.com](mailto:eljamez@gmail.com)**
-
----
-
-[Drug (Huey Lewis Remix)](https://soundcloud.com/ensly-mogul/drug-1?in=ensly-mogul/sets/remixs)
